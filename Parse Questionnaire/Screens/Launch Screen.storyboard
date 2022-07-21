@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YesNoMaybe" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-za-sdZ">
+                                <rect key="frame" x="40" y="128" width="334" height="640"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management Standards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLH-JJ-HSy">
+                                <rect key="frame" x="60" y="736" width="294" height="32"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FAo-aK-oWu"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FAo-aK-oWu" firstAttribute="bottom" secondItem="RLH-JJ-HSy" secondAttribute="bottom" constant="94" id="3PF-DQ-PVO"/>
+                            <constraint firstItem="2Ty-za-sdZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="K1u-a0-UXs"/>
+                            <constraint firstItem="2Ty-za-sdZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KnP-lQ-jkW"/>
+                            <constraint firstItem="RLH-JJ-HSy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="Ljy-a8-Ohl"/>
+                            <constraint firstItem="2Ty-za-sdZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kg7-V6-JdP"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ty-za-sdZ" secondAttribute="trailing" constant="40" id="pjL-tm-DZf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RLH-JJ-HSy" secondAttribute="trailing" constant="40" id="zkR-BF-ygU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="YesNoMaybe" width="640" height="640"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

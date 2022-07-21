@@ -1,0 +1,992 @@
+{
+  "introduction": {
+    "report": "# Role Profile\n\nYou have completed the questionnaire which has resulted in the generation of the profile shown below.\n\nThe profile consists of a number of _Units_, _Elements_, _Personal Competencies_ and _Knowledge Understanding_ requirements. The summary below lists the units and elements of your role.\n\nYou should refer to the full standards documentation for details of the personal competencies and knowledge understanding requirements.\n\n",
+    "questions": "# Questionnaire Summary\n\nHow did we arrive at this profile?\n\nTo arrive at this profile, your answewrs to the questions were analysed to arrive at the units that are applicable to you in the role you described.\n\nThe questions you answered and the units these caused to be added to your profile are shown below.\n\n"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Are you a director, manager, supervisor or team leader?",
+      "targetIfYes": 2,
+      "targetIfNo": 2,
+      "targetIfUnsure": 2,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 2,
+      "question": "Are you responsible for managing activities?",
+      "targetIfYes": 3,
+      "targetIfNo": 11,
+      "targetIfUnsure": 3,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 3,
+      "question": "Do you play a central role in defining your organisation's strategy?",
+      "targetIfYes": 4,
+      "targetIfNo": 7,
+      "targetIfUnsure": 4,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 4,
+      "question": "Are you responsible for understanding and influencing the external environments in which your organisation operates?",
+      "targetIfYes": 5,
+      "targetIfNo": 5,
+      "targetIfUnsure": 5,
+      "unitsIfYes": "A6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 5,
+      "question": "Are you responsible for defining and promoting the strategy for your organisation (or your part of the organisation)?",
+      "targetIfYes": 6,
+      "targetIfNo": 6,
+      "targetIfUnsure": 6,
+      "unitsIfYes": "A7",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 6,
+      "question": "Are you responsible for evaluating and improving the performance of your organisation as a whole?",
+      "targetIfYes": 7,
+      "targetIfNo": 7,
+      "targetIfUnsure": 7,
+      "unitsIfYes": "A8",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 7,
+      "question": "Do you have the authority to sign contracts with external customers?",
+      "targetIfYes": 9,
+      "targetIfNo": 8,
+      "targetIfUnsure": 8,
+      "unitsIfYes": "A3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 8,
+      "question": "Are you responsible for planning the activities necessary for meeting customer requirements?",
+      "targetIfYes": 9,
+      "targetIfNo": 11,
+      "targetIfUnsure": 11,
+      "unitsIfYes": "A2",
+      "unitsIfNo": "A1",
+      "unitsIfUnsure": "A1"
+    },
+    {
+      "id": 9,
+      "question": "Are you responsible for making improvements at work?",
+      "targetIfYes": 10,
+      "targetIfNo": 11,
+      "targetIfUnsure": 11,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 10,
+      "question": "Are you responsible for making improvements which have major impacts outside your own part of the organisation?",
+      "targetIfYes": 11,
+      "targetIfNo": 11,
+      "targetIfUnsure": 11,
+      "unitsIfYes": "A5",
+      "unitsIfNo": "A4",
+      "unitsIfUnsure": "A4"
+    },
+    {
+      "id": 11,
+      "question": "Are you responsible for managing resources efficiently?",
+      "targetIfYes": 12,
+      "targetIfNo": 17,
+      "targetIfUnsure": 12,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 12,
+      "question": "Are you responsible for identifying and obtaining the financial resources your organisation needs?",
+      "targetIfYes": 17,
+      "targetIfNo": 13,
+      "targetIfUnsure": 13,
+      "unitsIfYes": "B5",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 13,
+      "question": "Do you manage budgets?",
+      "targetIfYes": 14,
+      "targetIfNo": 16,
+      "targetIfUnsure": 14,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 14,
+      "question": "Do you manage budgets for major programmes of work?",
+      "targetIfYes": 17,
+      "targetIfNo": 15,
+      "targetIfUnsure": 15,
+      "unitsIfYes": "B4",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 15,
+      "question": "Do you control budgets for your own area of responsibility?",
+      "targetIfYes": 16,
+      "targetIfNo": 16,
+      "targetIfUnsure": 16,
+      "unitsIfYes": "B3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 16,
+      "question": "Are you responsible for identifying, obtaining and monitoring the physical resources required in your own area of responsibility?",
+      "targetIfYes": 17,
+      "targetIfNo": 17,
+      "targetIfUnsure": 17,
+      "unitsIfYes": "B2",
+      "unitsIfNo": "B1",
+      "unitsIfUnsure": "B1"
+    },
+    {
+      "id": 17,
+      "question": "Are you responsible for directly managing people?",
+      "targetIfYes": 18,
+      "targetIfNo": 29,
+      "targetIfUnsure": 18,
+      "unitsIfYes": "",
+      "unitsIfNo": "C1 & C4",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 18,
+      "question": "Are you responsible for managing other managers?",
+      "targetIfYes": 21,
+      "targetIfNo": 19,
+      "targetIfUnsure": 19,
+      "unitsIfYes": "C3, C6 & C11",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 19,
+      "question": "Are you responsible for the development of the people you manage?",
+      "targetIfYes": 20,
+      "targetIfNo": 21,
+      "targetIfUnsure": 21,
+      "unitsIfYes": "",
+      "unitsIfNo": "C1 & C4",
+      "unitsIfUnsure": "C1 & C4"
+    },
+    {
+      "id": 20,
+      "question": "Do you have the authority to decide about the development plans and activities of the people you manage?",
+      "targetIfYes": 21,
+      "targetIfNo": 21,
+      "targetIfUnsure": 21,
+      "unitsIfYes": "C2, C5 & C10",
+      "unitsIfNo": "C1, C4 & C9",
+      "unitsIfUnsure": "C1, C4 & C9"
+    },
+    {
+      "id": 21,
+      "question": "Do you get involved in recruiting and selecting people?",
+      "targetIfYes": 22,
+      "targetIfNo": 23,
+      "targetIfUnsure": 23,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 22,
+      "question": "Do you have the authority to appoint people to posts/jobs?",
+      "targetIfYes": 23,
+      "targetIfNo": 23,
+      "targetIfUnsure": 23,
+      "unitsIfYes": "C8",
+      "unitsIfNo": "C7",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 23,
+      "question": "Do you delegate substantial programmes of work and projects to other managers?",
+      "targetIfYes": 26,
+      "targetIfNo": 24,
+      "targetIfUnsure": 24,
+      "unitsIfYes": "C14",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 24,
+      "question": "Do you allocate work to members of your team and manage their performance over a period of time?",
+      "targetIfYes": 26,
+      "targetIfNo": 25,
+      "targetIfUnsure": 25,
+      "unitsIfYes": "C13",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 25,
+      "question": "Do you supervise people's work on a day-to-day basis?",
+      "targetIfYes": 26,
+      "targetIfNo": 26,
+      "targetIfUnsure": 26,
+      "unitsIfYes": "C12",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 26,
+      "question": "Are you responsible for dealing with poor performance in your team?",
+      "targetIfYes": 27,
+      "targetIfNo": 28,
+      "targetIfUnsure": 28,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 27,
+      "question": "Do you have the authority to dismiss people from their posts/jobs?",
+      "targetIfYes": 28,
+      "targetIfNo": 28,
+      "targetIfUnsure": 28,
+      "unitsIfYes": "C16",
+      "unitsIfNo": "C15",
+      "unitsIfUnsure": "C15"
+    },
+    {
+      "id": 28,
+      "question": "Are you responsible for redeploying people and making redundancies if necessary?",
+      "targetIfYes": 29,
+      "targetIfNo": 29,
+      "targetIfUnsure": 29,
+      "unitsIfYes": "C17",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 29,
+      "question": "Are you responsible for managing information?",
+      "targetIfYes": 30,
+      "targetIfNo": 36,
+      "targetIfUnsure": 30,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 30,
+      "question": "Do you lead high-level meetings with people both inside and outside your organisation?",
+      "targetIfYes": 33,
+      "targetIfNo": 31,
+      "targetIfUnsure": 31,
+      "unitsIfYes": "D3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 31,
+      "question": "Do you lead and participate in a variety of different types of meetings?",
+      "targetIfYes": 33,
+      "targetIfNo": 32,
+      "targetIfUnsure": 32,
+      "unitsIfYes": "D2",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 32,
+      "question": "Do you sometimes hold meetings with members of your team or other colleagues?",
+      "targetIfYes": 35,
+      "targetIfNo": 33,
+      "targetIfUnsure": 35,
+      "unitsIfYes": "D1",
+      "unitsIfNo": "",
+      "unitsIfUnsure": "D1"
+    },
+    {
+      "id": 33,
+      "question": "Are you responsible for taking decisions which are critical to your organisation's performance?",
+      "targetIfYes": 35,
+      "targetIfNo": 34,
+      "targetIfUnsure": 34,
+      "unitsIfYes": "D6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 34,
+      "question": "Are you responsible for providing information so that others can take critical decisions?",
+      "targetIfYes": 35,
+      "targetIfNo": 35,
+      "targetIfUnsure": 35,
+      "unitsIfYes": "D4",
+      "unitsIfNo": "",
+      "unitsIfUnsure": "D4"
+    },
+    {
+      "id": 35,
+      "question": "Are you responsible for establishing and monitoring your organisation's information and communication systems?",
+      "targetIfYes": 36,
+      "targetIfNo": 36,
+      "targetIfUnsure": 36,
+      "unitsIfYes": "D5",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 36,
+      "question": "Do you have a specialist responsibility for managing the way in which the organisation uses energy resources?",
+      "targetIfYes": 37,
+      "targetIfNo": 48,
+      "targetIfUnsure": 48,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 37,
+      "question": "Do you have overall responsibility for the way in which the organisation (or your part of the organisation) manages energy?",
+      "targetIfYes": 38,
+      "targetIfNo": 43,
+      "targetIfUnsure": 38,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 38,
+      "question": "Do you have a specific responsibility for identifying the scope for improvement in the way the organisation manages energy?",
+      "targetIfYes": 39,
+      "targetIfNo": 39,
+      "targetIfUnsure": 39,
+      "unitsIfYes": "E1",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 39,
+      "question": "Do you have a specific responsibility for providing advice on the development and implementation of energy policies?",
+      "targetIfYes": 40,
+      "targetIfNo": 40,
+      "targetIfUnsure": 40,
+      "unitsIfYes": "E2",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 40,
+      "question": "Do you have a specific responsibility for promoting energy efficiency?",
+      "targetIfYes": 41,
+      "targetIfNo": 41,
+      "targetIfUnsure": 41,
+      "unitsIfYes": "E3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 41,
+      "question": "Do you have a specific responsibility for monitoring and evaluating energy efficiency?",
+      "targetIfYes": 42,
+      "targetIfNo": 42,
+      "targetIfUnsure": 42,
+      "unitsIfYes": "E4",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 42,
+      "question": "Do you have a specific responsibility for identifying improvements to energy efficiency?",
+      "targetIfYes": 47,
+      "targetIfNo": 47,
+      "targetIfUnsure": 47,
+      "unitsIfYes": "E5",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 43,
+      "question": "Do you provide advice and support to help others use energy more efficiently?",
+      "targetIfYes": 44,
+      "targetIfNo": 47,
+      "targetIfUnsure": 44,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 44,
+      "question": "Do you have a specific responsibility providing advice and support for the development of energy efficient practices?",
+      "targetIfYes": 45,
+      "targetIfNo": 45,
+      "targetIfUnsure": 45,
+      "unitsIfYes": "E6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 45,
+      "question": "Do you have a specific responsibility for providing advice and support for the development and implementation of systems to measure energy usage?",
+      "targetIfYes": 46,
+      "targetIfNo": 46,
+      "targetIfUnsure": 46,
+      "unitsIfYes": "E7",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 46,
+      "question": "Do you have a specific responsibility for providing advice and support for improving energy efficiency?",
+      "targetIfYes": 47,
+      "targetIfNo": 47,
+      "targetIfUnsure": 47,
+      "unitsIfYes": "E8",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 47,
+      "question": "Are you responsible for monitoring the market to identify the best source(s) of energy supplies?",
+      "targetIfYes": 48,
+      "targetIfNo": 48,
+      "targetIfUnsure": 48,
+      "unitsIfYes": "E9",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 48,
+      "question": "Are you a quality specialist with a specific brief for managing quality in the organisation?",
+      "targetIfYes": 49,
+      "targetIfNo": 55,
+      "targetIfUnsure": 55,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 49,
+      "question": "Are you responsible for providing specialist advice and support to help senior management develop and implement quality policies?",
+      "targetIfYes": 50,
+      "targetIfNo": 50,
+      "targetIfUnsure": 50,
+      "unitsIfYes": "F2",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 50,
+      "question": "Are you responsible for providing specialist advice and support to help managers develop and implement quality systems?",
+      "targetIfYes": 51,
+      "targetIfNo": 51,
+      "targetIfUnsure": 51,
+      "unitsIfYes": "F5",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 51,
+      "question": "Do you have a specific responsibility for promoting the benefits of quality in the organisation?",
+      "targetIfYes": 52,
+      "targetIfNo": 52,
+      "targetIfUnsure": 52,
+      "unitsIfYes": "F1",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 52,
+      "question": "Do you have a specific responsibility for managing continuous quality improvement in the organisation?",
+      "targetIfYes": 53,
+      "targetIfNo": 53,
+      "targetIfUnsure": 53,
+      "unitsIfYes": "F3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 53,
+      "question": "Are you responsible for implementing and maintaining the organisation's quality system?",
+      "targetIfYes": 54,
+      "targetIfNo": 54,
+      "targetIfUnsure": 54,
+      "unitsIfYes": "F4",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 54,
+      "question": "Do you have overall responsibility for monitoring the organisation's compliance with quality systems?",
+      "targetIfYes": 55,
+      "targetIfNo": 55,
+      "targetIfUnsure": 55,
+      "unitsIfYes": "F6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 55,
+      "question": "Do you carry out quality audits?",
+      "targetIfYes": 56,
+      "targetIfNo": 56,
+      "targetIfUnsure": 56,
+      "unitsIfYes": "F7",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 56,
+      "question": "Are you responsible for managing projects?",
+      "targetIfYes": 57,
+      "targetIfNo": 59,
+      "targetIfUnsure": 58,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 57,
+      "question": "Are you responsible for managing substantial, complex projects which are critical to the organisation's strategic objectives?",
+      "targetIfYes": 59,
+      "targetIfNo": 58,
+      "targetIfUnsure": 58,
+      "unitsIfYes": "G4, G5 & G6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 58,
+      "question": "Are you involved in managing projects which have operational or strategic implications for the organisation?",
+      "targetIfYes": 59,
+      "targetIfNo": 59,
+      "targetIfUnsure": 59,
+      "unitsIfYes": "G1, G2 & G3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 59,
+      "question": "Do you have a specific responsibility for managing the environmental performance of the organisation (or the part of the organisation in which you work)?",
+      "targetIfYes": 60,
+      "targetIfNo": 66,
+      "targetIfUnsure": 66,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 60,
+      "question": "Do you have a specific responsibility for evaluating environmental performance and recommending improvements?",
+      "targetIfYes": 61,
+      "targetIfNo": 61,
+      "targetIfUnsure": 61,
+      "unitsIfYes": "H1",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 61,
+      "question": "Do you have a specific responsibility for gaining support and commitment for improving environmental performance?",
+      "targetIfYes": 62,
+      "targetIfNo": 62,
+      "targetIfUnsure": 62,
+      "unitsIfYes": "H2",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 62,
+      "question": "Do you have a specific responsibility for planning and implementing activities to improve environmental performance?",
+      "targetIfYes": 63,
+      "targetIfNo": 63,
+      "targetIfUnsure": 63,
+      "unitsIfYes": "H3",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 63,
+      "question": "Do you have a specific responsibility for improving environmental performance during work activities?",
+      "targetIfYes": 64,
+      "targetIfNo": 64,
+      "targetIfUnsure": 64,
+      "unitsIfYes": "H4",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 64,
+      "question": "Are you responsible for developing and maintaining the environmental policy for the organisation (or the part of the organisation in which you work)?",
+      "targetIfYes": 66,
+      "targetIfNo": 65,
+      "targetIfUnsure": 65,
+      "unitsIfYes": "H5",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 65,
+      "question": "Do you make recommendations concerning the organisation's environmental policy?",
+      "targetIfYes": 66,
+      "targetIfNo": 66,
+      "targetIfUnsure": 66,
+      "unitsIfYes": "H6",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 66,
+      "question": "Are you involved in environmental auditing?",
+      "targetIfYes": 67,
+      "targetIfNo": 70,
+      "targetIfUnsure": 70,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 67,
+      "question": "Do you have overall responsibility for auditing the organisation's environmental performance?",
+      "targetIfYes": 68,
+      "targetIfNo": 68,
+      "targetIfUnsure": 68,
+      "unitsIfYes": "H7",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 68,
+      "question": "Do you carry out environmental audits?",
+      "targetIfYes": 69,
+      "targetIfNo": 69,
+      "targetIfUnsure": 69,
+      "unitsIfYes": "H8",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 69,
+      "question": "Are you responsible for reporting on the organisation's environmental performance?",
+      "targetIfYes": 71,
+      "targetIfNo": 71,
+      "targetIfUnsure": 71,
+      "unitsIfYes": "H9",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 70,
+      "question": "Congratulations! You have now completed the questionnaire.",
+      "targetIfYes": -1,
+      "targetIfNo": -1,
+      "targetIfUnsure": -1,
+      "unitsIfYes": "",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    },
+    {
+      "id": 71,
+      "question": "Are you responsible for identifying, implementing and monitoring action to improve environmental performance?",
+      "targetIfYes": 70,
+      "targetIfNo": 70,
+      "targetIfUnsure": 70,
+      "unitsIfYes": "H10",
+      "unitsIfNo": "",
+      "unitsIfUnsure": ""
+    }
+  ],
+  "units": [
+    {
+      "id": "A1",
+      "analysisText": "## A1. Maintain activities to meet requirements\n\n This unit is about ensuring that the activities for which you are responsible meet the requirements of your organisation and your customers. This involves agreeing, planning and monitoring work activities, maintaining suitable work conditions and continuously looking for ways to improve work activities.\n\n\n* Maintain work activities to meet requirements\n * Maintain healthy, safe and productive working conditions\n * Make recommendations for improvements to work activities\n \n"
+    },
+    {
+      "id": "A2",
+      "analysisText": "## A2. Manage activities to meet requirements\n\n This unit is about managing activities and conditions in the workplace to meet the requirements of your organisation and your customers. This involves agreeing the outputs required, planning work activities to deliver these outputs and monitoring these activities to make sure quality requirements have been met. It also involves maintaining healthy, safe and productive work environment and continuously looking for ways to improve the processes involved.\n\n\n* Implement plans to meet customer requirements\n * Maintain a healthy, safe and productive work environment\n * Ensure products and services meet quality requirements\n \n"
+    },
+    {
+      "id": "A3",
+      "analysisText": "## A3. Manage activities to meet customer requirements\n\n This unit is about managing activities and conditions in the workplace to meet your customers' requirements. This involves agreeing requirements with your customers, planning work activities and monitoring these activities to ensure that your customers' requirements have been met. It also involves maintaining a suitable work environment and continuously looking for ways to improve working conditions and processes.\n\n\n* Agree customer requirements\n * Plan activities to meet customer requirements\n * Maintain a healthy, safe and productive work environment\n * Ensure products and services meet customer requirements\n \n"
+    },
+    {
+      "id": "A4",
+      "analysisText": "## A4. Contribute to improvements at work\n\n This unit is about making significant contributions to improving team and organisational performance. It covers making improvements in your own area of responsibility as well as making recommendations for improvements to organisational plans.\n\n\n* Improve work activities\n * Recommend improvements to organisational plans\n \n"
+    },
+    {
+      "id": "A5",
+      "analysisText": "## A5. Manage change in organisational activities\n\n This unit is about improving the operational activities under your control and managing the necessary changes effectively. It covers identifying possible areas for improvement, considering the feasibility of proposed changes, planning the implementation of change, reaching agreement with those involved and finally implementing the planned changes. \n\n\n* Identify opportunities for improvements in activities\n * Evaluate proposed changes for benefits and advantages\n * Plan the implementation of change in activities\n * Agree the introduction of change\n * Implement changes in activities\n \n"
+    },
+    {
+      "id": "A6",
+      "analysisText": "## A6. Review external and internal operating environments\n\n This unit is about evaluating and improving the environment in which your organisation operates. This involves reviewing your organisation's external operating environment, evaluating your competitors and potential partners, developing good relationships with your organisation's stakeholders, and reviewing your organisation's structures and systems.\n\n\n* Analyse your organisation's external operating environment\n * Evaluate competitors and collaborators\n * Develop effective relationships with stakeholders\n * Review your organisation's structures and systems\n \n"
+    },
+    {
+      "id": "A7",
+      "analysisText": "## A7. Establish strategies to guide the work of your organisation\n\n This unit is about strategic planning. This involves helping to create a shared vision and mission for your organisation, helping to define its policies and values, formulating objectives and strategies, and gaining support for the strategies you are proposing.\n\n\n* Create a shared vision and mission to give purpose to your organisation\n * Define values and policies to guide the work of your organisation\n * Formulate objectives and strategies to guide your organisation\n * Gain support for organisational strategies\n \n"
+    },
+    {
+      "id": "A8",
+      "analysisText": "## A8. Evaluate and improve organisational performance\n\n This unit is about managing the strategic performance of your organisation and achieving necessary improvements. This involves developing measures and criteria to evaluate your organisation's performance, carrying out evaluations, and finding the reasons for success and failure in your organisation's strategy.\n\n\n* Develop measures and criteria to evaluate your organisation's performance\n * Evaluate your organisation's performance\n * Explain the causes of success and failure in organisational strategies\n \n"
+    },
+    {
+      "id": "B1",
+      "analysisText": "## B1. Support the efficient use of resources\n\n This unit is about efficiently managing the resources for which you are responsible. It covers recommending the resources you and your team need to meet your objectives. It also covers monitoring and controlling the way in which resources are used. \n\n\n* Make recommendations for the use of resources\n * Contribute to the control of resources\n \n"
+    },
+    {
+      "id": "B2",
+      "analysisText": "## B2. Manage the use of physical resources.\n\n This unit is about efficiently managing the physical resources for which you are responsible. It covers planning to use the resources you and your team need, obtaining those resources, ensuring the availability of suitable supplies, and monitoring the use of resources. \n\n\n* Plan the use of physical resources\n * Obtain physical resources\n * Ensure availability of supplies\n * Monitor the use of physical resources\n \n"
+    },
+    {
+      "id": "B3",
+      "analysisText": "## B3. Manage the use of financial resources\n\n This unit is about making sure you use financial resources in the most efficient way possible. It covers making recommendations for the use of financial resources and controlling expenditure against budgets.\n\n\n* Make recommendations for expenditure\n * Control expenditure against budgets\n \n"
+    },
+    {
+      "id": "B4",
+      "analysisText": "## B4. Determine the effective use of resources\n\n This unit is about the efficient management of resources across substantial programmes of work. It covers making proposals for expenditure, agreeing budgets and controlling activities so that they operate within budget.\n\n\n* Make proposals for expenditure on programmes of work\n * Agree budgets for programmes of work\n * Control expenditure and activities against budgets\n \n"
+    },
+    {
+      "id": "B5",
+      "analysisText": "## B5. Secure financial resources for your organisation's plans\n\n This unit is about managing your organisation's finance at a strategic level. It covers examining the way your organisation generates and allocates financial resources, evaluating proposals from others on expenditure, and obtaining the financial resources which your organisation needs.\n\n\n* Review the generation and allocation of financial resources\n * Evaluate proposals for expenditure\n * Obtain financial resources for your organisation's activities\n \n"
+    },
+    {
+      "id": "C1",
+      "analysisText": "## C1. Manage yourself\n\n This unit is about developing your own skills and managing your time so that you can meet your objectives. \n\n\n* Develop your own skills to improve your performance\n * Manage your time to meet your objectives\n \n"
+    },
+    {
+      "id": "C2",
+      "analysisText": "## C2. Develop your own resources\n\n This unit is about developing your own knowledge and skills and managing your time and other resources so that you can meet your objectives. \n\n\n* Develop yourself to improve your performance\n * Manage your own time and resources to meet your objectives\n \n"
+    },
+    {
+      "id": "C3",
+      "analysisText": "## C3. Enhance your own performance\n\n This unit is about continuously developing your own knowledge and skills and optimising your use of your time and other resources so that you can meet your objectives. \n\n\n* Continuously develop your own knowledge and skills\n * Optimise your own resources to meet your objectives\n \n"
+    },
+    {
+      "id": "C4",
+      "analysisText": "## C4. Create effective working relationships\n\n This unit is about creating and maintaining effective working relationships with your manager, team members and other colleagues within your organisation. It also involves minimising the potential for  conflict and dealing with conflicts when they arise. \n\n\n* Gain the trust and support of colleagues and team members\n * Gain the trust and support of your manager\n * Minimise conflict in your team\n \n"
+    },
+    {
+      "id": "C5",
+      "analysisText": "## C5. Develop productive working relationships\n\n This unit is about developing productive working relationships with your manager, team members and other colleagues in your organisation. It also involves reducing the opportunity for conflict to a minimum and dealing with conflicts when they arise. \n\n\n* Develop the trust and support of colleagues and team members\n * Develop the trust and support of your manager\n * Minimise interpersonal conflict\n \n"
+    },
+    {
+      "id": "C6",
+      "analysisText": "## C6. Enhance productive working relationships\n\n This unit is about enhancing productive working relationships with your manager and other colleagues in your organisation. It also involves providing guidance on your organisation's values and how to work in accordance with these values. \n\n\n* Enhance the trust and support of colleagues\n * Enhance the trust and support of those to whom you report\n * Provide guidance on values at work\n \n"
+    },
+    {
+      "id": "C7",
+      "analysisText": "## C7. Contribute to the selection of personnel for activities\n\n This unit is about making a significant contribution to selecting the people needed to carry out your work activities. It applies to both the external and internal recruitment of people for permanent, temporary or project work. It applies equally to paid or voluntary work, whether full-time or part-time.\n\n\n* Contribute to identifying personnel requirements\n * Contribute to selecting required personnel \n \n"
+    },
+    {
+      "id": "C8",
+      "analysisText": "## C8. Select personnel for activities\n\n This unit is about recruiting and selecting the people you need to carry out your work activities. It applies to both external and internal recruitment of people for permanent work, temporary work or project work. It applies equally to paid or voluntary work, whether full-time or part-time.\n\n\n* Identify personnel requirements \n * Select required personnel \n \n"
+    },
+    {
+      "id": "C9",
+      "analysisText": "## C9. Contribute to the development of teams and individuals\n\n This unit is about making a significant contribution to developing the knowledge and skills of individuals and teams to ensure that they produce the best possible results at work. It covers helping to identify people's development needs, planning to meet those needs, carrying out development activities and assessing members of your team to see how they have progressed.\n\n\n* Contribute to the identification of development needs\n * Contribute to planning the development of teams and individuals\n * Contribute to development activities\n * Contribute to the assessment of people against development objectives\n \n"
+    },
+    {
+      "id": "C10",
+      "analysisText": "## C10. Develop teams and individuals to enhance performance\n\n This unit is about developing your team's skills and knowledge to ensure the best possible results at work. It covers identifying the development needs of your team and its members, planning their development and using a variety of activities to improve team performance. It also covers your role in supporting individuals' learning, assessing teams and individuals against agreed development objectives, and continually improving development activities, policies and overall practice.\n\n\n* Identify the development needs of teams and individuals\n * Plan the development of teams and individuals\n * Develop teams to improve performance\n * Support individual learning and development\n * Assess the development of teams and individuals \n * Improve the development of teams and individuals\n \n"
+    },
+    {
+      "id": "C11",
+      "analysisText": "## C11. Develop management teams\n\n This unit is about improving the performance of your management team. This involves analysing the strengths and weaknesses of your team and its members, and then taking steps to improve your team's effectiveness.\n\n\n* Assess the effectiveness of management teams \n * Improve the effectiveness of management teams \n \n"
+    },
+    {
+      "id": "C12",
+      "analysisText": "## C12. Lead the work of teams and individuals to achieve their objectives\n\n This unit is about making best use of your team and its members so that they can achieve their objectives. It covers planning and assessing work, and providing feedback to team members.\n\n\n* Plan the work of teams and individuals \n * Assess the work of teams and individuals \n * Provide feedback to teams and individuals on their work \n \n"
+    },
+    {
+      "id": "C13",
+      "analysisText": "## C13. Manage the performance of teams and individuals\n\n This unit is about making the best use of your team and its members so that they can achieve your organisation's objectives. It covers allocating work, agreeing objectives, and setting out plans and methods of working. It also involves monitoring and evaluating your team's work and providing feedback to them on their performance.\n\n\n* Allocate work to teams and individuals \n * Agree objectives and work plans with teams and individuals \n * Assess the performance of teams and individuals \n * Provide feedback to teams and individuals on their performance \n \n"
+    },
+    {
+      "id": "C14",
+      "analysisText": "## C14. Delegate work to others\n\n This unit is about delegating responsibility and authority at a senior level. It involves giving responsibility and authority for substantial pieces of work - whole programmes of work, part programmes of work and important one-off tasks - to others. It also covers agreeing with them the targets they need to achieve, advising and supporting them in what they do, and promoting and protecting them and their planned activities.\n\n\n* Delegate responsibility and authority to others\n * Agree targets for delegated work \n * Provide advice and support for delegated work \n * Promote and protect delegated work and those who carry it out\n \n"
+    },
+    {
+      "id": "C15",
+      "analysisText": "## C15. Respond to poor performance in the team\n\n This unit is about helping to deal with team members whose performance is unsatisfactory. It covers identifying their problems and providing help to deal with them. It also covers contributing to disciplinary and grievance procedures when work is consistently below standard or if a team member has a serious complaint against your organisation or someone in it.\n\n\n* Help team members who have problems affecting their performance\n * Contribute to implementing disciplinary and grievance procedures\n \n"
+    },
+    {
+      "id": "C16",
+      "analysisText": "## C16. Deal with poor performance in your team\n\n This unit is about dealing with team members whose performance is unsatisfactory. It covers identifying their problems and providing support to help them deal with these. It covers contributing to disciplinary and grievance procedures when work is consistently below standard or if a team member has a serious complaint against your organisation or someone in it. It also covers dismissing team members if their performance or conduct means that no other course of action is acceptable.\n\n\n* Support team members who have problems affecting their performance\n * Implement disciplinary and grievance procedures\n * Dismiss team members whose performance is unsatisfactory\n \n"
+    },
+    {
+      "id": "C17",
+      "analysisText": "## C17. Redeploy personnel and make redundancies\n\n This unit is about transferring people to other posts and making staff redundant in response to developments or structural changes. It covers planning redeployment, implementing those plans and making personnel redundant.\n\n\n* Plan the redeployment of personnel\n * Redeploy personnel\n * Make personnel redundant\n \n"
+    },
+    {
+      "id": "D1",
+      "analysisText": "## D1. Manage information for action\n\n This unit is about the efficient management of information within your area of responsibility. It covers gathering the information you need, providing information and advice to others, and holding meetings. \n\n\n* Gather required information \n * Inform and advise others\n * Hold meetings\n \n"
+    },
+    {
+      "id": "D2",
+      "analysisText": "## D2. Facilitate meetings\n\n This unit is about facilitating meetings so that objectives can be achieved.  It covers leading meetings and making contributions to meetings.\n\n\n* Lead meetings\n * Make contributions to meetings\n \n"
+    },
+    {
+      "id": "D3",
+      "analysisText": "## D3. Chair and participate in meetings\n\n This unit is about chairing and contributing to meetings so that the objectives of the meetings can be achieved.\n\n\n* Chair meetings\n * Participate in meetings\n \n"
+    },
+    {
+      "id": "D4",
+      "analysisText": "## D4. Provide information to support decision making\n\n This unit is about providing information so that sound decisions can be taken. It covers obtaining relevant information, recording and storing this information, and analysing this information so that decisions can be taken. It also covers advising and informing other people.\n\n\n* Obtain information for decision making\n * Record and store information\n * Analyse information to support decision making\n * Advise and inform others \n \n"
+    },
+    {
+      "id": "D5",
+      "analysisText": "## D5. Establish information management and communication systems\n\n This unit is about setting up effective communications and information management systems in your organisation. This involves identifying the information and communication needs of your organisation, selecting information management and communications systems which meet those needs, setting these systems up and finally monitoring these systems to ensure their effectiveness.\n\n\n* Identify information and communication requirements\n * Select information management and communication systems\n * Implement information management and communication systems\n * Monitor information management and communications systems \n \n"
+    },
+    {
+      "id": "D6",
+      "analysisText": "## D6. Use information to take critical decisions\n\n This unit is about using information so that you can take critical decisions effectively. It covers obtaining relevant information, analysing this information, and taking decisions which are critical to your organisation's performance. It also covers advising and informing other people.\n\n\n* Obtain the information needed to take critical decisions\n * Analyse information for decision making\n * Take critical decisions\n * Advise and inform others \n \n"
+    },
+    {
+      "id": "E1",
+      "analysisText": "## E1. Identify the scope for improvement in the way the organisation manages energy\n\n This unit is about evaluating how the organisation manages energy and suggesting possible areas for improvement.\n\n\n* Audit the organisation's performance in the way it manages energy\n * Identify improvements to the way the organisation manages energy\n \n"
+    },
+    {
+      "id": "E2",
+      "analysisText": "## E2. Provide advice on the development and implementation of energy policies\n\n This unit is about advising senior management on policies for the use of energy and on the strategies needed to implement these policies.\n\n\n* Provide advice on the development of policies for the use of energy\n * Recommend strategies to implement energy policies\n \n"
+    },
+    {
+      "id": "E3",
+      "analysisText": "## E3. Promote energy efficiency\n\n This unit is about encouraging a culture of energy efficiency within the organisation and promoting the organisation's achievements in energy efficiency to outside audiences.\n\n\n* Promote energy efficiency throughout the organisation\n * Promote the organisation's achievements in energy efficiency \n \n"
+    },
+    {
+      "id": "E4",
+      "analysisText": "## E4. Monitor and evaluate energy efficiency\n\n This unit is about monitoring and evaluating the organisation's performance in energy efficiency against its own declared policy and against current best practice. It covers setting up systems to monitor energy usage, collecting, analysing and recording information on energy usage, and assessing how the organisation is performing in terms of energy efficiency.\n\n\n* Establish systems and processes to monitor and evaluate energy usage\n * Obtain, analyse and record information on energy efficiency performance\n * Evaluate the organisation's energy efficiency performance\n \n"
+    },
+    {
+      "id": "E5",
+      "analysisText": "## E5. Identify improvements to energy efficiency\n\n This unit is about helping the organisation improve its energy efficiency. It covers both identifying opportunities for improvement and making appropriate recommendations.\n\n\n* Identify opportunities to improve energy efficiency\n * Recommend improvements to energy efficiency \n \n"
+    },
+    {
+      "id": "E6",
+      "analysisText": "## E6. Provide advice and support for the development of energy efficient practices\n\n This unit is about helping the organisation develop energy efficient practices. It covers supporting the development of a culture of energy awareness and advising people in the organisation on energy efficient practices.\n\n\n* Support the development of a culture of energy awareness\n * Provide advice and support for energy efficient practices\n \n"
+    },
+    {
+      "id": "E7",
+      "analysisText": "## E7. Provide advice and support for the development and implementation of systems to measure energy usage\n\n This unit is about helping the organisation develop and implement systems to measure energy usage. It covers advising people about appropriate systems, helping people gather and use the information from these systems and advising them on how to respond to trends and developments in energy usage.\n\n\n* Provide support for the development of systems to measure energy usage\n * Provide support for the collection, analysis and recording of information on energy usage\n * Provide advice on trends and developments in energy usage\n \n"
+    },
+    {
+      "id": "E8",
+      "analysisText": "## E8. Provide advice and support for improving energy efficiency\n\n This unit is about helping teams and individuals to become more efficient in the ways they use energy. It covers getting them involved in energy efficiency activities, helping them to identify the knowledge and skills they need and helping them to develop these knowledge and skills.\n\n\n* Encourage involvement in energy efficiency activities\n * Provide advice on the competences needed to use energy efficiently\n * Provide advice on the training needed to use energy efficiently\n \n"
+    },
+    {
+      "id": "E9",
+      "analysisText": "## E9. Determine conditions in the market for supplies\n\n This unit is about the manager's responsibility to analyse the energy supply market to establish how their own organisation is positioned in the marketplace. It requires the analysis of trends and developments affecting the energy market and changes which are likely to impact upon it including beneficial developments which affect both supplies and sources. One vital aspect of the manager's performance is to analyse the competitiveness of different sources of energy supply. \n\n\n* Establish the organisation's position in the market\n * Identify market changes likely to affect supplies\n * Determine the competitiveness of supplies from the market\n * Identify beneficial developments relating to supplies and sources\n \n"
+    },
+    {
+      "id": "F1",
+      "analysisText": "## F1. Promote the importance and benefits of quality\n\n This unit is about promoting the importance and benefits of quality throughout the organisation and its customer and supplier networks. It covers promoting the importance of quality to those who set the organisation's policies and strategies. It also covers publicising the benefits of quality and the organisation's quality achievements to audiences inside and outside the organisation.\n\n\n* Promote the importance of quality in the organisation's strategy\n * Promote quality throughout the organisation and its customer and supplier networks\n \n"
+    },
+    {
+      "id": "F2",
+      "analysisText": "## F2. Provide advice and support for the development and implementation of quality policies\n\n This unit is about helping organisations to define quality policies and develop strategies to implement these policies throughout the organisation and its customer and supplier networks.\n\n\n* Provide advice and support for the development of quality policies\n * Provide advice and support for the development of strategies to implement quality policies\n \n"
+    },
+    {
+      "id": "F3",
+      "analysisText": "## F3. Manage continuous quality improvement\n\n This unit is about ensuring there is continuous quality improvement throughout the organisation. It covers the development of systems to evaluate organisational performance and promoting continuous quality improvements in the organisation's products, services and processes.\n\n\n* Develop and implement systems to monitor and evaluate organisational performance\n * Promote continuous quality improvement for products, services and processes\n \n"
+    },
+    {
+      "id": "F4",
+      "analysisText": "## F4. Implement quality assurance systems\n\n This unit is about ensuring that your organisation's products and services continuously meet the standard required by your customers. It covers setting up quality assurance systems, assuring quality by making sure these systems operate effectively and making recommendations for improvements to quality assurance systems.\n\n\n* Establish quality assurance systems\n * Maintain quality assurance systems\n * Recommend improvements to quality assurance systems\n \n"
+    },
+    {
+      "id": "F5",
+      "analysisText": "## F5. Provide advice and support for the development and implementation of quality systems\n\n This unit is about helping organisations to develop and manage the systems they require to assure quality. It covers the support you give in evaluating current working environments and processes, and in developing plans to improve quality systems. It also covers your help in developing performance measuring systems and collecting and analysing information about the organisation's quality performance.\n\n\n* Provide advice and support for the assessment of processes and working environments\n * Provide advice and support for the development of plans to improve quality systems\n * Provide advice and support for the development of measurement systems\n * Provide advice and support for the collection, analysis and documentation of information\n \n"
+    },
+    {
+      "id": "F6",
+      "analysisText": "## F6. Monitor compliance with quality systems\n\n This unit is about ensuring that all the processes of the organisation comply with quality systems. It covers planning to audit quality systems, implementing this plan and providing a report on the organisation's overall compliance with its quality systems.\n\n\n* Plan to audit compliance with quality systems\n * Implement the audit plan\n * Report on compliance with quality systems\n \n"
+    },
+    {
+      "id": "F7",
+      "analysisText": "## F7. Carry out quality audits\n\n This unit is about assessing the extent to which individuals and teams either within your organisation or in other organisations comply with agreed quality systems and procedures. It covers carrying out audits and reporting the results.\n\n\n* Audit compliance with quality systems\n * Follow up quality audits\n \n"
+    },
+    {
+      "id": "G1",
+      "analysisText": "## G1. Contribute to project planning and preparation\n\n This unit is about helping higher level managers to plan and set up standard and complex projects which have operational or strategic implications for the project's sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Clarify the project's scope and definition \n * Provide plans to achieve the project's goals\n * Contribute to project preparation\n \n"
+    },
+    {
+      "id": "G2",
+      "analysisText": "## G2. Co-ordinate the running of projects\n\n This unit is about co-ordinating the work of standard and complex projects which have operational or strategic implications for the sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Support the project team\n * Co-ordinate activities, resources and plans \n * Keep stakeholders informed of the project's progress \n \n"
+    },
+    {
+      "id": "G3",
+      "analysisText": "## G3. Contribute to project closure\n\n This unit is about helping to complete standard and complex projects which have operational or strategic implications for the sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Complete project activities\n * Contribute to the evaluation of project planning and implementation\n \n"
+    },
+    {
+      "id": "G4",
+      "analysisText": "## G4. Plan and prepare strategic projects\n\n This unit is about planning and setting up substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  Project sponsors may be internal or external to your organisation.\n\n\n* Agree the project's scope and definition with the sponsor\n * Develop plans to achieve the project's goals\n * Establish the project's resourcing and control methods\n \n"
+    },
+    {
+      "id": "G5",
+      "analysisText": "## G5. Manage the running of strategic projects\n\n This unit is about managing the work of substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  Project sponsors may be internal or external to your organisation.\n\n\n* Lead the project team\n * Monitor and adjust activities, resources and plans \n * Develop solutions to project problems\n * Maintain communication with project stakeholders \n \n"
+    },
+    {
+      "id": "G6",
+      "analysisText": "## G6. Complete strategic projects\n\n This unit is about completing substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  The project sponsor may be internal or external to your organisation.\n\n\n* Ensure the completion of project activities\n * Evaluate the effectiveness of project planning and implementation\n \n"
+    },
+    {
+      "id": "H1",
+      "analysisText": "## H1. Evaluate environmental performance and recommend improvements\n\n This unit is about evaluating the environmental performance of an organisation or parts of an organisation (e.g. departments, work teams). The unit also covers recommending improvements to environmental performance.\n\n\n* Identify and evaluate organisational activities which have significant environmental effects and risks.\n *  Identify and evaluate potential improvements to environmental performance.\n *  Recommend improvements to environmental performance\n \n"
+    },
+    {
+      "id": "H2",
+      "analysisText": "## H2. Gain support and commitment for improving environmental performance\n\n This unit is about gaining support for improving the environmental performance. This is an important part of environmental management and involves effective communication with interested parties such as colleagues, managers, customers and suppliers.\n\n\n* Communicate and promote the benefits of improved environmental performance\n * Advise and support individuals and teams on improvements to environmental performance\n * Agree commitment for improving environmental performance\n \n"
+    },
+    {
+      "id": "H3",
+      "analysisText": "## H3. Plan and implement activities to improve environmental performance\n\n This unit covers planning and implementing activities to improve environmental performance. It also also covers monitoring and evaluating implementation.\n\n\n*  Plan activities to improve environmental performance\n *  Implement plans to improve environmental performance\n *  Monitor and evaluate the effectiveness of implementation\n \n"
+    },
+    {
+      "id": "H4",
+      "analysisText": "## H4. Contribute to improving environmental performance during work activities\n\n This unit describes the contribution you can make to improving environmental performance during your work. It relates to the on-going work activities for which you are responsible.\n\n\n* Maintain environmental performance during work activities\n * Make changes to work activities which improve environmental performance\n \n"
+    },
+    {
+      "id": "H5",
+      "analysisText": "## H5. Develop and maintain an environmental policy\n\n This unit is about developing an environmental policy which is a statement of commitment to improving environmental performance. The unit covers reviewing existing policies within the organisation, identifying the environmental impacts of existing policies, liasing with interested parties, and the development of an integrated policy relating to environmental performance. An environmental policy is designed to manage and improve the environmental performance of the organisation, and may be a component of another organisational policy. The policy may be a new policy or an existing policy that has been revised.\n\n\n* Review and evaluate the environmental impacts of the organisation's existing policies\n * Produce an environmental policy\n * Communicate an environmental policy\n \n"
+    },
+    {
+      "id": "H6",
+      "analysisText": "## H6. Evaluate, and make recommendations concerning, an environmental policy\n\n This unit is about contributing to the development of an environmental policy. An environmental policy is a written statement of commitment to improving environmental performance. This unit covers evaluating an environmental policy, liasing with interested parties and making recommendations concerning an environmental policy.\n\n\n* Evaluate an environmental policy\n * Make recommendations concerning an environmental policy\n \n"
+    },
+    {
+      "id": "H7",
+      "analysisText": "## H7. Plan, monitor and support auditing of environmental performance\n\n This unit is about setting up and supporting an audit of the organisation by another individual or team of individuals. The unit does not cover carrying out the audit, which is described in a separate unit (unit H8). The unit covers identifying the aspects of environmental performance to be audited, developing an audit specification, agreeing the specification with auditors and monitoring/supporting the work of the auditor(s). An audit is defined as the monitoring and evaluation of performance against specific pre-determined targets or indicators. Auditing will be carried out at defined time intervals or in response to specific external factors (e.g. system failures etc.). Audits may be compliance audits or procedural audits.\n\n\n* Plan and specify auditing of environmental performance\n * Negotiate and agree the specification for auditing environmental performance\n * Monitor and support the auditing of environmental performance\n \n"
+    },
+    {
+      "id": "H8",
+      "analysisText": "## H8. Audit environmental performance\n\n  This unit is about auditing environmental performance. It covers liaison with those commissioning the audit, evaluation of environmental aspects of the organisation's activities, reporting the results of the audit, and making recommendations for future action. An audit is defined as the monitoring and evaluation of performance against specific pre-determined targets or indicators. Auditing will be carried out at defined time intervals or in response to specific external factors (system failures etc.). Audits may be compliance audits or procedural audits.\n\n\n* Prepare to audit environmental performance\n * Carry out auditing in accordance with an agreed specification\n * Make recommendations based on the results of the audit\n \n"
+    },
+    {
+      "id": "H9",
+      "analysisText": "## H9. Report environmental performance to interested parties\n\n This unit is about reporting environmental performance to interested parties. Interested parties are defined as all individuals or groups concerned with or affected by the environmental performance of the organisation. They may include: staff of the organisation, statutory bodies, regulators, customers, suppliers, shareholders, environmental organisations, the financial community and the local community .\n\n\n* Produce reports on environmental performance\n * Disseminate reports on environmental performance to interested parties\n \n"
+    },
+    {
+      "id": "H10",
+      "analysisText": "## H10. Identify, implement and monitor action to improve environmental performance\n\n This unit is about taking action to improve environmental performance within an organisation. It focuses on a less formal route to improving environmental performance than other environmental management units.\n\n\n* Identify the scope for improving environmental performance\n * Implement and monitor action to maintain and improve environmental performance\n \n"
+    }
+  ]
+}
