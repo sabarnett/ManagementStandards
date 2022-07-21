@@ -28,7 +28,7 @@ struct ResultsQACard: View {
 
             ResultTitle(titleText: "Selected Units")
 
-            // TODO: List of units and their descriptions
+            // TODO: List of units and their descriptions.
             Text("List of units added")
             Spacer()
         }
