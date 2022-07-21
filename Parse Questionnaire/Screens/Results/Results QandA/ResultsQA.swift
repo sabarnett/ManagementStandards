@@ -12,7 +12,11 @@ struct ResultsQA: View {
 
     var body: some View {
         VStack {
-            Text("Questions and Answers")
+            TabView {
+                ForEach(review.QA) { q in
+                    ResultsQACard(qa: q, units: review.units)
+                }
+            }.tabViewStyle(.page)
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {

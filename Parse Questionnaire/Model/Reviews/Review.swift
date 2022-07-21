@@ -23,9 +23,9 @@ struct Review: Codable, Identifiable {
         title: "Dummy Review",
         description: "This was a dummy review created for testing purposes. It contains a limited number of responses and units.",
         QA: [
-            QandA(id: 1, question: "Question 1", Answer: "Yes", units: "A1, A2, A3"),
-            QandA(id: 2, question: "Question 2", Answer: "No", units: ""),
-            QandA(id: 3, question: "Question 3", Answer: "Unsure", units: "A1, A3")
+            QandA(id: 1, question: "Question 1", answer: "Yes", units: "A1, A2, A3"),
+            QandA(id: 2, question: "Question 2", answer: "No", units: ""),
+            QandA(id: 3, question: "Question 3", answer: "Unsure", units: "A1, A3")
         ],
         units: [
             Unit(id: "A1", analysisText: "This is the **analysis** text for unit __A1__"),
@@ -37,7 +37,7 @@ struct Review: Codable, Identifiable {
 struct QandA: Codable, Identifiable {
     var id: Int                 // Question Number
     var question: String
-    var Answer: String
+    var answer: String
     var units: String
 }
 
