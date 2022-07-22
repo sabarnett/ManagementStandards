@@ -11,6 +11,8 @@ struct AccountView: View {
     
     var body: some View {
         VStack {
+            PageTitleView(title: "Your Details")
+            
             Text("Account View")
             Text("Account View")
             Text("Account View")
@@ -18,9 +20,7 @@ struct AccountView: View {
             Text("Account View")
             Text("Account View")
             Text("Account View")
-            Text("Account View")
-            Text("Account View")
-            Text("Account View")
+            Spacer()
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {

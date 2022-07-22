@@ -17,7 +17,7 @@ struct QuestionnaireView: View {
                     BackgroundView()
                     
                 VStack(alignment: .leading) {
-                    PageTitleView()
+                    QuestionnaireTitleView()
                         .padding(.horizontal)
                     
                     VStack(alignment: .center) {

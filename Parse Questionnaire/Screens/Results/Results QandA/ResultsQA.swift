@@ -12,6 +12,8 @@ struct ResultsQA: View {
 
     var body: some View {
         VStack {
+            PageTitleView(title: "Q and A")
+            
             TabView {
                 ForEach(review.QA) { q in
                     ResultsQACard(qa: q, units: review.units)

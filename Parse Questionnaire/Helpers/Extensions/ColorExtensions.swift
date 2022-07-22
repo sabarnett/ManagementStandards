@@ -21,4 +21,6 @@ extension Color {
     
     static var backgroundStart: Color = Color("backgroundStart")
     static var backgroundEnd: Color = Color("backgroundEnd")
+    
+    static var titleColor: Color = Color("titleColor")
 }

@@ -39,6 +39,15 @@ struct QandA: Codable, Identifiable {
     var question: String
     var answer: String
     var units: String
+    
+    func unitText(unitText: [Unit]) -> [Unit] {
+        let unitList = units.split(separator: ",")
+        let result = unitList.map({ unit -> Unit in
+            let trimmedUnit = unit.trimmingCharacters(in: CharacterSet([" "]))
+            return unitText.first(where: { $0.id == trimmedUnit })!
+        })
+        return result
+    }
 }
 
 extension Review {

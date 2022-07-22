@@ -6,31 +6,23 @@
 import SwiftUI
 
 struct PageTitleView: View {
+    
+    var title: String
+    
     var body: some View {
         HStack {
-            Image("TickCross")
-                .resizable()
-                .frame(width: 60, height: 70, alignment: .center)
-            Text("Management\nStandards")
-                .font(.system(size: 28,
-                              weight: .bold,
-                              design: .default))
-                .italic()
-                .foregroundColor(.primary)
-                .multilineTextAlignment(.leading)
-                .padding()
+            Text(title)
+                .font(.title)
+                .fontWeight(.semibold)
+                .foregroundColor(Color.titleColor)
+                .padding(15)
+            Spacer()
         }
     }
 }
 
-struct PageTitle_Previews: PreviewProvider {
+struct PageTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            PageTitleView()
-                .previewLayout(.sizeThatFits)
-            PageTitleView()
-                .previewLayout(.sizeThatFits)
-                .preferredColorScheme(.dark)
-        }
+        PageTitleView(title: "Hello World")
     }
 }

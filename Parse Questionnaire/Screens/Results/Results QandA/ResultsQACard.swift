@@ -28,8 +28,9 @@ struct ResultsQACard: View {
 
             ResultTitle(titleText: "Selected Units")
 
-            // TODO: List of units and their descriptions.
-            Text("List of units added")
+            List(qa.unitText(unitText: units)) { datum in
+                ResultUnitsCell(unit: datum)
+            }.listStyle(.plain)
             Spacer()
         }
         .padding(15)
@@ -55,7 +56,7 @@ struct ResultTitle: View {
                 Rectangle()
                     .frame(height: 1)
             }
-            .foregroundColor(Color.buttonBackground)
+            .foregroundColor(Color.titleColor)
             Spacer()
         }
     }

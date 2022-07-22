@@ -21,6 +21,7 @@ struct ResultUnitsView: View {
                     Text(review.createdDateFormatted)
                         .font(.caption)
                 }
+                .foregroundColor(Color.titleColor)
                 .padding(.horizontal, 15)
                 Spacer()
             }

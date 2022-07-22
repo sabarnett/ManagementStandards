@@ -12,13 +12,7 @@ struct AnalysisView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Reviews")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding(15)
-                Spacer()
-            }
+            PageTitleView(title: "Reviews")
             
             if viewModel.reviewCount == 0 {
                 Spacer()
