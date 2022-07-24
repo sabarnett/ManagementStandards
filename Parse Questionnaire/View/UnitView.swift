@@ -19,7 +19,7 @@ struct UnitView: View {
                     .font(.title)
                 
                 ScrollView(showsIndicators: false) {
-                    Text(unit.analysisText)
+                    MarkdownView(markdown: unit.analysisText)
                         .multilineTextAlignment(.leading)
                         .font(.body)
                 }

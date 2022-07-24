@@ -20,9 +20,8 @@ struct ResultUnitsCell: View {
                 .foregroundColor(Color.buttonForeground)
                 .clipShape(Circle())
             
-                Text(unit.analysisText)
+            MarkdownView(markdown: unit.analysisText)
                     .font(.caption)
-                    .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
         }
