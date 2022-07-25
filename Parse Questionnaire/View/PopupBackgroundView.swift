@@ -6,11 +6,9 @@
 import SwiftUI
 
 
-struct BackgroundView: View {
+struct PopupBackgroundView: View {
     var body: some View {
-        LinearGradient(
-            colors: [Color.backgroundStart, Color.backgroundEnd],
-            startPoint: .top, endPoint: .bottom)
+        Color.secondary.opacity(0.4)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
     }
@@ -18,6 +16,6 @@ struct BackgroundView: View {
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView()
+        PopupBackgroundView()
     }
 }

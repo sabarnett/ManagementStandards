@@ -12,7 +12,7 @@ struct UnitView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView()
+            PopupBackgroundView()
             
             VStack(alignment: .leading, spacing: 15) {
                 Text("Unit \(unit.id)")

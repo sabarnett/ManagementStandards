@@ -11,45 +11,50 @@ struct QuestionnaireView: View {
     @State private var showAnalysis: Bool = false
     
     var body: some View {
-            NavigationView
-            {
-                ZStack {
-                    BackgroundView()
+        ZStack {
+            PopupBackgroundView()
+            
+            VStack(alignment: .leading) {
+                QuestionnaireTitleView()
+                    .padding(.horizontal)
+                Spacer()
+                
+                VStack(alignment: .center) {
+                    Spacer()
                     
-                VStack(alignment: .leading) {
-                    QuestionnaireTitleView()
-                        .padding(.horizontal)
+                    QuestionPromptView(question: questions.currentQuestion)
+                        .padding()
                     
-                    VStack(alignment: .center) {
-                        Spacer()
-                        
-                        QuestionPromptView(question: questions.currentQuestion)
-                            .padding()
-                        
-                        Spacer()
-                        
-                        if questions.isComplete {
-                            NavigationLink(destination: ResultUnitsView(review: Review.dummyData),
-                                           isActive: $showAnalysis,
-                                           label: {
-                                Button(action: {
-                                    showAnalysis = true
-                                }, label: {
-                                    APPButtonText(caption: "Begin Analysis")
-                                }
-                                )
-                            })
-                            
-                        } else {
-                            AnswerButtonsView() {
-                                button in
-                                questions.addAnswer(buttonPress: button)
+                    Spacer()
+                    
+                    if questions.isComplete {
+                        NavigationLink(destination: ResultUnitsView(review: Review.dummyData),
+                                       isActive: $showAnalysis,
+                                       label: {
+                            Button(action: {
+                                showAnalysis = true
+                            }, label: {
+                                APPButtonText(caption: "Begin Analysis")
                             }
-                        }
+                            )
+                        })
                         
-                        Spacer()
+                    } else {
+                        AnswerButtonsView() {
+                            button in
+                            questions.addAnswer(buttonPress: button)
+                        }
                     }
+                    
+                    Spacer()
                 }
+            }
+        }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                showAnalysis = true
+            } label: {
+                XDismissButton()
             }
         }
     }
