@@ -35,8 +35,7 @@ struct QuestionnaireView: View {
                                 showAnalysis = true
                             }, label: {
                                 APPButtonText(caption: "Begin Analysis")
-                            }
-                            )
+                            })
                         })
                         
                     } else {

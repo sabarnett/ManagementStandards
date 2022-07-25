@@ -17,6 +17,7 @@ struct UnitView: View {
             VStack(alignment: .leading, spacing: 15) {
                 Text("Unit \(unit.id)")
                     .font(.title)
+                    .foregroundColor(.titleColor)
                 
                 ScrollView(showsIndicators: false) {
                     MarkdownView(markdown: unit.analysisText)

@@ -21,7 +21,7 @@ struct QuestionPromptView: View {
         .background {
             Color(.systemGray5)
                 .cornerRadius(28)
-                .shadow(color: Color.secondary, radius: 4, x: 3, y: 3)
+//                .shadow(color: Color.secondary, radius: 4, x: 3, y: 3)
             }
     }
 }

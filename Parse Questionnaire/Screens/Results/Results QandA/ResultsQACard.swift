@@ -13,15 +13,15 @@ struct ResultsQACard: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                VStack(alignment: .center) {
-                    Text("Question \(qa.id)")
-                        .padding(.bottom, -2)
-                        .padding(.top, 5)
-                        .font(.title3)
-                    Rectangle()
-                        .frame(height: 1)
-                }
-                .foregroundColor(Color.titleColor)
+//                VStack(alignment: .center) {
+//                    Text("Question \(qa.id)")
+//                        .padding(.bottom, -2)
+//                        .padding(.top, 5)
+//                        .font(.title3)
+//                    Rectangle()
+//                        .frame(height: 1)
+//                }
+//                .foregroundColor(Color.titleColor)
                 
                 Text(qa.question)
                     .font(.body)
@@ -29,12 +29,13 @@ struct ResultsQACard: View {
                     .foregroundColor(.secondary)
                 
                 VStack(alignment: .center) {
-                    Rectangle()
-                        .frame(height: 1)
-                    Text("Answer: \(qa.answer)")
-                        .padding(.top, -2)
-                        .padding(.bottom, 5)
+                    Text("Your answer: \(qa.answer)")
+                        .frame(maxWidth: .infinity)
+                        .background(Color.titleColor)
+                        .foregroundColor(.black)
+                        .padding(.vertical, 5)
                         .font(.title3)
+                        
                 }
                 .foregroundColor(Color.titleColor)
             }.background(Color.secondary.opacity(0.3))
