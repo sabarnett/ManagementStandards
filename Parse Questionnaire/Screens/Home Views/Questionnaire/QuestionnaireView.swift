@@ -32,19 +32,14 @@ struct QuestionnaireView: View {
                     Spacer()
                     
                     if questions.isComplete {
-                        NavigationLink(destination: ResultUnitsView(review: Review.dummyData),
-                                       isActive: $showAnalysis,
-                                       label: {
-                            Button(action: {
-                                // Save the answers to the reviews list
-                                
-                                // Save the reviews list
-                                
-                                // Return to the caller so they can display the results
-                                showQuestionnaire = false
-                            }, label: {
-                                APPButtonText(caption: "Begin Analysis")
-                            })
+                        Button(action: {
+                            // Save the answers to the reviews list
+                            questions.saveReview(to: viewModel)
+                            
+                            // Return to the caller so they can display the results
+                            showQuestionnaire = false
+                        }, label: {
+                            APPButtonText(caption: "Begin Analysis")
                         })
                         
                     } else {

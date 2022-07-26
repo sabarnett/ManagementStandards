@@ -27,9 +27,13 @@ class HomeTabViewModel: ObservableObject {
         if let reviews = reviews { return reviews.count }
         return 0
     }
+    
     func  loadReviews() {
         reviews = Reviews.shared.get(forUser: loggedInUser)
         loadingReviews = false
     }
 
+    func saveReviews() {
+        Reviews.shared.save(reviews, forUser: loggedInUser)
+    }
 }

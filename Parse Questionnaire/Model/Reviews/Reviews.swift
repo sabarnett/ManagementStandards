@@ -16,4 +16,8 @@ class Reviews {
         // Else return the loaded reviews
         [Review.dummyData, Review.dummyData, Review.dummyData]
     }
+    
+    func save(_ reviews: [Review], forUser: String) {
+        // TODO: Persist the review list to disc
+    }
 }
