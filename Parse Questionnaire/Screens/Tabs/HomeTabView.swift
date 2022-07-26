@@ -26,7 +26,11 @@ struct HomeTabView: View {
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }.sheet(isPresented: $showQuestionnaire) {
-            QuestionnaireView()
+            QuestionnaireView(viewModel: viewModel, showQuestionnaire: $showQuestionnaire)
+                .onDisappear() {
+                    // They closed the questionnaire view
+                    print("Questionnaire has disappeared")
+                }
         }
     }
     
