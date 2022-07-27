@@ -9,6 +9,7 @@ enum QuestionnairePhase {
     case titles
     case questionnaire
     case save
+    case finished
 }
 
 struct QuestionnaireView: View {
@@ -17,7 +18,6 @@ struct QuestionnaireView: View {
     @Binding var showQuestionnaire: Bool
 
     @StateObject var questions = Questionnaire()
-    @State private var showAnalysis: Bool = false
     @State private var showWarning: Bool = false
     
     @State private var phase: QuestionnairePhase = .titles
@@ -35,9 +35,13 @@ struct QuestionnaireView: View {
                 QuestionPrompts(viewModel: viewModel, questions: questions, phase: $phase)
             } else if phase == .save {
                 // Finished - display the confirmation text and the begin analysis button
-                QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase) {
-                    showQuestionnaire = false
-                }
+                QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase)
+            }
+        }
+        .onChange(of: phase) {
+            newValue in
+            if newValue == .finished {
+                showQuestionnaire = false
             }
         }
         .overlay(alignment: .topTrailing) {
