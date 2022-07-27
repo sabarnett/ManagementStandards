@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80A25DA28917DAC0090D426 /* QuestionnaireTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25D928917DAC0090D426 /* QuestionnaireTitles.swift */; };
+		E80A25DC28917DCC0090D426 /* QuestionPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25DB28917DCC0090D426 /* QuestionPrompts.swift */; };
+		E80A25DE28917DD80090D426 /* QuestionnaireFinished.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25DD28917DD80090D426 /* QuestionnaireFinished.swift */; };
 		E816A3FA2884026500653A06 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816A3F92884026500653A06 /* BusyView.swift */; };
 		E816A3FD28840AE900653A06 /* ResultUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816A3FC28840AE900653A06 /* ResultUnitsCell.swift */; };
 		E81FDAD1285B7BE900150580 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81FDAD0285B7BE900150580 /* Launch Screen.storyboard */; };
@@ -51,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E80A25D928917DAC0090D426 /* QuestionnaireTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireTitles.swift; sourceTree = "<group>"; };
+		E80A25DB28917DCC0090D426 /* QuestionPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPrompts.swift; sourceTree = "<group>"; };
+		E80A25DD28917DD80090D426 /* QuestionnaireFinished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireFinished.swift; sourceTree = "<group>"; };
 		E816A3F92884026500653A06 /* BusyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyView.swift; sourceTree = "<group>"; };
 		E816A3FC28840AE900653A06 /* ResultUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUnitsCell.swift; sourceTree = "<group>"; };
 		E81FDAD0285B7BE900150580 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -106,6 +112,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80A25D828917D8C0090D426 /* QuestionnairePhases */ = {
+			isa = PBXGroup;
+			children = (
+				E80A25D928917DAC0090D426 /* QuestionnaireTitles.swift */,
+				E80A25DB28917DCC0090D426 /* QuestionPrompts.swift */,
+				E80A25DD28917DD80090D426 /* QuestionnaireFinished.swift */,
+			);
+			path = QuestionnairePhases;
+			sourceTree = "<group>";
+		};
+		E80A25DF28918B830090D426 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8947BD12843803900D47C7A /* QuestionPromptView.swift */,
+				E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */,
+				E88D391828423522009E90D9 /* AnswerButtonView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E816A3FB28840AC400653A06 /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,11 +270,10 @@
 		E88F6B21287DF0D100C279D0 /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
+				E80A25DF28918B830090D426 /* Helpers */,
+				E80A25D828917D8C0090D426 /* QuestionnairePhases */,
 				E88D391628423015009E90D9 /* Questionnaire.swift */,
 				E8261FE728411669005F84A3 /* QuestionnaireView.swift */,
-				E88D391828423522009E90D9 /* AnswerButtonView.swift */,
-				E8947BD12843803900D47C7A /* QuestionPromptView.swift */,
-				E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */,
 			);
 			path = Questionnaire;
 			sourceTree = "<group>";
@@ -430,6 +455,7 @@
 				E8C2183C2848E570003E2915 /* QuestionnaireTitleView.swift in Sources */,
 				E8BC752F288D52B000B1D8E7 /* MarkdownView.swift in Sources */,
 				E842E46F284CDA7E004B7B2B /* PopupBackgroundView.swift in Sources */,
+				E80A25DA28917DAC0090D426 /* QuestionnaireTitles.swift in Sources */,
 				E8D1B62428786E7E0029C173 /* SigninViewModel.swift in Sources */,
 				E8947BD028437ED300D47C7A /* ColorExtensions.swift in Sources */,
 				E8BF428F287481A400C53975 /* Auth.swift in Sources */,
@@ -443,6 +469,7 @@
 				E8BF428B28747BDD00C53975 /* User.swift in Sources */,
 				E816A3FD28840AE900653A06 /* ResultUnitsCell.swift in Sources */,
 				E8C867C92889827500FD0ADD /* ResultsQACard.swift in Sources */,
+				E80A25DC28917DCC0090D426 /* QuestionPrompts.swift in Sources */,
 				E84AE3212881F5370028011A /* Reviews.swift in Sources */,
 				E8FE37E128854862004B02A3 /* UnitView.swift in Sources */,
 				E8BB35152885860F00369316 /* XDismissButton.swift in Sources */,
@@ -455,6 +482,7 @@
 				E8947BD22843803900D47C7A /* QuestionPromptView.swift in Sources */,
 				E8261FFE28411748005F84A3 /* Unit.swift in Sources */,
 				E8C09CA2287ABE670052EF8B /* HomeTabViewModel.swift in Sources */,
+				E80A25DE28917DD80090D426 /* QuestionnaireFinished.swift in Sources */,
 				E8C268F12889770200400EAC /* ResultsReport.swift in Sources */,
 				E8261FF8284116F6005F84A3 /* QuestionnaireData.swift in Sources */,
 				E84AE31D2881ECD80028011A /* Review.swift in Sources */,

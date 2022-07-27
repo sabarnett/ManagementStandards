@@ -5,6 +5,12 @@
 
 import SwiftUI
 
+enum QuestionnairePhase {
+    case titles
+    case questionnaire
+    case save
+}
+
 struct QuestionnaireView: View {
     
     @ObservedObject var viewModel : HomeTabViewModel
@@ -14,65 +20,46 @@ struct QuestionnaireView: View {
     @State private var showAnalysis: Bool = false
     @State private var showWarning: Bool = false
     
+    @State private var phase: QuestionnairePhase = .titles
+    
+    
     var body: some View {
         ZStack {
             PopupBackgroundView()
-            
-            VStack(alignment: .leading) {
-                QuestionnaireTitleView()
-                    .padding(.horizontal)
-                Spacer()
-                
-                VStack(alignment: .center) {
-                    Spacer()
-                    
-                    QuestionPromptView(question: questions.currentQuestion)
-                        .padding()
-                    
-                    Spacer()
-                    
-                    if questions.isComplete {
-                        Button(action: {
-                            // Save the answers to the reviews list
-                            questions.saveReview(to: viewModel)
-                            
-                            // Return to the caller so they can display the results
-                            showQuestionnaire = false
-                        }, label: {
-                            APPButtonText(caption: "Begin Analysis")
-                        })
-                        
-                    } else {
-                        AnswerButtonsView() {
-                            button in
-                            questions.addAnswer(buttonPress: button)
-                        }
-                    }
-                    
-                    Spacer()
+    
+            if phase == .titles {
+                // Get the questionnaire title and the user notes
+                QuestionnaireTitles(viewModel: viewModel, questions: questions, phase: $phase)
+            } else if phase == .questionnaire {
+                // Display the questionnaire and gather results
+                QuestionPrompts(viewModel: viewModel, questions: questions, phase: $phase)
+            } else if phase == .save {
+                // Finished - display the confirmation text and the begin analysis button
+                QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase) {
+                    showQuestionnaire = false
                 }
             }
         }
         .overlay(alignment: .topTrailing) {
-            Button {
-                showWarning = true
-            } label: {
-                XDismissButton()
-            }
+            Button { showWarning = true } label: { XDismissButton() }
         }
         .alert(isPresented: $showWarning) {
-            Alert(
-                title: Text("Are you sure you want to cancel?"),
-                message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
-                primaryButton: .destructive(Text("Cancel")) {
-                    print("Questionnaire cancelled...")
-                    showQuestionnaire = false
-                },
-                secondaryButton: .default(Text("Continue")) {
-                    showWarning = false
-                }
-            )
+            AreYouSurePrompt()
         }
+    }
+    
+    fileprivate func AreYouSurePrompt() -> Alert {
+        return Alert(
+            title: Text("Are you sure you want to cancel?"),
+            message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
+            primaryButton: .destructive(Text("Cancel")) {
+                print("Questionnaire cancelled...")
+                showQuestionnaire = false
+            },
+            secondaryButton: .default(Text("Continue")) {
+                showWarning = false
+            }
+        )
     }
 }
 

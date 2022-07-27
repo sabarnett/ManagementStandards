@@ -8,6 +8,7 @@ import Foundation
 class Questionnaire: ObservableObject {
     
     @Published var questionnaireData: QuestionnaireData? = QuestionnaireLoader.load(forName: "ManagementStandards")
+    @Published var isComplete: Bool = false
     private var currentQuestionId = 1
     private var review: Review = Review(created: Date.now,
                                         title: "Sample Review",
@@ -44,11 +45,12 @@ class Questionnaire: ObservableObject {
         }
         
         review.QA.append(qa)
+        
+        isComplete = currentQuestion.targetIfNo == -1
+            && currentQuestion.targetIfYes == -1
+            && currentQuestion.targetIfUnsure == -1
+        
         objectWillChange.send()
-    }
-    
-    var isComplete : Bool {
-        currentQuestion.targetIfNo == -1 && currentQuestion.targetIfYes == -1 && currentQuestion.targetIfUnsure == -1
     }
     
     func saveReview(to viewModel: HomeTabViewModel) {
