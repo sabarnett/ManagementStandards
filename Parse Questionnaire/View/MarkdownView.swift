@@ -4,13 +4,16 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct MarkdownView: View {
     
     var markdown: String
     
-    var body: Text {
-        Text(markdownText(text: markdown))
+    var body: some View {
+        VStack {
+            Markdown(markdown)
+        }
     }
     
     func markdownText(text: String) -> LocalizedStringKey {
@@ -20,6 +23,6 @@ struct MarkdownView: View {
 
 struct MarkdownView_Previews: PreviewProvider {
     static var previews: some View {
-        MarkdownView(markdown: "**Hello** ~~World~~Steve")
+        MarkdownView(markdown: "## Hello\n\n* One\n* Two\n* Three\n\n World Steve")
     }
 }

@@ -33,6 +33,7 @@
 		E8947BCD284377E800D47C7A /* QuestionnaireLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8947BCC284377E800D47C7A /* QuestionnaireLoader.swift */; };
 		E8947BD028437ED300D47C7A /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8947BCF28437ED300D47C7A /* ColorExtensions.swift */; };
 		E8947BD22843803900D47C7A /* QuestionPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8947BD12843803900D47C7A /* QuestionPromptView.swift */; };
+		E8B19DC1289294F300339341 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E8B19DC0289294F300339341 /* MarkdownUI */; };
 		E8BB35152885860F00369316 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB35142885860F00369316 /* XDismissButton.swift */; };
 		E8BC752F288D52B000B1D8E7 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC752E288D52B000B1D8E7 /* MarkdownView.swift */; };
 		E8BF428B28747BDD00C53975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF428A28747BDD00C53975 /* User.swift */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B19DC1289294F300339341 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,10 +272,10 @@
 		E88F6B21287DF0D100C279D0 /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
-				E80A25DF28918B830090D426 /* Helpers */,
-				E80A25D828917D8C0090D426 /* QuestionnairePhases */,
 				E88D391628423015009E90D9 /* Questionnaire.swift */,
 				E8261FE728411669005F84A3 /* QuestionnaireView.swift */,
+				E80A25DF28918B830090D426 /* Helpers */,
+				E80A25D828917D8C0090D426 /* QuestionnairePhases */,
 			);
 			path = Questionnaire;
 			sourceTree = "<group>";
@@ -395,6 +397,9 @@
 			dependencies = (
 			);
 			name = "Parse Questionnaire";
+			packageProductDependencies = (
+				E8B19DC0289294F300339341 /* MarkdownUI */,
+			);
 			productName = "Parse Questionnaire";
 			productReference = E8261FE228411669005F84A3 /* Parse Questionnaire.app */;
 			productType = "com.apple.product-type.application";
@@ -423,6 +428,9 @@
 				Base,
 			);
 			mainGroup = E8261FD928411669005F84A3;
+			packageReferences = (
+				E8B19DBF289294F300339341 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+			);
 			productRefGroup = E8261FE328411669005F84A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -693,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8B19DBF289294F300339341 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8B19DC0289294F300339341 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8B19DBF289294F300339341 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8261FDA28411669005F84A3 /* Project object */;
 }
