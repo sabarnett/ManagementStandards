@@ -59,7 +59,9 @@ class Questionnaire: ObservableObject {
         for qa in review.QA {
             if !qa.units.isEmpty {
                 // Split the unit list, returning the trimmed unit number
-                let unitIds = qa.units.split(separator: "&")
+                //let unitIds = qa.units.split(separator: "&")
+                let unitIds = qa.units.components(separatedBy: CharacterSet(charactersIn: "&,"))
+
                 let trimmedUnitIds = unitIds.map() { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 unitList.formUnion(trimmedUnitIds)
             }

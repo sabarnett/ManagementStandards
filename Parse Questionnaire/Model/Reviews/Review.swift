@@ -28,9 +28,15 @@ struct Review: Codable, Identifiable {
             QandA(id: 3, question: "Question 3", answer: "Unsure", units: "A1, A3")
         ],
         units: [
-            Unit(id: "A1", analysisText: "This is the **analysis** text for unit __A1__"),
-            Unit(id: "A2", analysisText: "This is the analysis text for unit A2. This is the analysis text for unit A2. This is the analysis text for unit A2"),
-            Unit(id: "A3", analysisText: "This is the analysis text for unit A3. This is the analysis text for unit A3"),
+            Unit(id: "A1",
+                 title: "Unit A1 Title",
+                 analysisText: "This is the **analysis** text for unit __A1__"),
+            Unit(id: "A2",
+                 title: "Unit A2 Title",
+                 analysisText: "This is the analysis text for unit A2. This is the analysis text for unit A2. This is the analysis text for unit A2"),
+            Unit(id: "A3",
+                 title: "Unit A3 Title",
+                 analysisText: "This is the analysis text for unit A3. This is the analysis text for unit A3"),
         ])
 }
 
@@ -41,7 +47,9 @@ struct QandA: Codable, Identifiable {
     var units: String
     
     func unitText(unitText: [Unit]) -> [Unit] {
-        let unitList = units.split(separator: "&")
+        guard !units.isEmpty else { return [] }
+        
+        let unitList = units.components(separatedBy: CharacterSet(charactersIn: "&,"))
         let result = unitList.map({ unit -> Unit in
             let trimmedUnit = unit.trimmingCharacters(in: CharacterSet([" "]))
             return unitText.first(where: { $0.id == trimmedUnit })!

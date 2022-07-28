@@ -718,274 +718,342 @@
   "units": [
     {
       "id": "A1",
+      "title": "Maintain activities to meet requirements",
       "analysisText": "## A1. Maintain activities to meet requirements\n\n This unit is about ensuring that the activities for which you are responsible meet the requirements of your organisation and your customers. This involves agreeing, planning and monitoring work activities, maintaining suitable work conditions and continuously looking for ways to improve work activities.\n\n\n* Maintain work activities to meet requirements\n * Maintain healthy, safe and productive working conditions\n * Make recommendations for improvements to work activities\n \n"
     },
     {
       "id": "A2",
+      "title": "Manage activities to meet requirements",
       "analysisText": "## A2. Manage activities to meet requirements\n\n This unit is about managing activities and conditions in the workplace to meet the requirements of your organisation and your customers. This involves agreeing the outputs required, planning work activities to deliver these outputs and monitoring these activities to make sure quality requirements have been met. It also involves maintaining healthy, safe and productive work environment and continuously looking for ways to improve the processes involved.\n\n\n* Implement plans to meet customer requirements\n * Maintain a healthy, safe and productive work environment\n * Ensure products and services meet quality requirements\n \n"
     },
     {
       "id": "A3",
+      "title": "Manage activities to meet customer requirements",
       "analysisText": "## A3. Manage activities to meet customer requirements\n\n This unit is about managing activities and conditions in the workplace to meet your customers' requirements. This involves agreeing requirements with your customers, planning work activities and monitoring these activities to ensure that your customers' requirements have been met. It also involves maintaining a suitable work environment and continuously looking for ways to improve working conditions and processes.\n\n\n* Agree customer requirements\n * Plan activities to meet customer requirements\n * Maintain a healthy, safe and productive work environment\n * Ensure products and services meet customer requirements\n \n"
     },
     {
       "id": "A4",
+      "title": "Contribute to improvements at work",
       "analysisText": "## A4. Contribute to improvements at work\n\n This unit is about making significant contributions to improving team and organisational performance. It covers making improvements in your own area of responsibility as well as making recommendations for improvements to organisational plans.\n\n\n* Improve work activities\n * Recommend improvements to organisational plans\n \n"
     },
     {
       "id": "A5",
+      "title": "Manage change in organisational activities",
       "analysisText": "## A5. Manage change in organisational activities\n\n This unit is about improving the operational activities under your control and managing the necessary changes effectively. It covers identifying possible areas for improvement, considering the feasibility of proposed changes, planning the implementation of change, reaching agreement with those involved and finally implementing the planned changes. \n\n\n* Identify opportunities for improvements in activities\n * Evaluate proposed changes for benefits and advantages\n * Plan the implementation of change in activities\n * Agree the introduction of change\n * Implement changes in activities\n \n"
     },
     {
       "id": "A6",
+      "title": "Review external and internal operating environments",
       "analysisText": "## A6. Review external and internal operating environments\n\n This unit is about evaluating and improving the environment in which your organisation operates. This involves reviewing your organisation's external operating environment, evaluating your competitors and potential partners, developing good relationships with your organisation's stakeholders, and reviewing your organisation's structures and systems.\n\n\n* Analyse your organisation's external operating environment\n * Evaluate competitors and collaborators\n * Develop effective relationships with stakeholders\n * Review your organisation's structures and systems\n \n"
     },
     {
       "id": "A7",
+      "title": "Establish strategies to guide the work of your organisation",
       "analysisText": "## A7. Establish strategies to guide the work of your organisation\n\n This unit is about strategic planning. This involves helping to create a shared vision and mission for your organisation, helping to define its policies and values, formulating objectives and strategies, and gaining support for the strategies you are proposing.\n\n\n* Create a shared vision and mission to give purpose to your organisation\n * Define values and policies to guide the work of your organisation\n * Formulate objectives and strategies to guide your organisation\n * Gain support for organisational strategies\n \n"
     },
     {
       "id": "A8",
+      "title": "Evaluate and improve organisational performance",
       "analysisText": "## A8. Evaluate and improve organisational performance\n\n This unit is about managing the strategic performance of your organisation and achieving necessary improvements. This involves developing measures and criteria to evaluate your organisation's performance, carrying out evaluations, and finding the reasons for success and failure in your organisation's strategy.\n\n\n* Develop measures and criteria to evaluate your organisation's performance\n * Evaluate your organisation's performance\n * Explain the causes of success and failure in organisational strategies\n \n"
     },
     {
       "id": "B1",
+      "title": "Support the efficient use of resources",
       "analysisText": "## B1. Support the efficient use of resources\n\n This unit is about efficiently managing the resources for which you are responsible. It covers recommending the resources you and your team need to meet your objectives. It also covers monitoring and controlling the way in which resources are used. \n\n\n* Make recommendations for the use of resources\n * Contribute to the control of resources\n \n"
     },
     {
       "id": "B2",
+      "title": "Manage the use of physical resources",
       "analysisText": "## B2. Manage the use of physical resources.\n\n This unit is about efficiently managing the physical resources for which you are responsible. It covers planning to use the resources you and your team need, obtaining those resources, ensuring the availability of suitable supplies, and monitoring the use of resources. \n\n\n* Plan the use of physical resources\n * Obtain physical resources\n * Ensure availability of supplies\n * Monitor the use of physical resources\n \n"
     },
     {
       "id": "B3",
+      "title": "Manage the use of financial resources",
       "analysisText": "## B3. Manage the use of financial resources\n\n This unit is about making sure you use financial resources in the most efficient way possible. It covers making recommendations for the use of financial resources and controlling expenditure against budgets.\n\n\n* Make recommendations for expenditure\n * Control expenditure against budgets\n \n"
     },
     {
       "id": "B4",
+      "title": "Determine the effective use of resources",
       "analysisText": "## B4. Determine the effective use of resources\n\n This unit is about the efficient management of resources across substantial programmes of work. It covers making proposals for expenditure, agreeing budgets and controlling activities so that they operate within budget.\n\n\n* Make proposals for expenditure on programmes of work\n * Agree budgets for programmes of work\n * Control expenditure and activities against budgets\n \n"
     },
     {
       "id": "B5",
+      "title": "Secure financial resources for your organisation's plans",
       "analysisText": "## B5. Secure financial resources for your organisation's plans\n\n This unit is about managing your organisation's finance at a strategic level. It covers examining the way your organisation generates and allocates financial resources, evaluating proposals from others on expenditure, and obtaining the financial resources which your organisation needs.\n\n\n* Review the generation and allocation of financial resources\n * Evaluate proposals for expenditure\n * Obtain financial resources for your organisation's activities\n \n"
     },
     {
       "id": "C1",
+      "title": "anage yourself",
       "analysisText": "## C1. Manage yourself\n\n This unit is about developing your own skills and managing your time so that you can meet your objectives. \n\n\n* Develop your own skills to improve your performance\n * Manage your time to meet your objectives\n \n"
     },
     {
       "id": "C2",
+      "title": "Develop your own resources",
       "analysisText": "## C2. Develop your own resources\n\n This unit is about developing your own knowledge and skills and managing your time and other resources so that you can meet your objectives. \n\n\n* Develop yourself to improve your performance\n * Manage your own time and resources to meet your objectives\n \n"
     },
     {
       "id": "C3",
+      "title": "Enhance your own performance",
       "analysisText": "## C3. Enhance your own performance\n\n This unit is about continuously developing your own knowledge and skills and optimising your use of your time and other resources so that you can meet your objectives. \n\n\n* Continuously develop your own knowledge and skills\n * Optimise your own resources to meet your objectives\n \n"
     },
     {
       "id": "C4",
+      "title": "Create effective working relationships",
       "analysisText": "## C4. Create effective working relationships\n\n This unit is about creating and maintaining effective working relationships with your manager, team members and other colleagues within your organisation. It also involves minimising the potential for  conflict and dealing with conflicts when they arise. \n\n\n* Gain the trust and support of colleagues and team members\n * Gain the trust and support of your manager\n * Minimise conflict in your team\n \n"
     },
     {
       "id": "C5",
+      "title": "Develop productive working relationships",
       "analysisText": "## C5. Develop productive working relationships\n\n This unit is about developing productive working relationships with your manager, team members and other colleagues in your organisation. It also involves reducing the opportunity for conflict to a minimum and dealing with conflicts when they arise. \n\n\n* Develop the trust and support of colleagues and team members\n * Develop the trust and support of your manager\n * Minimise interpersonal conflict\n \n"
     },
     {
       "id": "C6",
+      "title": "Enhance productive working relationships",
       "analysisText": "## C6. Enhance productive working relationships\n\n This unit is about enhancing productive working relationships with your manager and other colleagues in your organisation. It also involves providing guidance on your organisation's values and how to work in accordance with these values. \n\n\n* Enhance the trust and support of colleagues\n * Enhance the trust and support of those to whom you report\n * Provide guidance on values at work\n \n"
     },
     {
       "id": "C7",
+      "title": "Contribute to the selection of personnel for activities",
       "analysisText": "## C7. Contribute to the selection of personnel for activities\n\n This unit is about making a significant contribution to selecting the people needed to carry out your work activities. It applies to both the external and internal recruitment of people for permanent, temporary or project work. It applies equally to paid or voluntary work, whether full-time or part-time.\n\n\n* Contribute to identifying personnel requirements\n * Contribute to selecting required personnel \n \n"
     },
     {
       "id": "C8",
+      "title": "elect personnel for activities",
       "analysisText": "## C8. Select personnel for activities\n\n This unit is about recruiting and selecting the people you need to carry out your work activities. It applies to both external and internal recruitment of people for permanent work, temporary work or project work. It applies equally to paid or voluntary work, whether full-time or part-time.\n\n\n* Identify personnel requirements \n * Select required personnel \n \n"
     },
     {
       "id": "C9",
+      "title": "Contribute to the development of teams and individuals",
       "analysisText": "## C9. Contribute to the development of teams and individuals\n\n This unit is about making a significant contribution to developing the knowledge and skills of individuals and teams to ensure that they produce the best possible results at work. It covers helping to identify people's development needs, planning to meet those needs, carrying out development activities and assessing members of your team to see how they have progressed.\n\n\n* Contribute to the identification of development needs\n * Contribute to planning the development of teams and individuals\n * Contribute to development activities\n * Contribute to the assessment of people against development objectives\n \n"
     },
     {
       "id": "C10",
+      "title": "Develop teams and individuals to enhance performance",
       "analysisText": "## C10. Develop teams and individuals to enhance performance\n\n This unit is about developing your team's skills and knowledge to ensure the best possible results at work. It covers identifying the development needs of your team and its members, planning their development and using a variety of activities to improve team performance. It also covers your role in supporting individuals' learning, assessing teams and individuals against agreed development objectives, and continually improving development activities, policies and overall practice.\n\n\n* Identify the development needs of teams and individuals\n * Plan the development of teams and individuals\n * Develop teams to improve performance\n * Support individual learning and development\n * Assess the development of teams and individuals \n * Improve the development of teams and individuals\n \n"
     },
     {
       "id": "C11",
+      "title": "Develop management teams",
       "analysisText": "## C11. Develop management teams\n\n This unit is about improving the performance of your management team. This involves analysing the strengths and weaknesses of your team and its members, and then taking steps to improve your team's effectiveness.\n\n\n* Assess the effectiveness of management teams \n * Improve the effectiveness of management teams \n \n"
     },
     {
       "id": "C12",
+      "title": "Lead the work of teams and individuals to achieve their objectives",
       "analysisText": "## C12. Lead the work of teams and individuals to achieve their objectives\n\n This unit is about making best use of your team and its members so that they can achieve their objectives. It covers planning and assessing work, and providing feedback to team members.\n\n\n* Plan the work of teams and individuals \n * Assess the work of teams and individuals \n * Provide feedback to teams and individuals on their work \n \n"
     },
     {
       "id": "C13",
+      "title": "Manage the performance of teams and individuals",
       "analysisText": "## C13. Manage the performance of teams and individuals\n\n This unit is about making the best use of your team and its members so that they can achieve your organisation's objectives. It covers allocating work, agreeing objectives, and setting out plans and methods of working. It also involves monitoring and evaluating your team's work and providing feedback to them on their performance.\n\n\n* Allocate work to teams and individuals \n * Agree objectives and work plans with teams and individuals \n * Assess the performance of teams and individuals \n * Provide feedback to teams and individuals on their performance \n \n"
     },
     {
       "id": "C14",
+      "title": "Delegate work to others",
       "analysisText": "## C14. Delegate work to others\n\n This unit is about delegating responsibility and authority at a senior level. It involves giving responsibility and authority for substantial pieces of work - whole programmes of work, part programmes of work and important one-off tasks - to others. It also covers agreeing with them the targets they need to achieve, advising and supporting them in what they do, and promoting and protecting them and their planned activities.\n\n\n* Delegate responsibility and authority to others\n * Agree targets for delegated work \n * Provide advice and support for delegated work \n * Promote and protect delegated work and those who carry it out\n \n"
     },
     {
       "id": "C15",
+      "title": "Respond to poor performance in the team",
       "analysisText": "## C15. Respond to poor performance in the team\n\n This unit is about helping to deal with team members whose performance is unsatisfactory. It covers identifying their problems and providing help to deal with them. It also covers contributing to disciplinary and grievance procedures when work is consistently below standard or if a team member has a serious complaint against your organisation or someone in it.\n\n\n* Help team members who have problems affecting their performance\n * Contribute to implementing disciplinary and grievance procedures\n \n"
     },
     {
       "id": "C16",
+      "title": "Deal with poor performance in your team",
       "analysisText": "## C16. Deal with poor performance in your team\n\n This unit is about dealing with team members whose performance is unsatisfactory. It covers identifying their problems and providing support to help them deal with these. It covers contributing to disciplinary and grievance procedures when work is consistently below standard or if a team member has a serious complaint against your organisation or someone in it. It also covers dismissing team members if their performance or conduct means that no other course of action is acceptable.\n\n\n* Support team members who have problems affecting their performance\n * Implement disciplinary and grievance procedures\n * Dismiss team members whose performance is unsatisfactory\n \n"
     },
     {
       "id": "C17",
+      "title": "Redeploy personnel and make redundancies",
       "analysisText": "## C17. Redeploy personnel and make redundancies\n\n This unit is about transferring people to other posts and making staff redundant in response to developments or structural changes. It covers planning redeployment, implementing those plans and making personnel redundant.\n\n\n* Plan the redeployment of personnel\n * Redeploy personnel\n * Make personnel redundant\n \n"
     },
     {
       "id": "D1",
+      "title": "Manage information for action",
       "analysisText": "## D1. Manage information for action\n\n This unit is about the efficient management of information within your area of responsibility. It covers gathering the information you need, providing information and advice to others, and holding meetings. \n\n\n* Gather required information \n * Inform and advise others\n * Hold meetings\n \n"
     },
     {
       "id": "D2",
+      "title": "Facilitate meetings",
       "analysisText": "## D2. Facilitate meetings\n\n This unit is about facilitating meetings so that objectives can be achieved.  It covers leading meetings and making contributions to meetings.\n\n\n* Lead meetings\n * Make contributions to meetings\n \n"
     },
     {
       "id": "D3",
+      "title": "Chair and participate in meetings",
       "analysisText": "## D3. Chair and participate in meetings\n\n This unit is about chairing and contributing to meetings so that the objectives of the meetings can be achieved.\n\n\n* Chair meetings\n * Participate in meetings\n \n"
     },
     {
       "id": "D4",
+      "title": "Provide information to support decision making",
       "analysisText": "## D4. Provide information to support decision making\n\n This unit is about providing information so that sound decisions can be taken. It covers obtaining relevant information, recording and storing this information, and analysing this information so that decisions can be taken. It also covers advising and informing other people.\n\n\n* Obtain information for decision making\n * Record and store information\n * Analyse information to support decision making\n * Advise and inform others \n \n"
     },
     {
       "id": "D5",
+      "title": "Establish information management and communication systems",
       "analysisText": "## D5. Establish information management and communication systems\n\n This unit is about setting up effective communications and information management systems in your organisation. This involves identifying the information and communication needs of your organisation, selecting information management and communications systems which meet those needs, setting these systems up and finally monitoring these systems to ensure their effectiveness.\n\n\n* Identify information and communication requirements\n * Select information management and communication systems\n * Implement information management and communication systems\n * Monitor information management and communications systems \n \n"
     },
     {
       "id": "D6",
+      "title": "Use information to take critical decisions",
       "analysisText": "## D6. Use information to take critical decisions\n\n This unit is about using information so that you can take critical decisions effectively. It covers obtaining relevant information, analysing this information, and taking decisions which are critical to your organisation's performance. It also covers advising and informing other people.\n\n\n* Obtain the information needed to take critical decisions\n * Analyse information for decision making\n * Take critical decisions\n * Advise and inform others \n \n"
     },
     {
       "id": "E1",
+      "title": "Identify the scope for improvement in the way the organisation manages energy",
       "analysisText": "## E1. Identify the scope for improvement in the way the organisation manages energy\n\n This unit is about evaluating how the organisation manages energy and suggesting possible areas for improvement.\n\n\n* Audit the organisation's performance in the way it manages energy\n * Identify improvements to the way the organisation manages energy\n \n"
     },
     {
       "id": "E2",
+      "title": "Provide advice on the development and implementation of energy policies",
       "analysisText": "## E2. Provide advice on the development and implementation of energy policies\n\n This unit is about advising senior management on policies for the use of energy and on the strategies needed to implement these policies.\n\n\n* Provide advice on the development of policies for the use of energy\n * Recommend strategies to implement energy policies\n \n"
     },
     {
       "id": "E3",
+      "title": "Promote energy efficiency",
       "analysisText": "## E3. Promote energy efficiency\n\n This unit is about encouraging a culture of energy efficiency within the organisation and promoting the organisation's achievements in energy efficiency to outside audiences.\n\n\n* Promote energy efficiency throughout the organisation\n * Promote the organisation's achievements in energy efficiency \n \n"
     },
     {
       "id": "E4",
+      "title": "Monitor and evaluate energy efficiency",
       "analysisText": "## E4. Monitor and evaluate energy efficiency\n\n This unit is about monitoring and evaluating the organisation's performance in energy efficiency against its own declared policy and against current best practice. It covers setting up systems to monitor energy usage, collecting, analysing and recording information on energy usage, and assessing how the organisation is performing in terms of energy efficiency.\n\n\n* Establish systems and processes to monitor and evaluate energy usage\n * Obtain, analyse and record information on energy efficiency performance\n * Evaluate the organisation's energy efficiency performance\n \n"
     },
     {
       "id": "E5",
+      "title": "Identify improvements to energy efficiency",
       "analysisText": "## E5. Identify improvements to energy efficiency\n\n This unit is about helping the organisation improve its energy efficiency. It covers both identifying opportunities for improvement and making appropriate recommendations.\n\n\n* Identify opportunities to improve energy efficiency\n * Recommend improvements to energy efficiency \n \n"
     },
     {
       "id": "E6",
+      "title": "Provide advice and support for the development of energy efficient practices",
       "analysisText": "## E6. Provide advice and support for the development of energy efficient practices\n\n This unit is about helping the organisation develop energy efficient practices. It covers supporting the development of a culture of energy awareness and advising people in the organisation on energy efficient practices.\n\n\n* Support the development of a culture of energy awareness\n * Provide advice and support for energy efficient practices\n \n"
     },
     {
       "id": "E7",
+      "title": "Provide advice and support for the development and implementation of systems to measure energy usage",
       "analysisText": "## E7. Provide advice and support for the development and implementation of systems to measure energy usage\n\n This unit is about helping the organisation develop and implement systems to measure energy usage. It covers advising people about appropriate systems, helping people gather and use the information from these systems and advising them on how to respond to trends and developments in energy usage.\n\n\n* Provide support for the development of systems to measure energy usage\n * Provide support for the collection, analysis and recording of information on energy usage\n * Provide advice on trends and developments in energy usage\n \n"
     },
     {
       "id": "E8",
+      "title": "Provide advice and support for improving energy efficiency",
       "analysisText": "## E8. Provide advice and support for improving energy efficiency\n\n This unit is about helping teams and individuals to become more efficient in the ways they use energy. It covers getting them involved in energy efficiency activities, helping them to identify the knowledge and skills they need and helping them to develop these knowledge and skills.\n\n\n* Encourage involvement in energy efficiency activities\n * Provide advice on the competences needed to use energy efficiently\n * Provide advice on the training needed to use energy efficiently\n \n"
     },
     {
       "id": "E9",
+      "title": "Determine conditions in the market for supplies",
       "analysisText": "## E9. Determine conditions in the market for supplies\n\n This unit is about the manager's responsibility to analyse the energy supply market to establish how their own organisation is positioned in the marketplace. It requires the analysis of trends and developments affecting the energy market and changes which are likely to impact upon it including beneficial developments which affect both supplies and sources. One vital aspect of the manager's performance is to analyse the competitiveness of different sources of energy supply. \n\n\n* Establish the organisation's position in the market\n * Identify market changes likely to affect supplies\n * Determine the competitiveness of supplies from the market\n * Identify beneficial developments relating to supplies and sources\n \n"
     },
     {
       "id": "F1",
+      "title": "Promote the importance and benefits of quality",
       "analysisText": "## F1. Promote the importance and benefits of quality\n\n This unit is about promoting the importance and benefits of quality throughout the organisation and its customer and supplier networks. It covers promoting the importance of quality to those who set the organisation's policies and strategies. It also covers publicising the benefits of quality and the organisation's quality achievements to audiences inside and outside the organisation.\n\n\n* Promote the importance of quality in the organisation's strategy\n * Promote quality throughout the organisation and its customer and supplier networks\n \n"
     },
     {
       "id": "F2",
+      "title": "Provide advice and support for the development and implementation of quality policies",
       "analysisText": "## F2. Provide advice and support for the development and implementation of quality policies\n\n This unit is about helping organisations to define quality policies and develop strategies to implement these policies throughout the organisation and its customer and supplier networks.\n\n\n* Provide advice and support for the development of quality policies\n * Provide advice and support for the development of strategies to implement quality policies\n \n"
     },
     {
       "id": "F3",
+      "title": "Manage continuous quality improvement",
       "analysisText": "## F3. Manage continuous quality improvement\n\n This unit is about ensuring there is continuous quality improvement throughout the organisation. It covers the development of systems to evaluate organisational performance and promoting continuous quality improvements in the organisation's products, services and processes.\n\n\n* Develop and implement systems to monitor and evaluate organisational performance\n * Promote continuous quality improvement for products, services and processes\n \n"
     },
     {
       "id": "F4",
+      "title": "Implement quality assurance systems",
       "analysisText": "## F4. Implement quality assurance systems\n\n This unit is about ensuring that your organisation's products and services continuously meet the standard required by your customers. It covers setting up quality assurance systems, assuring quality by making sure these systems operate effectively and making recommendations for improvements to quality assurance systems.\n\n\n* Establish quality assurance systems\n * Maintain quality assurance systems\n * Recommend improvements to quality assurance systems\n \n"
     },
     {
       "id": "F5",
+      "title": "Provide advice and support for the development and implementation of quality systems",
       "analysisText": "## F5. Provide advice and support for the development and implementation of quality systems\n\n This unit is about helping organisations to develop and manage the systems they require to assure quality. It covers the support you give in evaluating current working environments and processes, and in developing plans to improve quality systems. It also covers your help in developing performance measuring systems and collecting and analysing information about the organisation's quality performance.\n\n\n* Provide advice and support for the assessment of processes and working environments\n * Provide advice and support for the development of plans to improve quality systems\n * Provide advice and support for the development of measurement systems\n * Provide advice and support for the collection, analysis and documentation of information\n \n"
     },
     {
       "id": "F6",
+      "title": "Monitor compliance with quality systems",
       "analysisText": "## F6. Monitor compliance with quality systems\n\n This unit is about ensuring that all the processes of the organisation comply with quality systems. It covers planning to audit quality systems, implementing this plan and providing a report on the organisation's overall compliance with its quality systems.\n\n\n* Plan to audit compliance with quality systems\n * Implement the audit plan\n * Report on compliance with quality systems\n \n"
     },
     {
       "id": "F7",
+      "title": "Carry out quality audits",
       "analysisText": "## F7. Carry out quality audits\n\n This unit is about assessing the extent to which individuals and teams either within your organisation or in other organisations comply with agreed quality systems and procedures. It covers carrying out audits and reporting the results.\n\n\n* Audit compliance with quality systems\n * Follow up quality audits\n \n"
     },
     {
       "id": "G1",
+      "title": "Contribute to project planning and preparation",
       "analysisText": "## G1. Contribute to project planning and preparation\n\n This unit is about helping higher level managers to plan and set up standard and complex projects which have operational or strategic implications for the project's sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Clarify the project's scope and definition \n * Provide plans to achieve the project's goals\n * Contribute to project preparation\n \n"
     },
     {
       "id": "G2",
+      "title": "Co-ordinate the running of projects",
       "analysisText": "## G2. Co-ordinate the running of projects\n\n This unit is about co-ordinating the work of standard and complex projects which have operational or strategic implications for the sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Support the project team\n * Co-ordinate activities, resources and plans \n * Keep stakeholders informed of the project's progress \n \n"
     },
     {
       "id": "G3",
+      "title": "Contribute to project closure",
       "analysisText": "## G3. Contribute to project closure\n\n This unit is about helping to complete standard and complex projects which have operational or strategic implications for the sponsor.  The sponsor may be internal or external to your organisation.\n\n\n* Complete project activities\n * Contribute to the evaluation of project planning and implementation\n \n"
     },
     {
       "id": "G4",
+      "title": "Plan and prepare strategic projects",
       "analysisText": "## G4. Plan and prepare strategic projects\n\n This unit is about planning and setting up substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  Project sponsors may be internal or external to your organisation.\n\n\n* Agree the project's scope and definition with the sponsor\n * Develop plans to achieve the project's goals\n * Establish the project's resourcing and control methods\n \n"
     },
     {
       "id": "G5",
+      "title": "Manage the running of strategic projects",
       "analysisText": "## G5. Manage the running of strategic projects\n\n This unit is about managing the work of substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  Project sponsors may be internal or external to your organisation.\n\n\n* Lead the project team\n * Monitor and adjust activities, resources and plans \n * Develop solutions to project problems\n * Maintain communication with project stakeholders \n \n"
     },
     {
       "id": "G6",
+      "title": "Complete strategic projects",
       "analysisText": "## G6. Complete strategic projects\n\n This unit is about completing substantial, complex projects which are critical to the strategic objectives of the sponsoring organisation.  The project sponsor may be internal or external to your organisation.\n\n\n* Ensure the completion of project activities\n * Evaluate the effectiveness of project planning and implementation\n \n"
     },
     {
       "id": "H1",
+      "title": "Evaluate environmental performance and recommend improvements",
       "analysisText": "## H1. Evaluate environmental performance and recommend improvements\n\n This unit is about evaluating the environmental performance of an organisation or parts of an organisation (e.g. departments, work teams). The unit also covers recommending improvements to environmental performance.\n\n\n* Identify and evaluate organisational activities which have significant environmental effects and risks.\n *  Identify and evaluate potential improvements to environmental performance.\n *  Recommend improvements to environmental performance\n \n"
     },
     {
       "id": "H2",
+      "title": "Gain support and commitment for improving environmental performance",
       "analysisText": "## H2. Gain support and commitment for improving environmental performance\n\n This unit is about gaining support for improving the environmental performance. This is an important part of environmental management and involves effective communication with interested parties such as colleagues, managers, customers and suppliers.\n\n\n* Communicate and promote the benefits of improved environmental performance\n * Advise and support individuals and teams on improvements to environmental performance\n * Agree commitment for improving environmental performance\n \n"
     },
     {
       "id": "H3",
+      "title": "Plan and implement activities to improve environmental performance",
       "analysisText": "## H3. Plan and implement activities to improve environmental performance\n\n This unit covers planning and implementing activities to improve environmental performance. It also also covers monitoring and evaluating implementation.\n\n\n*  Plan activities to improve environmental performance\n *  Implement plans to improve environmental performance\n *  Monitor and evaluate the effectiveness of implementation\n \n"
     },
     {
       "id": "H4",
+      "title": "Contribute to improving environmental performance during work activities",
       "analysisText": "## H4. Contribute to improving environmental performance during work activities\n\n This unit describes the contribution you can make to improving environmental performance during your work. It relates to the on-going work activities for which you are responsible.\n\n\n* Maintain environmental performance during work activities\n * Make changes to work activities which improve environmental performance\n \n"
     },
     {
       "id": "H5",
+      "title": "Develop and maintain an environmental policy",
       "analysisText": "## H5. Develop and maintain an environmental policy\n\n This unit is about developing an environmental policy which is a statement of commitment to improving environmental performance. The unit covers reviewing existing policies within the organisation, identifying the environmental impacts of existing policies, liasing with interested parties, and the development of an integrated policy relating to environmental performance. An environmental policy is designed to manage and improve the environmental performance of the organisation, and may be a component of another organisational policy. The policy may be a new policy or an existing policy that has been revised.\n\n\n* Review and evaluate the environmental impacts of the organisation's existing policies\n * Produce an environmental policy\n * Communicate an environmental policy\n \n"
     },
     {
       "id": "H6",
+      "title": "Evaluate, and make recommendations concerning, an environmental policy",
       "analysisText": "## H6. Evaluate, and make recommendations concerning, an environmental policy\n\n This unit is about contributing to the development of an environmental policy. An environmental policy is a written statement of commitment to improving environmental performance. This unit covers evaluating an environmental policy, liasing with interested parties and making recommendations concerning an environmental policy.\n\n\n* Evaluate an environmental policy\n * Make recommendations concerning an environmental policy\n \n"
     },
     {
       "id": "H7",
+      "title": "Plan, monitor and support auditing of environmental performance",
       "analysisText": "## H7. Plan, monitor and support auditing of environmental performance\n\n This unit is about setting up and supporting an audit of the organisation by another individual or team of individuals. The unit does not cover carrying out the audit, which is described in a separate unit (unit H8). The unit covers identifying the aspects of environmental performance to be audited, developing an audit specification, agreeing the specification with auditors and monitoring/supporting the work of the auditor(s). An audit is defined as the monitoring and evaluation of performance against specific pre-determined targets or indicators. Auditing will be carried out at defined time intervals or in response to specific external factors (e.g. system failures etc.). Audits may be compliance audits or procedural audits.\n\n\n* Plan and specify auditing of environmental performance\n * Negotiate and agree the specification for auditing environmental performance\n * Monitor and support the auditing of environmental performance\n \n"
     },
     {
       "id": "H8",
+      "title": "Audit environmental performance",
       "analysisText": "## H8. Audit environmental performance\n\n  This unit is about auditing environmental performance. It covers liaison with those commissioning the audit, evaluation of environmental aspects of the organisation's activities, reporting the results of the audit, and making recommendations for future action. An audit is defined as the monitoring and evaluation of performance against specific pre-determined targets or indicators. Auditing will be carried out at defined time intervals or in response to specific external factors (system failures etc.). Audits may be compliance audits or procedural audits.\n\n\n* Prepare to audit environmental performance\n * Carry out auditing in accordance with an agreed specification\n * Make recommendations based on the results of the audit\n \n"
     },
     {
       "id": "H9",
+      "title": "Report environmental performance to interested parties",
       "analysisText": "## H9. Report environmental performance to interested parties\n\n This unit is about reporting environmental performance to interested parties. Interested parties are defined as all individuals or groups concerned with or affected by the environmental performance of the organisation. They may include: staff of the organisation, statutory bodies, regulators, customers, suppliers, shareholders, environmental organisations, the financial community and the local community .\n\n\n* Produce reports on environmental performance\n * Disseminate reports on environmental performance to interested parties\n \n"
     },
     {
       "id": "H10",
+      "title": "Identify, implement and monitor action to improve environmental performance",
       "analysisText": "## H10. Identify, implement and monitor action to improve environmental performance\n\n This unit is about taking action to improve environmental performance within an organisation. It focuses on a less formal route to improving environmental performance than other environmental management units.\n\n\n* Identify the scope for improving environmental performance\n * Implement and monitor action to maintain and improve environmental performance\n \n"
     }
   ]
