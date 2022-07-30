@@ -7,16 +7,43 @@ import SwiftUI
 
 struct ResultsQA: View {
 
+    enum filterResults: Int, CaseIterable {
+        case allResults
+        case unitResults
+    }
+    
     @State var review: Review
     @State var appearAnimationActive:Bool = false
+    @State private var selection: Int = 0
+    @AppStorage("FilterQAResults") var filterQAResults: filterResults = .allResults
 
     var body: some View {
         VStack {
             PageTitleView(title: "Q and A")
             
-            TabView {
-                ForEach(review.QA) { q in
+            HStack {
+                Spacer()
+                Menu() {
+                    Text("Filter results to show")
+                    Button("All Q & A", action: {
+                        selection = 0
+                        filterQAResults = .allResults
+                    })
+                    Button("Questions with units", action: {
+                        selection = 0
+                        filterQAResults = .unitResults
+                    })
+                } label: {
+                    Image(systemName: "eye")
+                        .scaleEffect(1.6)
+                }
+            }.padding(.horizontal)
+            
+            TabView(selection: $selection) {
+                ForEach(filteredQA()) {
+                    q in
                     ResultsQACard(qa: q, units: review.units)
+                        .tag(q.id)
                 }
             }.tabViewStyle(.page)
         }
@@ -29,6 +56,16 @@ struct ResultsQA: View {
         .onDisappear {
             appearAnimationActive = false
         }
+    }
+    
+    func filteredQA() -> [QandA] {
+        let values = review.QA.filter {
+            q in
+            
+            if filterQAResults == .allResults { return true }
+            return !q.units.isEmpty
+        }
+        return values
     }
 }
 
