@@ -16,7 +16,7 @@ struct QuestionnaireView: View {
     
     @ObservedObject var viewModel : HomeTabViewModel
     @Binding var showQuestionnaire: Bool
-
+    
     @StateObject var questions = Questionnaire()
     @State private var showWarning: Bool = false
     
@@ -26,16 +26,21 @@ struct QuestionnaireView: View {
     var body: some View {
         ZStack {
             PopupBackgroundView()
-    
-            if phase == .titles {
-                // Get the questionnaire title and the user notes
-                QuestionnaireTitles(viewModel: viewModel, questions: questions, phase: $phase)
-            } else if phase == .questionnaire {
-                // Display the questionnaire and gather results
-                QuestionPrompts(viewModel: viewModel, questions: questions, phase: $phase)
-            } else if phase == .save {
-                // Finished - display the confirmation text and the begin analysis button
-                QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase)
+            
+            VStack {
+                QuestionnaireTitleView()
+                    .padding(.horizontal)
+                
+                if phase == .titles {
+                    // Get the questionnaire title and the user notes
+                    QuestionnaireTitles(viewModel: viewModel, questions: questions, phase: $phase)
+                } else if phase == .questionnaire {
+                    // Display the questionnaire and gather results
+                    QuestionPrompts(viewModel: viewModel, questions: questions, phase: $phase)
+                } else if phase == .save {
+                    // Finished - display the confirmation text and the begin analysis button
+                    QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase)
+                }
             }
         }
         .onChange(of: phase) {

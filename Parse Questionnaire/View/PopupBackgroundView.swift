@@ -8,7 +8,7 @@ import SwiftUI
 
 struct PopupBackgroundView: View {
     var body: some View {
-        Color.secondary.opacity(0.8)
+        Color.popupBackground
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
     }
@@ -17,5 +17,6 @@ struct PopupBackgroundView: View {
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
         PopupBackgroundView()
+            .preferredColorScheme(.dark)
     }
 }

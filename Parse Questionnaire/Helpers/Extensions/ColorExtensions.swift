@@ -23,4 +23,6 @@ extension Color {
     static var backgroundEnd: Color = Color("backgroundEnd")
     
     static var titleColor: Color = Color("titleColor")
+    
+    static var popupBackground: Color = Color("popupBackground")
 }

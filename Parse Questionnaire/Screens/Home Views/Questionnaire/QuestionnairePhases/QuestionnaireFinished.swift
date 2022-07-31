@@ -12,8 +12,8 @@ struct QuestionnaireFinished: View {
     @Binding var phase: QuestionnairePhase
     
     var body: some View {
-        VStack {
-            
+        VStack(alignment: .center, spacing: 20) {
+            Spacer()
             Text("You have completed the questionnaire. Press the button.")
             
             Button(action: {
@@ -25,6 +25,7 @@ struct QuestionnaireFinished: View {
             }, label: {
                 APPButtonText(caption: "Begin Analysis")
             })
+            Spacer()
         }
     }
 }

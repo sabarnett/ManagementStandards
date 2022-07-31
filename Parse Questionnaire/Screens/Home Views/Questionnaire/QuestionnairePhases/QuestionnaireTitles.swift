@@ -12,10 +12,16 @@ struct QuestionnaireTitles: View {
     @Binding var phase: QuestionnairePhase
     
     var body: some View {
-        Button {
-            phase = .questionnaire
-        } label: {
-            Text("Press for questionnaire")
+        VStack(alignment: .center, spacing: 25) {
+            Spacer()
+            
+            Button {
+                phase = .questionnaire
+            } label: {
+                APPButtonText(caption: "Begin Questionnaire")
+            }
+            
+            Spacer()
         }
     }
 }

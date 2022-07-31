@@ -16,7 +16,7 @@ struct QuestionnaireTitleView: View {
                               weight: .bold,
                               design: .default))
                 .italic()
-                .foregroundColor(.primary)
+                .foregroundColor(.titleColor)
                 .multilineTextAlignment(.leading)
                 .padding()
         }
