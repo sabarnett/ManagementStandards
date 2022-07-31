@@ -16,7 +16,7 @@ struct ResultsQA: View {
     @State var appearAnimationActive:Bool = false
     @State private var selection: Int = 0
     @AppStorage("FilterQAResults") var filterQAResults: filterResults = .allResults
-
+    
     var body: some View {
         VStack {
             PageTitleView(title: "Q and A")
@@ -25,16 +25,26 @@ struct ResultsQA: View {
                 Spacer()
                 Menu() {
                     Text("Filter results to show")
-                    Button("All Q & A", action: {
+                    Button(action: {
                         selection = 0
                         filterQAResults = .allResults
+                    }, label: {
+                        if filterQAResults == .allResults {
+                            Image(systemName: "checkmark").padding(.trailing, 3)
+                        }
+                        Text("All Q & A")
                     })
-                    Button("Questions with units", action: {
+                    Button(action: {
                         selection = 0
                         filterQAResults = .unitResults
+                    }, label: {
+                        if filterQAResults == .unitResults {
+                            Image(systemName: "checkmark").padding(.trailing, 3)
+                        }
+                        Text("Questions with units")
                     })
                 } label: {
-                    Image(systemName: "eye")
+                    Image(systemName: filterQAResults == .allResults ? "eye" : "eye.fill")
                         .scaleEffect(1.6)
                 }
             }.padding(.horizontal)
