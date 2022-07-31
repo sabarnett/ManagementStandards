@@ -9,6 +9,8 @@ class Questionnaire: ObservableObject {
     
     @Published var questionnaireData: QuestionnaireData? = QuestionnaireLoader.load(forName: "ManagementStandards")
     @Published var isComplete: Bool = false
+    @Published var alertItem: AlertItem?
+    
     private var currentQuestionId = 1
     private var review: Review = Review(created: Date.now,
                                         title: "Sample Review",
@@ -83,6 +85,30 @@ class Questionnaire: ObservableObject {
         // Save the review list
         viewModel.saveReviews()
     }
+    
+    var reviewTitle: String {
+        get { review.title }
+        set {
+            if newValue.isEmpty {
+                alertItem = AlertContext.reviewTitleRequired
+                return
+            }
+            review.title = newValue
+        }
+    }
+    
+    var reviewDescription: String {
+        get { review.title }
+        set {
+            if newValue.isEmpty {
+                alertItem = AlertContext.reviewDescriptionRequired
+                return
+            }
+            review.description = newValue
+        }
+    }
+
+    
 }
 
 

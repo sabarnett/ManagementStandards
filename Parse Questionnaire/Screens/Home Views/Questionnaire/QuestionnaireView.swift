@@ -55,6 +55,13 @@ struct QuestionnaireView: View {
         .alert(isPresented: $showWarning) {
             AreYouSurePrompt()
         }
+        .alert(item: $questions.alertItem) {
+            alertItem in
+            
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
+        }
     }
     
     fileprivate func AreYouSurePrompt() -> Alert {

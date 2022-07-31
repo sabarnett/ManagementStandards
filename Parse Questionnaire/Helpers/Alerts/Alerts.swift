@@ -29,4 +29,12 @@ struct AlertContext {
     static let passwordRequired = AlertItem(title: Text("Invalid Entry"),
                                            message: Text("You must enter the password."),
                                            dismissButton: .default(Text("OK")))
+    
+    static let reviewTitleRequired = AlertItem(title: Text("Invalid Entry"),
+                                           message: Text("You must enter a review title."),
+                                           dismissButton: .default(Text("OK")))
+    
+    static let reviewDescriptionRequired = AlertItem(title: Text("Invalid Entry"),
+                                           message: Text("You must enter a review description."),
+                                           dismissButton: .default(Text("OK")))
 }
