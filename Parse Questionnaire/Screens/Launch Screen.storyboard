@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YesNoMaybe" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-za-sdZ">
-                                <rect key="frame" x="40" y="128" width="334" height="640"/>
+                                <rect key="frame" x="40" y="198" width="334" height="500"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management Standards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLH-JJ-HSy">
                                 <rect key="frame" x="60" y="736" width="294" height="32"/>
@@ -30,7 +30,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FAo-aK-oWu"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FAo-aK-oWu" firstAttribute="bottom" secondItem="RLH-JJ-HSy" secondAttribute="bottom" constant="94" id="3PF-DQ-PVO"/>
                             <constraint firstItem="2Ty-za-sdZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="K1u-a0-UXs"/>
@@ -48,7 +48,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="YesNoMaybe" width="640" height="640"/>
+        <image name="YesNoMaybe" width="500" height="500"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
