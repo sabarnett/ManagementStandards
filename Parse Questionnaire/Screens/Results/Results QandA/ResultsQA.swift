@@ -44,7 +44,7 @@ struct ResultsQA: View {
                         Text("Questions with units")
                     })
                 } label: {
-                    Image(systemName: filterQAResults == .allResults ? "eye" : "eye.fill")
+                    Image(systemName: filterQAResults == .allResults ? "menucard" : "menucard.fill")
                         .scaleEffect(1.6)
                 }
             }.padding(.horizontal)

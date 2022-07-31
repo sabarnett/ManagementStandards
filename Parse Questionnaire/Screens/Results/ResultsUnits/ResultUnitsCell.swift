@@ -21,7 +21,7 @@ struct ResultUnitsCell: View {
                 .clipShape(Circle())
             
             Text(unit.title)
-                    .font(.caption)
+                .font(.body)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
         }
