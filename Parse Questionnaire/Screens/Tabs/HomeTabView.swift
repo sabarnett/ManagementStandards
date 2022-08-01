@@ -7,8 +7,9 @@ import SwiftUI
 
 struct HomeTabView: View {
     
-    @StateObject var viewModel : HomeTabViewModel = HomeTabViewModel()
+    @StateObject var viewModel : HomeTabViewModel
     @State var showQuestionnaire: Bool = false
+    @Binding var loggedIn: Bool
     
     var body: some View {
         NavigationView {
@@ -56,7 +57,8 @@ struct HomeTabView: View {
     
     private func homeLeadingBarItems() -> some View {
         Button {
-            viewModel.loggedInUser = ""
+            Users.shared.signout()
+            loggedIn = false
         } label: {
             Text("Signout")
         }
@@ -131,7 +133,6 @@ struct HomeTabView: View {
 
 struct HomeNavView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTabView()
-        
+        HomeTabView(viewModel: HomeTabViewModel(), loggedIn: .constant(true))
     }
 }

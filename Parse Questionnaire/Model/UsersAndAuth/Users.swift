@@ -16,6 +16,27 @@ class Users {
         loadUserList()
     }
     
+    /// Returns the currently logged in user details
+    ///
+    ///  - Returns: The current user details or nil if there is no logged in user
+    var loggedInUser: User? {
+        return currentUser
+    }
+    
+    /// Signin the specified user. We fetch the user detaiols and assign them to the internal currentUser
+    /// variable.
+    ///
+    /// - Parameter userName: The name of the user to signin
+    ///
+    func signin(userName: String) {
+        currentUser = userList.users.first(where: { $0.name.lowercased() == userName.lowercased()})
+    }
+    
+    /// Signs the usre out, clearing the currently logged in user details
+    func signout() {
+        currentUser = nil
+    }
+    
     /// Fetch the secified user from the users list
     ///
     /// - Parameter userName: The name of the user to fetch.

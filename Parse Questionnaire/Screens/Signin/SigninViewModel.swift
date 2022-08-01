@@ -7,18 +7,19 @@ import SwiftUI
 
 class SigninViewModel: ObservableObject {
     
-    
     @Published var userName: String = ""
     @Published var password: String = ""
     @Published var alertItem: AlertItem?
-    
-    @AppStorage("loggedInUser") var loggedInUser: String = ""
 
     func signin() {
         if !validateForm() { return }
-        
+
+        // Attempt to login. This will either retrieve the user details or
+        // quietly fail and sdet the current user to nil.
+        Users.shared.signin(userName: userName)
+
         // Signin - validate the user and the password
-        guard let user = Users.shared.get(userName: userName) else {
+        guard let user = Users.shared.loggedInUser else {
             alertItem = AlertContext.invalidCredentials
             return
         }
@@ -28,13 +29,11 @@ class SigninViewModel: ObservableObject {
             return
         }
         
-        loggedInUser = user.name
     }
     
     func register() {
         if !validateForm() { return }
 
-        // TODO: Register - check the user does not exist and add it if it does.
         if Users.shared.get(userName: userName) != nil {
             alertItem = AlertContext.userAlreadyExists
             return
@@ -43,7 +42,7 @@ class SigninViewModel: ObservableObject {
         let newUser = User(name: userName, email: "", password: Auth.encrypt(password))
         Users.shared.save(newUser)
         
-        loggedInUser = newUser.name
+        Users.shared.signin(userName: userName)
     }
     
     private func validateForm() -> Bool {

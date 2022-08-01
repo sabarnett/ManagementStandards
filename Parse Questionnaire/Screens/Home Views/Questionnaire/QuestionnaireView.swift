@@ -14,7 +14,7 @@ enum QuestionnairePhase {
 
 struct QuestionnaireView: View {
     
-    @ObservedObject var viewModel : HomeTabViewModel
+    @StateObject var viewModel : HomeTabViewModel
     @Binding var showQuestionnaire: Bool
     
     @StateObject var questions = Questionnaire()

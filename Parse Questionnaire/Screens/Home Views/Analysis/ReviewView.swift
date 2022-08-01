@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ReviewView: View {
     
-    @ObservedObject var viewModel: HomeTabViewModel
+    @StateObject var viewModel: HomeTabViewModel
     @State var appearAnimationActive: Bool = false
     
     var body: some View {

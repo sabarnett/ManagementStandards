@@ -7,8 +7,8 @@ import SwiftUI
 
 struct QuestionnaireTitles: View {
     
-    @ObservedObject var viewModel: HomeTabViewModel
-    @ObservedObject var questions: Questionnaire
+    @StateObject var viewModel: HomeTabViewModel
+    @StateObject var questions: Questionnaire
     @Binding var phase: QuestionnairePhase
     
     @State var reviewTitle: String = ""

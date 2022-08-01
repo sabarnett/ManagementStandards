@@ -7,13 +7,10 @@ import SwiftUI
 
 class HomeTabViewModel: ObservableObject {
     
-    @AppStorage("loggedInUser") var loggedInUser: String = ""
-    
     @Published var currentUser: User!
     
     init() {
-        currentUser = Users.shared.get(userName: loggedInUser)
-        if currentUser == nil { currentUser = User.dummy() }
+        currentUser = Users.shared.loggedInUser
     }
     
     // MARK:- Review data model components
@@ -28,13 +25,13 @@ class HomeTabViewModel: ObservableObject {
         return 0
     }
     
-    func  loadReviews() {
-        reviews = Reviews.shared.get(forUser: loggedInUser)
+    func loadReviews() {
+        reviews = Reviews.shared.get(forUser: currentUser.name)
         loadingReviews = false
     }
 
     func saveReviews() {
-        Reviews.shared.save(reviews, forUser: loggedInUser)
+        Reviews.shared.save(reviews, forUser: currentUser.name)
     }
     
     func addReview(_ review: Review) {

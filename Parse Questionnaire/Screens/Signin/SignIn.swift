@@ -14,6 +14,7 @@ struct SignIn: View {
     
     @FocusState private var focusField: Field?
     @StateObject var viewModel = SigninViewModel()
+    @Binding var loggedIn: Bool
     
     var body: some View {
         VStack {
@@ -47,6 +48,7 @@ struct SignIn: View {
                     focusField = .password
                 } else {
                     viewModel.signin()
+                    loggedIn = true
                 }
             } label: {
                 APPButtonText(caption: "Sign in", buttonWidth: 280)
@@ -54,6 +56,7 @@ struct SignIn: View {
             
             Button {
                 viewModel.register()
+                loggedIn = true
             } label: {
                 Text("Register")
             }
@@ -72,7 +75,7 @@ struct SignIn: View {
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignIn(loggedIn: .constant(false))
             .preferredColorScheme(.dark)
         
         
