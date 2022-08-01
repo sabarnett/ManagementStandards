@@ -38,7 +38,7 @@ struct HomeTabView: View {
     
     func homeTabs() -> some View {
         return TabView {
-            AnalysisView(viewModel: viewModel)
+            ReviewView(viewModel: viewModel)
                 .tabItem {
                     Label("Analyses", systemImage: "newspaper.fill")
                 }

@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct AnalysisView: View {
+struct ReviewView: View {
     
     @ObservedObject var viewModel: HomeTabViewModel
     @State var appearAnimationActive: Bool = false
@@ -34,7 +34,7 @@ struct AnalysisView: View {
                         BusyView(caption: "retrieving reviews")
                     }
                     List(viewModel.reviews) { datum in
-                        AnalysisViewCell(review: datum)
+                        ReviewViewCell(review: datum)
                             .onTapGesture {
                                 viewModel.selectedReview = datum
                                 viewModel.showReview = true
@@ -59,6 +59,6 @@ struct AnalysisView: View {
 
 struct AnalysisView_Previews: PreviewProvider {
     static var previews: some View {
-        AnalysisView(viewModel: HomeTabViewModel())
+        ReviewView(viewModel: HomeTabViewModel())
     }
 }

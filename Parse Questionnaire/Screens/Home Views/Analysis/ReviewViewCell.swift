@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct AnalysisViewCell: View {
+struct ReviewViewCell: View {
     
     @State var review: Review
     
@@ -13,11 +13,11 @@ struct AnalysisViewCell: View {
         HStack {
             Text("\(review.unitCount)")
                 .fontWeight(.bold)
-                .frame(width: 50, height: 50, alignment: .center)
+                .frame(width: 45, height: 45, alignment: .center)
                 .border(.clear, width: 50)
                 .background(Color.buttonBackground)
                 .foregroundColor(Color.buttonForeground)
-                .clipShape(Circle())
+                .clipShape(RoundedRectangle(cornerRadius: 15))
             
             VStack(alignment: .leading) {
                 Text(review.title)
@@ -33,7 +33,7 @@ struct AnalysisViewCell: View {
 
 struct AnalysisViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnalysisViewCell(review: Review.dummyData)
+        ReviewViewCell(review: Review.dummyData)
             .previewLayout(.sizeThatFits)
     }
 }
