@@ -13,16 +13,6 @@ struct ResultsQACard: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-//                VStack(alignment: .center) {
-//                    Text("Question \(qa.id)")
-//                        .padding(.bottom, -2)
-//                        .padding(.top, 5)
-//                        .font(.title3)
-//                    Rectangle()
-//                        .frame(height: 1)
-//                }
-//                .foregroundColor(Color.titleColor)
-                
                 Text(qa.question)
                     .font(.body)
                     .padding(10)
@@ -40,10 +30,8 @@ struct ResultsQACard: View {
                 .foregroundColor(Color.titleColor)
             }.background(Color.secondary.opacity(0.3))
             
-            List(qa.unitText(unitText: units)) { datum in
-                ResultUnitsCell(unit: datum)
-            }.listStyle(.plain)
-                .padding(15)
+            questoinUnits(qa)
+
             Spacer()
         }
         .background(
@@ -52,6 +40,36 @@ struct ResultsQACard: View {
                 .opacity(0.3)
         )
         .padding(15)
+    }
+    
+    fileprivate func questoinUnits(_ qa: QandA) -> AnyView {
+        
+        if qa.units.count == 0 {
+            // There are no units, so display the placeholder
+            return AnyView(
+                HStack {
+                    Spacer()
+                    VStack {
+                        Image("StarPages")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 250, height: 200)
+                            .opacity(0.3)
+                        Text("No Units Generated")
+                            .font(.title2)
+                    }
+                    Spacer()
+                }
+            )
+        } else {
+            // Return a list of the units in this question
+            return AnyView(
+                List(qa.unitText(unitText: units)) { datum in
+                    ResultUnitsCell(unit: datum)
+                }.listStyle(.plain)
+                    .padding(15)
+                )
+        }
     }
 }
 
