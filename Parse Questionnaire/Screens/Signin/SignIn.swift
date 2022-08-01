@@ -12,8 +12,8 @@ struct SignIn: View {
         case password
     }
     
-    @StateObject var viewModel = SigninViewModel()
     @FocusState private var focusField: Field?
+    @StateObject var viewModel = SigninViewModel()
     
     var body: some View {
         VStack {

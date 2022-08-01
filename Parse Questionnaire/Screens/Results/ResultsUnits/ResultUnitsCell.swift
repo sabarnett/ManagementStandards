@@ -18,8 +18,8 @@ struct ResultUnitsCell: View {
                 .border(.clear, width: 50)
                 .background(Color.buttonBackground)
                 .foregroundColor(Color.buttonForeground)
-                .clipShape(Circle())
-            
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+
             Text(unit.title)
                 .font(.body)
                     .multilineTextAlignment(.leading)

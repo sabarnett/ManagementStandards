@@ -12,26 +12,41 @@ struct QuestionnaireFinished: View {
     @Binding var phase: QuestionnairePhase
     
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
+        VStack(alignment: .leading, spacing: 35) {
             Spacer()
-            Text("You have completed the questionnaire. Press the button.")
             
-            Button(action: {
-                // Save the answers to the reviews list
-                questions.saveReview(to: viewModel)
+            Text("**Congratulations** you have completed the questionnaire.")
+                .font(.title2)
+            
+            Text("When you tap the __Begin Analysis__ button, your answers will be saved and analysed to determine which units you need to concentrate on.")
+            
+            Text("Press the button to get started.")
+                .padding(.bottom, 30)
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    // Save the answers to the reviews list
+                    questions.saveReview(to: viewModel)
 
-                // Return to the caller so they can display the results
-                phase = .finished
-            }, label: {
-                APPButtonText(caption: "Begin Analysis")
-            })
+                    // Return to the caller so they can display the results
+                    phase = .finished
+                }, label: {
+                    APPButtonText(caption: "Begin Analysis")
+                })
+                Spacer()
+            }
+            
             Spacer()
-        }
+        }.padding()
     }
 }
 
-//struct QuestionnaireFinished_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuestionnaireFinished()
-//    }
-//}
+struct QuestionnaireFinished_Previews: PreviewProvider {
+    static var previews: some View {
+        QuestionnaireFinished(
+            viewModel: HomeTabViewModel(),
+            questions: Questionnaire(),
+            phase: .constant(.titles))
+    }
+}
