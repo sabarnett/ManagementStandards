@@ -57,18 +57,22 @@ struct QuestionnaireView: View {
         }
         .alert(isPresented: $questions.showAlert) {
             if let alertItem = questions.alertItem {
-                return Alert(title: alertItem.title,
-                             message: alertItem.message,
-                             dismissButton: .default(alertItem.dismissButton,
-                                                     action: {
-                        questions.showAlert = false
-                        questions.alertItem = nil
-                    })
-                )
+                return ErrorPrompt(alertItem: alertItem)
             } else {
                 return AreYouSurePrompt()
             }
         }
+    }
+    
+    fileprivate func ErrorPrompt(alertItem: AlertItem) -> Alert {
+        return Alert(title: alertItem.title,
+                     message: alertItem.message,
+                     dismissButton: .default(alertItem.dismissButton,
+                                             action: {
+                questions.showAlert = false
+                questions.alertItem = nil
+            })
+        )
     }
     
     fileprivate func AreYouSurePrompt() -> Alert {
