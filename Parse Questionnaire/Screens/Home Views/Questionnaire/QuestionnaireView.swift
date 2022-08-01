@@ -43,24 +43,31 @@ struct QuestionnaireView: View {
                 }
             }
         }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                questions.alertItem = nil
+                questions.showAlert = true
+            } label: { XDismissButton() }
+        }
         .onChange(of: phase) {
             newValue in
             if newValue == .finished {
                 showQuestionnaire = false
             }
         }
-        .overlay(alignment: .topTrailing) {
-            Button { showWarning = true } label: { XDismissButton() }
-        }
-        .alert(isPresented: $showWarning) {
-            AreYouSurePrompt()
-        }
-        .alert(item: $questions.alertItem) {
-            alertItem in
-            
-            Alert(title: alertItem.title,
-                  message: alertItem.message,
-                  dismissButton: alertItem.dismissButton)
+        .alert(isPresented: $questions.showAlert) {
+            if let alertItem = questions.alertItem {
+                return Alert(title: alertItem.title,
+                             message: alertItem.message,
+                             dismissButton: .default(alertItem.dismissButton,
+                                                     action: {
+                        questions.showAlert = false
+                        questions.alertItem = nil
+                    })
+                )
+            } else {
+                return AreYouSurePrompt()
+            }
         }
     }
     
@@ -70,10 +77,11 @@ struct QuestionnaireView: View {
             message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
             primaryButton: .destructive(Text("Cancel")) {
                 print("Questionnaire cancelled...")
+                questions.showAlert = false
                 showQuestionnaire = false
             },
-            secondaryButton: .default(Text("Continue")) {
-                showWarning = false
+            secondaryButton: .default(Text("Resume")) {
+                questions.showAlert = false
             }
         )
     }

@@ -10,6 +10,7 @@ class Questionnaire: ObservableObject {
     @Published var questionnaireData: QuestionnaireData? = QuestionnaireLoader.load(forName: "ManagementStandards")
     @Published var isComplete: Bool = false
     @Published var alertItem: AlertItem?
+    @Published var showAlert: Bool = false 
     
     private var currentQuestionId = 1
     private var review: Review = Review(created: Date.now,
@@ -91,6 +92,7 @@ class Questionnaire: ObservableObject {
         set {
             if newValue.isEmpty {
                 alertItem = AlertContext.reviewTitleRequired
+                showAlert = true
                 return
             }
             review.title = newValue
@@ -102,6 +104,7 @@ class Questionnaire: ObservableObject {
         set {
             if newValue.isEmpty {
                 alertItem = AlertContext.reviewDescriptionRequired
+                showAlert = true
                 return
             }
             review.description = newValue

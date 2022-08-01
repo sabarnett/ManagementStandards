@@ -64,7 +64,7 @@ struct SignIn: View {
             
             Alert(title: alertItem.title,
                   message: alertItem.message,
-                  dismissButton: alertItem.dismissButton)
+                  dismissButton: .default(alertItem.dismissButton))
         }
         
     }
