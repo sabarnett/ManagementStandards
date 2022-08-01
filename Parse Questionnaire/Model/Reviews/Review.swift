@@ -47,6 +47,9 @@ extension Review {
         formatter.dateFormat = "E, d MMM y - HH:mm "
         return formatter.string(from: created)
     }
+}
+
+extension Review {
 
     static var dummyData: Review = Review(
         id: UUID(),

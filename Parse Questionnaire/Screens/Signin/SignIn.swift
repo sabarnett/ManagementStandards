@@ -47,16 +47,14 @@ struct SignIn: View {
                 } else if viewModel.password.isEmpty {
                     focusField = .password
                 } else {
-                    viewModel.signin()
-                    loggedIn = true
+                    if viewModel.signin() { loggedIn = true }
                 }
             } label: {
                 APPButtonText(caption: "Sign in", buttonWidth: 280)
             }.padding(.top, 20)
             
             Button {
-                viewModel.register()
-                loggedIn = true
+                if viewModel.register() { loggedIn = true }
             } label: {
                 Text("Register")
             }

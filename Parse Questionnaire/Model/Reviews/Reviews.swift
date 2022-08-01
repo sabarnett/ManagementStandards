@@ -12,21 +12,30 @@ class Reviews {
     
     private var reviewList: ReviewList!
     
+    /// Retrieve the list of reviews associated with a user
+    ///
+    /// - Parameter forUser: The login name of the user we want the reviews for
+    ///
+    /// - Returns: A list of review objects. The list may be empty if there are no reviews
+    ///
     func get(forUser: String) -> [Review] {
         loadReviewList(forUser: forUser)
         return reviewList.reviews
-//        // Find the reviews file.
-//        // If it doesn't exist, return an empty list
-//        // Else return the loaded reviews
-//        [Review.dummyData, Review.dummyData, Review.dummyData]
     }
     
+    /// Saves the review list we have been passed for the user. The list will be persisted to disk.
+    ///
+    /// - Parameters:
+    ///   - reviews: An array of Review objects to be saved
+    ///   - forUser: The login user name to save the reviews to
+    ///
     func save(_ reviews: [Review], forUser: String) {
         reviewList.reviews = reviews
         saveReviewsList(forUser: forUser)
     }
     
-    // Mark:- Load/save user list
+    // Mark:- Load/save review list
+    
     private func loadReviewList(forUser: String) {
         // Find and load the user list. If it doesn't exist, create it
         let fileURL = Reviews.reviewsFileName(userName: forUser)
@@ -55,6 +64,12 @@ class Reviews {
     }
 
     
+    /// Generate the file name from which we will load or to which we will save the reviews for the user
+    ///
+    /// - Parameter userName: The login name of the user
+    /// 
+    /// - Returns: The file URL of the reviews file. Note; for a new user, the file **may** not exist
+    ///
     public static func reviewsFileName(userName: String) -> URL {
         let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         return URL(fileURLWithPath: "\(userName)-ReviewList", relativeTo: directoryURL)

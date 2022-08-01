@@ -21,7 +21,9 @@ struct User: Codable, Identifiable {
     // Housekeeping
     var created: Date = Date.now
     var updated: Date = Date.now
-    
+}
+
+extension User {
     static func dummy() -> User {
         User(name: "Dummy", email: "dummy@dummy.com", password: Auth.encrypt("dummy"))
     }
