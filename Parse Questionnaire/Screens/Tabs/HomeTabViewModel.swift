@@ -36,4 +36,13 @@ class HomeTabViewModel: ObservableObject {
     func saveReviews() {
         Reviews.shared.save(reviews, forUser: loggedInUser)
     }
+    
+    func addReview(_ review: Review) {
+        if reviewCount == 0 {
+            reviews = []
+        }
+        
+        reviews.insert(review, at: 0)
+        saveReviews()
+    }
 }

@@ -80,11 +80,8 @@ class Questionnaire: ObservableObject {
         // Add the units to the review
         review.units = unsortedUnits.sorted(by: {a, b in a.id < b.id})
         
-        // Add the review to the start of the loaded reviews
-        viewModel.reviews.insert(review, at: 0)
-        
-        // Save the review list
-        viewModel.saveReviews()
+        // Add the review which will also cause the list to save
+        viewModel.addReview(review)
     }
     
     var reviewTitle: String {

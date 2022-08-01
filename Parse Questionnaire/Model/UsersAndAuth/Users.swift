@@ -59,7 +59,7 @@ class Users {
         
         // Remove the user review file. This is the file containing the review data and has the
         // file name <username>-ReviewList. Itr is in the same folder as the user list.
-        let reviewsFileURL = reviewsFileName(userName: userName)
+        let reviewsFileURL = Reviews.reviewsFileName(userName: userName)
         if FileManager.default.fileExists(atPath: reviewsFileURL.absoluteString) {
             do {
                 try FileManager.default.removeItem(atPath: reviewsFileURL.absoluteString)
@@ -100,10 +100,5 @@ class Users {
         return URL(fileURLWithPath: "UserList", relativeTo: directoryURL)
             .appendingPathExtension("json")
     }
-    
-    private func reviewsFileName(userName: String) -> URL {
-        let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        return URL(fileURLWithPath: "\(userName)-ReviewList", relativeTo: directoryURL)
-            .appendingPathExtension("json")
-    }
+
 }

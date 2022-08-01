@@ -16,28 +16,6 @@ struct Review: Codable, Identifiable {
     var description: String
     var QA: [QandA]
     var units: [Unit]
-
-    static var dummyData: Review = Review(
-        id: UUID(),
-        created: Date.now,
-        title: "Dummy Review",
-        description: "This was a dummy review created for testing purposes. It contains a limited number of responses and units.",
-        QA: [
-            QandA(id: 1, question: "Question 1", answer: "Yes", units: "A1, A2, A3"),
-            QandA(id: 2, question: "Question 2", answer: "No", units: ""),
-            QandA(id: 3, question: "Question 3", answer: "Unsure", units: "A1, A3")
-        ],
-        units: [
-            Unit(id: "A1",
-                 title: "Unit A1 Title",
-                 analysisText: "This is the **analysis** text for unit __A1__"),
-            Unit(id: "A2",
-                 title: "Unit A2 Title",
-                 analysisText: "This is the analysis text for unit A2. This is the analysis text for unit A2. This is the analysis text for unit A2"),
-            Unit(id: "A3",
-                 title: "Unit A3 Title",
-                 analysisText: "This is the analysis text for unit A3. This is the analysis text for unit A3"),
-        ])
 }
 
 struct QandA: Codable, Identifiable {
@@ -69,5 +47,27 @@ extension Review {
         formatter.dateFormat = "E, d MMM y - HH:mm "
         return formatter.string(from: created)
     }
+
+    static var dummyData: Review = Review(
+        id: UUID(),
+        created: Date.now,
+        title: "Dummy Review",
+        description: "This was a dummy review created for testing purposes. It contains a limited number of responses and units.",
+        QA: [
+            QandA(id: 1, question: "Question 1", answer: "Yes", units: "A1, A2, A3"),
+            QandA(id: 2, question: "Question 2", answer: "No", units: ""),
+            QandA(id: 3, question: "Question 3", answer: "Unsure", units: "A1, A3")
+        ],
+        units: [
+            Unit(id: "A1",
+                 title: "Unit A1 Title",
+                 analysisText: "This is the **analysis** text for unit __A1__"),
+            Unit(id: "A2",
+                 title: "Unit A2 Title",
+                 analysisText: "This is the analysis text for unit A2. This is the analysis text for unit A2. This is the analysis text for unit A2"),
+            Unit(id: "A3",
+                 title: "Unit A3 Title",
+                 analysisText: "This is the analysis text for unit A3. This is the analysis text for unit A3"),
+        ])
 
 }
