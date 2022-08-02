@@ -11,8 +11,18 @@ struct ResultsReport: View {
     @State var appearAnimationActive:Bool = false
 
     var body: some View {
-        VStack {
-            Text("Report Page")
+        VStack(alignment: .leading, spacing: 15) {
+            Text(review.title)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundColor(.titleColor)
+            
+            Text(review.description)
+                .font(.body)
+            
+            ScrollView(showsIndicators: false) {
+                MarkdownView(markdown: review.report)
+            }
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {
@@ -29,5 +39,6 @@ struct ResultsReport: View {
 struct ResultsReport_Previews: PreviewProvider {
     static var previews: some View {
         ResultsReport(review: Review.dummyData)
+            .preferredColorScheme(.dark)
     }
 }

@@ -13,6 +13,15 @@ struct MarkdownView: View {
     var body: some View {
         VStack {
             Markdown(markdown)
+                .markdownStyle(
+                  MarkdownStyle(
+                    font: .system(size: 15, design: .rounded),
+                    measurements: .init(
+                      codeFontScale: 0.8,
+                      headingSpacing: 0.3
+                    )
+                  )
+                )
         }
     }
     
@@ -23,6 +32,6 @@ struct MarkdownView: View {
 
 struct MarkdownView_Previews: PreviewProvider {
     static var previews: some View {
-        MarkdownView(markdown: "## Hello\n\n* One\n* Two\n* Three\n\n World Steve")
+        MarkdownView(markdown: "## Hello\n\n### Another Head\n\n* One\n* Two\n* Three\n\n World Steve")
     }
 }

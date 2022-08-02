@@ -50,6 +50,15 @@ extension Review {
 }
 
 extension Review {
+    var report: String {
+        get {
+            let unitText = self.units.map({ $0.analysisText })
+            return unitText.joined(separator: "\n\n")
+        }
+    }
+}
+
+extension Review {
 
     static var dummyData: Review = Review(
         id: UUID(),
