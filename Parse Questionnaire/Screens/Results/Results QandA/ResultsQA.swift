@@ -6,17 +6,12 @@
 import SwiftUI
 
 struct ResultsQA: View {
-
-    enum filterResults: Int, CaseIterable {
-        case allResults
-        case unitResults
-    }
     
     @State var review: Review
     @State var appearAnimationActive:Bool = false
     @State private var selection: Int = 0
-    @AppStorage("FilterQAResults") var filterQAResults: filterResults = .allResults
-    
+    @State private var filterQAResults: qaCardFilterResults = .allResults
+
     var body: some View {
         VStack {
             PageTitleView(title: "Q and A")
@@ -59,11 +54,16 @@ struct ResultsQA: View {
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {
+            // Set the filter state bssed on the user preferences
+            filterQAResults = Users.shared.loggedInUser!.preferences.qaCardFilter
             withAnimation(.easeIn(duration: 0.4)) {
                 appearAnimationActive = true
             }
         }
         .onDisappear {
+            // Update the user preferences with the filter state
+            Users.shared.loggedInUser!.preferences.qaCardFilter = filterQAResults
+            Users.shared.save(Users.shared.loggedInUser!)
             appearAnimationActive = false
         }
     }

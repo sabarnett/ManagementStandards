@@ -20,7 +20,10 @@ class Users {
     ///
     ///  - Returns: The current user details or nil if there is no logged in user
     var loggedInUser: User? {
-        return currentUser
+        get {
+            return currentUser
+        }
+        set { }
     }
     
     /// Signin the specified user. We fetch the user detaiols and assign them to the internal currentUser
@@ -55,6 +58,8 @@ class Users {
     func save(_ user: User) {
         let userIndex = userList.users.firstIndex(where: {$0.name.lowercased() == user.name.lowercased()})
         if let userIndex = userIndex {
+            print("Save With Value: \(user.preferences.qaCardFilter)")
+
             // Replace this user
             userList.users[userIndex] = user
             userList.users[userIndex].updated = Date.now
