@@ -9,6 +9,7 @@ struct HomeTabView: View {
     
     @StateObject var viewModel : HomeTabViewModel
     @State var showQuestionnaire: Bool = false
+    @State var showInfoView: Bool = false
     @Binding var loggedIn: Bool
     
     var body: some View {
@@ -26,12 +27,16 @@ struct HomeTabView: View {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-        }.sheet(isPresented: $showQuestionnaire) {
+        }
+        .sheet(isPresented: $showQuestionnaire) {
             QuestionnaireView(viewModel: viewModel, showQuestionnaire: $showQuestionnaire)
                 .onDisappear() {
                     // They closed the questionnaire view
                     print("Questionnaire has disappeared")
                 }
+        }
+        .sheet(isPresented: $showInfoView) {
+            InfoView(showInfoView: $showInfoView)
         }
     }
     
@@ -53,6 +58,7 @@ struct HomeTabView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: homeLeadingBarItems()
                             , trailing: homeTrailingBarItems())
+        
     }
     
     private func homeLeadingBarItems() -> some View {
@@ -76,6 +82,11 @@ struct HomeTabView: View {
                 // TODO: Handle settings
             } label: {
                 Image(systemName: "gearshape")
+            }
+            Button {
+                showInfoView = true
+            } label: {
+                Image(systemName: "info.circle")
             }
         }
         
@@ -125,6 +136,12 @@ struct HomeTabView: View {
 //            } label: {
 //                Image(systemName: "gearshape")
 //            }
+            Button {
+                showInfoView = true
+            } label: {
+                Image(systemName: "info.circle")
+            }
+
         }
         
     }
