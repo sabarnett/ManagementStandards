@@ -7,7 +7,7 @@ import SwiftUI
 
 struct SignIn: View {
     
-    enum Field: Hashable {
+    private enum Field: Hashable {
         case userName
         case password
     }
@@ -67,7 +67,6 @@ struct SignIn: View {
                   message: alertItem.message,
                   dismissButton: .default(alertItem.dismissButton))
         }
-        
     }
 }
 
@@ -75,7 +74,5 @@ struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
         SignIn(loggedIn: .constant(false))
             .preferredColorScheme(.dark)
-        
-        
     }
 }

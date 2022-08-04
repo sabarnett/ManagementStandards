@@ -1,6 +1,11 @@
 // Project: Parse Questionnaire
 //
+// SignInViewModel - Handles the signin and registration of users. Signin will validate
+// that the user exists and that the password entered hashes to the stored password.
 //  
+// Registration will validate the user name and password and ensures that the user name
+// has not already been registered. If the checks pass, the user will be created and
+// the user will login automatically.
 //
 
 import SwiftUI
