@@ -71,7 +71,7 @@ struct HomeTabView: View {
     }
     
     private func homeTrailingBarItems() -> some View {
-        HStack(spacing: 15) {
+        HStack(spacing: 10) {
             Button {
                 // TODO: Handle adding a questionnaire
                 showQuestionnaire = true
@@ -124,7 +124,7 @@ struct HomeTabView: View {
     }
     
     private func reviewTrailingBarItems() -> some View {
-        HStack(spacing: 15) {
+        HStack(spacing: 10) {
 //            Button {
 //                // TODO: Handle adding a questionnaire
 //                showQuestionnaire = true
