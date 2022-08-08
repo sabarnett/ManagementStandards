@@ -24,6 +24,11 @@ struct ResultUnitsCell: View {
                 .font(.body)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
+            
+            Spacer()
+            Button(action: {}) {
+                Image(systemName: "chevron.right")
+            }
         }
         .onTapGesture {
             showUnit = true

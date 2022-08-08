@@ -10,7 +10,7 @@ struct ReviewViewCell: View {
     @State var review: Review
     
     var body: some View {
-        HStack {
+       HStack {
             Text("\(review.unitCount)")
                 .fontWeight(.bold)
                 .frame(width: 45, height: 45, alignment: .center)
@@ -25,8 +25,12 @@ struct ReviewViewCell: View {
                     .fontWeight(.semibold)
                 Text(review.createdDateFormatted)
                     .font(.footnote)
-
             }
+           
+           Spacer()
+           Button(action: {}) {
+               Image(systemName: "chevron.right")
+           }
         }.padding(6)
     }
 }
