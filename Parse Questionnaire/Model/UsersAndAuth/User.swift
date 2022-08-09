@@ -24,6 +24,9 @@ class User: Codable, Identifiable {
         self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         self.email = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
         self.password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""
+        self.firstname = try container.decodeIfPresent(String.self, forKey: .firstname) ?? ""
+        self.lastname = try container.decodeIfPresent(String.self, forKey: .lastname) ?? ""
+        self.jobtitle = try container.decodeIfPresent(String.self, forKey: .jobtitle) ?? ""
 
         self.created = try container.decodeIfPresent(Date.self, forKey: .created) ?? Date.now
         self.updated = try container.decodeIfPresent(Date.self, forKey: .updated) ?? Date.now
@@ -41,6 +44,9 @@ class User: Codable, Identifiable {
     var name: String
     var email: String
     var password: String
+    var firstname: String?
+    var lastname: String?
+    var jobtitle: String?
     
     // Housekeeping
     var created: Date = Date.now
