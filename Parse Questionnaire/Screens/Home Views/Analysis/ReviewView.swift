@@ -9,6 +9,7 @@ struct ReviewView: View {
     
     @StateObject var viewModel: HomeTabViewModel
     @State var appearAnimationActive: Bool = false
+    @State var showDeletePrompt: Bool = false
     
     var body: some View {
         VStack {
@@ -33,12 +34,15 @@ struct ReviewView: View {
                     if viewModel.loadingReviews {
                         BusyView(caption: "retrieving reviews")
                     }
-                    List(viewModel.reviews) { datum in
-                        ReviewViewCell(review: datum)
-                            .onTapGesture {
-                                viewModel.selectedReview = datum
-                                viewModel.showReview = true
-                            }
+                    List {
+                        ForEach(viewModel.reviews) { review in
+                            ReviewViewCell(review: review)
+                                .onTapGesture {
+                                    viewModel.selectedReview = review
+                                    viewModel.showReview = true
+                                }
+                        }
+                        .onDelete(perform: deleteReview)
                     }.listStyle(.plain)
                 }
             }
@@ -50,10 +54,29 @@ struct ReviewView: View {
             }
             viewModel.loadReviews()
         }
-        .onDisappear {
-            appearAnimationActive = false
-        }
-
+        .onDisappear { appearAnimationActive = false }
+        .alert(isPresented: $showDeletePrompt) { deleteReviewPrompt() }
+    }
+    
+    fileprivate func deleteReview(at offsets: IndexSet) {
+        viewModel.selectedReview = viewModel.reviews[offsets.first!]
+        showDeletePrompt = true
+    }
+    
+    fileprivate func deleteReviewPrompt() -> Alert {
+        return Alert(
+            title: Text("Are you sure?"),
+            message: Text("Do you want to delete review:  '\(viewModel.selectedReview!.title)'? This action cannot be undone!"),
+            primaryButton: .destructive(Text("Delete")) {
+                    if let selectedReview = viewModel.selectedReview {
+                        viewModel.deleteReview(selectedReview)
+                    }
+                    showDeletePrompt = false
+                },
+            secondaryButton: .cancel(Text("Keep")) {
+                    showDeletePrompt = false
+                }
+        )
     }
 }
 

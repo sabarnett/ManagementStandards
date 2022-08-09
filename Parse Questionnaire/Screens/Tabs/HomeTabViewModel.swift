@@ -42,4 +42,11 @@ class HomeTabViewModel: ObservableObject {
         reviews.insert(review, at: 0)
         saveReviews()
     }
+    
+    func deleteReview(_ reviewToDelete: Review) {
+        if let deleteIndex = reviews.firstIndex(where: { review in review.id == reviewToDelete.id }) {
+            reviews.remove(at: deleteIndex)
+            saveReviews()
+        }
+    }
 }
