@@ -44,8 +44,11 @@ class AccountViewModel: ObservableObject {
         }
 
         // Update user
+        Users.shared.updateLoggedInUser(firstname: firstname,
+                                        lastname: lastname,
+                                        email: email)
         
-        // Save user data
+        // inform the user
         alertItem = AlertContext.userUpdated
     }
     
@@ -72,7 +75,14 @@ class AccountViewModel: ObservableObject {
             alertItem = AlertContext.oldPasswordIncorrect
             return
         }
+        
         // Update password
+        Users.shared.updateLoggedInPassword(newPassword: Auth.encrypt(newPassword))
+        
+        // Reset the data entry fields.
+        oldPassword = ""
+        newPassword = ""
+        verifyPassword = ""
         
         // Save user
         alertItem = AlertContext.passwordUpdated

@@ -56,10 +56,10 @@ class Users {
     /// properly encoded at the point of save.
     ///
     func save(_ user: User) {
+        loadUserList()
+        
         let userIndex = userList.users.firstIndex(where: {$0.name.lowercased() == user.name.lowercased()})
         if let userIndex = userIndex {
-            print("Save With Value: \(user.preferences.qaCardFilter)")
-
             // Replace this user
             userList.users[userIndex] = user
             userList.users[userIndex].updated = Date.now
@@ -91,6 +91,26 @@ class Users {
                 try FileManager.default.removeItem(atPath: reviewsFileURL.absoluteString)
             } catch {}
         }
+    }
+    
+    func updateLoggedInUser(firstname: String, lastname: String, email: String) {
+        guard let user = currentUser else { return }
+
+        user.firstname = firstname
+        user.lastname = lastname
+        user.email = email
+        
+        save(user)
+        signin(userName: user.name)
+    }
+    
+    func updateLoggedInPassword(newPassword: String) {
+        guard let user = currentUser else { return }
+
+        user.password = newPassword
+        
+        save(user)
+        signin(userName: user.name)
     }
     
     // Mark:- Load/save user list
