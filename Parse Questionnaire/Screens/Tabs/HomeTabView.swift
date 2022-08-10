@@ -49,7 +49,7 @@ struct HomeTabView: View {
                     Label("Analyses", systemImage: "newspaper.fill")
                 }
 
-            AccountView()
+            AccountView(viewModel: viewModel, loggedIn: $loggedIn)
                 .tabItem {
                     Label("Account", systemImage: "person.fill")
                 }

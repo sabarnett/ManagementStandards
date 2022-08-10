@@ -76,21 +76,15 @@ class Users {
     /// - Parameter user: The user name to be removed
     ///
     func remove(userName: String) {
-        // Remove the user from the list of users
+        Reviews.shared.remove(forUser: userName)
+
+        loadUserList()
+        
         let userIndex = userList.users.firstIndex(where: {$0.name.lowercased() == userName.lowercased()})
         if let userIndex = userIndex {
             userList.users.remove(at: userIndex)
             saveUserList()
-        }
-        
-        // Remove the user review file. This is the file containing the review data and has the
-        // file name <username>-ReviewList. Itr is in the same folder as the user list.
-        let reviewsFileURL = Reviews.reviewsFileName(userName: userName)
-        if FileManager.default.fileExists(atPath: reviewsFileURL.absoluteString) {
-            do {
-                try FileManager.default.removeItem(atPath: reviewsFileURL.absoluteString)
-            } catch {}
-        }
+        }        
     }
     
     func updateLoggedInUser(firstname: String, lastname: String, email: String) {
@@ -111,6 +105,14 @@ class Users {
         
         save(user)
         signin(userName: user.name)
+    }
+    
+    func deleteLoggedInUser() {
+        // delete reviews for this user
+        
+        // delete this user
+        
+        
     }
     
     // Mark:- Load/save user list

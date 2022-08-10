@@ -7,66 +7,66 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @StateObject var viewModel: AccountViewModel = AccountViewModel()
+    @StateObject var viewModel: HomeTabViewModel
+    @Binding var loggedIn: Bool
+
+    @StateObject var accViewModel: AccountViewModel = AccountViewModel()
     @State var appearAnimationActive:Bool = false
+    @State var showDeleteAccountVerification: Bool = false
     
     var body: some View {
         VStack {
             PageTitleView(title: "Your Details",
-                          subtitle: viewModel.username)
+                          subtitle: accViewModel.username)
             
-            VStack {
-                Form {
-                    Section(header: Text("Your Details").bold()) {
-                        TextField("First Name", text: $viewModel.firstname)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
-                        TextField("Last Name", text: $viewModel.lastname)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
-                        TextField("Email Address", text: $viewModel.email)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
-                        
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                viewModel.updateUser()
-                            }, label: { Text("Update")})
-                        }
-                    }
+            Form {
+                Section(header: Text("Your Details").bold()) {
+                    TextInput(field: "First Name", text: $accViewModel.firstname)
+                    TextInput(field: "Last Name", text: $accViewModel.lastname)
+                    TextInput(field: "Email Address", text: $accViewModel.email)
                     
-                    Section(header: Text("Password Change").bold()) {
-                        SecureField("Old Password", text: $viewModel.oldPassword)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
-
-                        SecureField("New Password", text: $viewModel.newPassword)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
-
-                        SecureField("Repeat Password", text: $viewModel.verifyPassword)
-                            .foregroundColor(.primary)
-                            .padding(8)
-                            .background(.tertiary)
-                            .cornerRadius(8.0)
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            accViewModel.updateUser()
+                        }, label: { Text("Update")})
+                    }
+                }
+                
+                Section(header: Text("Password Change").bold()) {
+                    TextInput(field: "Old Password", text: $accViewModel.oldPassword, secure: true)
+                    TextInput(field: "New Password", text: $accViewModel.newPassword, secure: true)
+                    TextInput(field: "Repeat Password", text: $accViewModel.verifyPassword, secure: true)
+                    
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            accViewModel.updatePassword()
+                        }, label: { Text("Update")})
+                    }
+                }
+                
+                Section(header: Text("Delete Account").bold()) {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showDeleteAccountVerification.toggle()
+                        }, label: {
+                            APPButtonText(caption: "Delete Account!",
+                                          buttonWidth: 220,
+                                          backgroundColor: Color(.systemRed),
+                                          foregroundColor: Color.white)
+                        })
+                        .fullScreenCover(
+                            isPresented: $showDeleteAccountVerification,
+                            content: {
+                                DeleteAccountModalView(
+                                    viewModel: viewModel,
+                                    showWarning: $showDeleteAccountVerification,
+                                    loggedIn: $loggedIn)
+                            })
                         
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                viewModel.updatePassword()
-                            }, label: { Text("Update")})
-                        }
+                        Spacer()
                     }
                 }
             }
@@ -80,7 +80,7 @@ struct AccountView: View {
         .onDisappear {
             appearAnimationActive = false
         }
-        .alert(item: $viewModel.alertItem) {
+        .alert(item: $accViewModel.alertItem) {
             alertItem in
             
             Alert(title: alertItem.title,
@@ -92,7 +92,31 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView()
+        AccountView(viewModel: HomeTabViewModel(),
+                    loggedIn: .constant(true))
             .preferredColorScheme(.dark)
+    }
+}
+
+struct TextInput: View {
+    
+    var field: String
+    @Binding var text: String
+    var secure: Bool = false
+    
+    var body: some View {
+        if secure {
+            SecureField(field, text: $text)
+                .foregroundColor(.primary)
+                .padding(8)
+                .background(.tertiary)
+                .cornerRadius(8.0)
+        } else {
+            TextField(field, text: $text)
+                .foregroundColor(.primary)
+                .padding(8)
+                .background(.tertiary)
+                .cornerRadius(8.0)
+        }
     }
 }

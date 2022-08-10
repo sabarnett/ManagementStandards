@@ -49,4 +49,8 @@ class HomeTabViewModel: ObservableObject {
             saveReviews()
         }
     }
+    
+    func deleteAccount() {
+        Users.shared.remove(userName: currentUser.name)
+    }
 }

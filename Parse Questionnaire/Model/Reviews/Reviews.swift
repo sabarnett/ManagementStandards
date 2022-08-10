@@ -34,11 +34,26 @@ class Reviews {
         saveReviewsList(forUser: forUser)
     }
     
+    /// Remove the user review file. This is the file containing the review data and has the
+    /// file name <username>-ReviewList. It is in the same folder as the user list.
+    ///
+    /// - Parameter userName: The name of the user that we want to remove the reviews for
+    ///
+    func remove(forUser userName: String) {
+        let reviewsFileURL = reviewsFileName(userName: userName)
+        if FileManager.default.fileExists(atPath: reviewsFileURL.absoluteString) {
+            do {
+                try FileManager.default.removeItem(atPath: reviewsFileURL.absoluteString)
+            } catch {}
+        }
+    }
+
+    
     // Mark:- Load/save review list
     
     private func loadReviewList(forUser: String) {
         // Find and load the user list. If it doesn't exist, create it
-        let fileURL = Reviews.reviewsFileName(userName: forUser)
+        let fileURL = reviewsFileName(userName: forUser)
         
         do {
             // Get the saved data
@@ -53,7 +68,7 @@ class Reviews {
     }
 
     private func saveReviewsList(forUser: String) {
-        let fileURL = Reviews.reviewsFileName(userName: forUser)
+        let fileURL = reviewsFileName(userName: forUser)
         
         do {
             let data = try JSONEncoder().encode(reviewList)
@@ -70,7 +85,7 @@ class Reviews {
     /// 
     /// - Returns: The file URL of the reviews file. Note; for a new user, the file **may** not exist
     ///
-    public static func reviewsFileName(userName: String) -> URL {
+    private func reviewsFileName(userName: String) -> URL {
         let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         return URL(fileURLWithPath: "\(userName)-ReviewList", relativeTo: directoryURL)
             .appendingPathExtension("json")
