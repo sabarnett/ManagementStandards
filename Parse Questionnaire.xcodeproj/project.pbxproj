@@ -51,6 +51,7 @@
 		E8D1B621287869BB0029C173 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1B620287869BB0029C173 /* SignIn.swift */; };
 		E8D1B62428786E7E0029C173 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1B62328786E7E0029C173 /* SigninViewModel.swift */; };
 		E8D1B627287874500029C173 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1B626287874500029C173 /* Alerts.swift */; };
+		E8DB057A28ABDBAA00449F1D /* HTMLtoPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */; };
 		E8E02E3828A3ADF300AA5DAB /* DeleteAccountModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E02E3728A3ADF300AA5DAB /* DeleteAccountModalView.swift */; };
 		E8E8C9AD28804DC1002CF367 /* APPButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E8C9AC28804DC1002CF367 /* APPButtonText.swift */; };
 		E8EBC0AE28A5344800EC1CBB /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBC0AD28A5344800EC1CBB /* NSAttributedStringExtensions.swift */; };
@@ -103,6 +104,7 @@
 		E8D1B620287869BB0029C173 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E8D1B62328786E7E0029C173 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		E8D1B626287874500029C173 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLtoPDF.swift; sourceTree = "<group>"; };
 		E8E02E3728A3ADF300AA5DAB /* DeleteAccountModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountModalView.swift; sourceTree = "<group>"; };
 		E8E8C9AC28804DC1002CF367 /* APPButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPButtonText.swift; sourceTree = "<group>"; };
 		E8EBC0AD28A5344800EC1CBB /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				E8947BCE28437EBD00D47C7A /* Extensions */,
 				E8D1B6252878700F0029C173 /* Alerts */,
 				E8B854F7284CF14D0060EF13 /* Styles */,
+				E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				E8EBC0AE28A5344800EC1CBB /* NSAttributedStringExtensions.swift in Sources */,
 				E816A3FA2884026500653A06 /* BusyView.swift in Sources */,
 				E8261FFC28411727005F84A3 /* Question.swift in Sources */,
+				E8DB057A28ABDBAA00449F1D /* HTMLtoPDF.swift in Sources */,
 				E8C09CA0287ABDE20052EF8B /* HomeTabView.swift in Sources */,
 				E8D1B621287869BB0029C173 /* SignIn.swift in Sources */,
 				E84AE3232881F6560028011A /* ReviewViewCell.swift in Sources */,
