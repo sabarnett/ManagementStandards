@@ -30,10 +30,6 @@ struct HomeTabView: View {
         }
         .sheet(isPresented: $showQuestionnaire) {
             QuestionnaireView(viewModel: viewModel, showQuestionnaire: $showQuestionnaire)
-                .onDisappear() {
-                    // They closed the questionnaire view
-                    print("Questionnaire has disappeared")
-                }
         }
         .sheet(isPresented: $showInfoView) {
             InfoView(showInfoView: $showInfoView)
@@ -120,32 +116,24 @@ struct HomeTabView: View {
                 Text("Reviews")
             }
         }
-            
     }
     
     private func reviewTrailingBarItems() -> some View {
         HStack(spacing: 10) {
-//            Button {
-//                // TODO: Handle adding a questionnaire
-//                showQuestionnaire = true
-//            } label: {
-//                Image(systemName: "plus")
-//            }
-//            Button {
-//                // TODO: Handle settings
-//            } label: {
-//                Image(systemName: "gearshape")
-//            }
+            Button {
+                viewModel.selectedReview?.shareReview()
+            } label: {
+                Image(systemName: "square.and.arrow.up")
+                    .resizable()
+                    .scaleEffect(0.9)
+            }
             Button {
                 showInfoView = true
             } label: {
                 Image(systemName: "info.circle")
             }
-
         }
-        
     }
-
 }
 
 struct HomeNavView_Previews: PreviewProvider {

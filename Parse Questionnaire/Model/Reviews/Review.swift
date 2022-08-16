@@ -4,6 +4,8 @@
 //
 
 import Foundation
+import UIKit
+import MarkdownUI
 
 struct ReviewList: Codable {
     var reviews: [Review]
@@ -55,6 +57,15 @@ extension Review {
             let unitText = self.units.map({ $0.analysisText })
             return unitText.joined(separator: "\n\n")
         }
+    }
+    
+    func shareReview() {
+        let htmlData = try! Document(markdown: self.report).renderHTML()
+        
+        let attributedString = try? NSAttributedString(htmlString: htmlData)
+        
+        let av = UIActivityViewController(activityItems: [attributedString], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }
 }
 

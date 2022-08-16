@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct ResultsReport: View {
     

@@ -7,7 +7,7 @@ import SwiftUI
 
 class HomeTabViewModel: ObservableObject {
     
-    @Published var currentUser: User!
+    @Published var currentUser: User?
     
     init() {
         currentUser = Users.shared.loggedInUser
@@ -26,11 +26,16 @@ class HomeTabViewModel: ObservableObject {
     }
     
     func loadReviews() {
-        reviews = Reviews.shared.get(forUser: currentUser.name)
+        if let currentUser = currentUser {
+            reviews = Reviews.shared.get(forUser: currentUser.name)
+        } else {
+            reviews = []
+        }
         loadingReviews = false
     }
 
     func saveReviews() {
+        guard let currentUser = currentUser else { return }
         Reviews.shared.save(reviews, forUser: currentUser.name)
     }
     
@@ -51,6 +56,7 @@ class HomeTabViewModel: ObservableObject {
     }
     
     func deleteAccount() {
+        guard let currentUser = currentUser else { return }
         Users.shared.remove(userName: currentUser.name)
     }
 }
