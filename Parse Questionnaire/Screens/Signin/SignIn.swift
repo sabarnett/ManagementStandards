@@ -30,9 +30,7 @@ struct SignIn: View {
                 .padding()
                 .background(.tertiary)
                 .cornerRadius(8.0)
-                .onAppear() {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6){ focusField = .userName }
-                }
+                .frame(maxWidth: 420)
             
             SecureField("Password", text: $viewModel.password)
                 .focused($focusField, equals: .password)
@@ -40,7 +38,8 @@ struct SignIn: View {
                 .padding()
                 .background(.tertiary)
                 .cornerRadius(8.0)
-            
+                .frame(maxWidth: 420)
+
             Button {
                 if viewModel.userName.isEmpty {
                     focusField = .userName

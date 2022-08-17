@@ -23,6 +23,7 @@ struct HomeTabView: View {
                     .zIndex(2) // to keep the views on top, however this needs to be changed when the active child view changes.
             }
         }
+        .navigationViewStyle(.stack)
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()
