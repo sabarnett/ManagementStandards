@@ -31,7 +31,7 @@ struct SignIn: View {
                 .background(.tertiary)
                 .cornerRadius(8.0)
                 .onAppear() {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6){ focusField = .userName }
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6){ focusField = .userName }
                 }
             
             SecureField("Password", text: $viewModel.password)
@@ -47,6 +47,7 @@ struct SignIn: View {
                 } else if viewModel.password.isEmpty {
                     focusField = .password
                 } else {
+                    hideKeyboard()
                     if viewModel.signin() { loggedIn = true }
                 }
             } label: {
@@ -54,6 +55,7 @@ struct SignIn: View {
             }.padding(.top, 20)
             
             Button {
+                hideKeyboard()
                 if viewModel.register() { loggedIn = true }
             } label: {
                 Text("Register")

@@ -28,6 +28,7 @@ struct AccountView: View {
                     HStack {
                         Spacer()
                         Button(action: {
+                            hideKeyboard()
                             accViewModel.updateUser()
                         }, label: { Text("Update")})
                     }
@@ -41,6 +42,7 @@ struct AccountView: View {
                     HStack {
                         Spacer()
                         Button(action: {
+                            hideKeyboard()
                             accViewModel.updatePassword()
                         }, label: { Text("Update")})
                     }
