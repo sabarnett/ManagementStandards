@@ -20,9 +20,9 @@ struct SignIn: View {
         VStack {
             Image("YesNoMaybe")
                 .resizable()
-                .frame(width: 200, height: 200, alignment: .center)
+                .frame(width: 160, height: 160, alignment: .center)
                 .aspectRatio(contentMode: .fill)
-                .padding(.bottom, 40)
+                .padding(.bottom, 30)
             
             TextField("User Name", text: $viewModel.userName)
                 .focused($focusField, equals: .userName)
