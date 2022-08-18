@@ -7,7 +7,7 @@ import SwiftUI
 
 struct QuestionPrompts: View {
     
-    @StateObject var viewModel: HomeTabViewModel
+    @EnvironmentObject var viewModel: AppData
     @StateObject var questions: Questionnaire
     @Binding var phase: QuestionnairePhase
     

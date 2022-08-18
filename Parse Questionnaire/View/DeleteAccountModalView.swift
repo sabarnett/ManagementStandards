@@ -7,7 +7,7 @@ import SwiftUI
 
 struct DeleteAccountModalView: View {
     
-    @StateObject var viewModel: HomeTabViewModel
+    @EnvironmentObject var viewModel: AppData
     @Binding var showWarning: Bool
     @Binding var loggedIn: Bool
 
@@ -56,10 +56,8 @@ struct DeleteAccountModalView: View {
 
 struct DeleteAccountModalView_Previews: PreviewProvider {
     static var previews: some View {
-        DeleteAccountModalView(
-            viewModel: HomeTabViewModel(),
-            showWarning: .constant(true),
-            loggedIn: .constant(true)
-        )
+        DeleteAccountModalView(showWarning: .constant(true),
+            loggedIn: .constant(true))
+        .environmentObject(AppData())
     }
 }

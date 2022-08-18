@@ -10,12 +10,15 @@ struct Parse_QuestionnaireApp: App {
     
     @State var loggedIn: Bool = false
     
+    var appData: AppData = AppData()
+    
     var body: some Scene {
         WindowGroup {
             if !loggedIn {
                 SignIn(loggedIn: $loggedIn)
             } else {
-                HomeTabView(viewModel: HomeTabViewModel(), loggedIn: $loggedIn)
+                HomeTabView(loggedIn: $loggedIn)
+                    .environmentObject(appData)
             }
         }
     }

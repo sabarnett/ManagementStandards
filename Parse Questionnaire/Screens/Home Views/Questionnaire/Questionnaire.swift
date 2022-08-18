@@ -56,7 +56,7 @@ class Questionnaire: ObservableObject {
         objectWillChange.send()
     }
     
-    func saveReview(to viewModel: HomeTabViewModel) {
+    func saveReview(to viewModel: AppData) {
         // Resolve the unit list
         var unitList: Set<String> = Set<String>()
         for qa in review.QA {

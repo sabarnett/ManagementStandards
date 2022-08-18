@@ -7,7 +7,7 @@ import SwiftUI
 
 struct QuestionnaireFinished: View {
     
-    @StateObject var viewModel: HomeTabViewModel
+    @EnvironmentObject var viewModel: AppData
     @StateObject var questions: Questionnaire
     @Binding var phase: QuestionnairePhase
     
@@ -44,9 +44,8 @@ struct QuestionnaireFinished: View {
 
 struct QuestionnaireFinished_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionnaireFinished(
-            viewModel: HomeTabViewModel(),
-            questions: Questionnaire(),
+        QuestionnaireFinished(questions: Questionnaire(),
             phase: .constant(.titles))
+        .environmentObject(AppData())
     }
 }

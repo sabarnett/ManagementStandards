@@ -7,7 +7,7 @@ import SwiftUI
 
 struct HomeTabView: View {
     
-    @StateObject var viewModel : HomeTabViewModel
+    @EnvironmentObject var viewModel : AppData
     @State var showQuestionnaire: Bool = false
     @State var showInfoView: Bool = false
     @Binding var loggedIn: Bool
@@ -30,7 +30,7 @@ struct HomeTabView: View {
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }
         .sheet(isPresented: $showQuestionnaire) {
-            QuestionnaireView(viewModel: viewModel, showQuestionnaire: $showQuestionnaire)
+            QuestionnaireView(showQuestionnaire: $showQuestionnaire)
         }
         .sheet(isPresented: $showInfoView) {
             InfoView(showInfoView: $showInfoView)
@@ -41,12 +41,12 @@ struct HomeTabView: View {
     
     func homeTabs() -> some View {
         return TabView {
-            ReviewView(viewModel: viewModel)
+            ReviewView()
                 .tabItem {
                     Label("Analyses", systemImage: "newspaper.fill")
                 }
 
-            AccountView(viewModel: viewModel, loggedIn: $loggedIn)
+            AccountView(loggedIn: $loggedIn)
                 .tabItem {
                     Label("Account", systemImage: "person.fill")
                 }
@@ -70,7 +70,6 @@ struct HomeTabView: View {
     private func homeTrailingBarItems() -> some View {
         HStack(spacing: 10) {
             Button {
-                // TODO: Handle adding a questionnaire
                 showQuestionnaire = true
             } label: {
                 Image(systemName: "plus")
@@ -139,6 +138,7 @@ struct HomeTabView: View {
 
 struct HomeNavView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTabView(viewModel: HomeTabViewModel(), loggedIn: .constant(true))
+        HomeTabView(loggedIn: .constant(true))
+            .environmentObject(AppData())
     }
 }

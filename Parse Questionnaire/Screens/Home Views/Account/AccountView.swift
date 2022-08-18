@@ -7,7 +7,7 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @StateObject var viewModel: HomeTabViewModel
+    @EnvironmentObject var viewModel: AppData
     @Binding var loggedIn: Bool
 
     @StateObject var accViewModel: AccountViewModel = AccountViewModel()
@@ -24,6 +24,7 @@ struct AccountView: View {
                     TextInput(field: "First Name", text: $accViewModel.firstname)
                     TextInput(field: "Last Name", text: $accViewModel.lastname)
                     TextInput(field: "Email Address", text: $accViewModel.email)
+                        .keyboardType(.emailAddress)
                     
                     HStack {
                         Spacer()
@@ -63,7 +64,6 @@ struct AccountView: View {
                             isPresented: $showDeleteAccountVerification,
                             content: {
                                 DeleteAccountModalView(
-                                    viewModel: viewModel,
                                     showWarning: $showDeleteAccountVerification,
                                     loggedIn: $loggedIn)
                             })
@@ -94,8 +94,8 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView(viewModel: HomeTabViewModel(),
-                    loggedIn: .constant(true))
+        AccountView(loggedIn: .constant(true))
+        .environmentObject(AppData())
             .preferredColorScheme(.dark)
     }
 }

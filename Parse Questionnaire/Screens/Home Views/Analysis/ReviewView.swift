@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ReviewView: View {
     
-    @StateObject var viewModel: HomeTabViewModel
+    @EnvironmentObject var viewModel: AppData
     @State var appearAnimationActive: Bool = false
     @State var showDeletePrompt: Bool = false
     
@@ -82,6 +82,7 @@ struct ReviewView: View {
 
 struct AnalysisView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewView(viewModel: HomeTabViewModel())
+        ReviewView()
+            .environmentObject(AppData())
     }
 }

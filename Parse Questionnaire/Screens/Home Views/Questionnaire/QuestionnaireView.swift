@@ -14,7 +14,7 @@ enum QuestionnairePhase {
 
 struct QuestionnaireView: View {
     
-    @StateObject var viewModel : HomeTabViewModel
+    @EnvironmentObject var viewModel : AppData
     @Binding var showQuestionnaire: Bool
     
     @StateObject var questions = Questionnaire()
@@ -33,13 +33,13 @@ struct QuestionnaireView: View {
                 
                 if phase == .titles {
                     // Get the questionnaire title and the user notes
-                    QuestionnaireTitles(viewModel: viewModel, questions: questions, phase: $phase)
+                    QuestionnaireTitles(questions: questions, phase: $phase)
                 } else if phase == .questionnaire {
                     // Display the questionnaire and gather results
-                    QuestionPrompts(viewModel: viewModel, questions: questions, phase: $phase)
+                    QuestionPrompts(questions: questions, phase: $phase)
                 } else if phase == .save {
                     // Finished - display the confirmation text and the begin analysis button
-                    QuestionnaireFinished(viewModel: viewModel, questions: questions, phase: $phase)
+                    QuestionnaireFinished(questions: questions, phase: $phase)
                 }
             }
         }
@@ -93,6 +93,7 @@ struct QuestionnaireView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionnaireView(viewModel: HomeTabViewModel(), showQuestionnaire: .constant(true))
+        QuestionnaireView(showQuestionnaire: .constant(true))
+            .environmentObject(AppData())
     }
 }
