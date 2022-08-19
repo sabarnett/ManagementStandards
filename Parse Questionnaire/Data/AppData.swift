@@ -14,6 +14,7 @@ class AppData: ObservableObject {
     @Published var showReview: Bool = false
     var selectedReview: Review?
     
+    /// Returns the number of reviews that the current user has associated with them.
     var reviewCount: Int {
         if let reviews = reviews { return reviews.count }
         return 0

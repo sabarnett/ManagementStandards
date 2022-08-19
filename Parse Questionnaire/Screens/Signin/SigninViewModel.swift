@@ -62,14 +62,30 @@ class SigninViewModel: ObservableObject {
         return true
     }
     
+    // MARK: - Publically available validation functions
+    
+    /// Validates the current user name field.
+    /// - Returns: Returns True if the field is valid, else False
+    func usernameIsValid() -> Bool {
+        if userName == "" { return false }
+        return true
+    }
+    
+    /// Validates that the password field is valid.
+    /// - Returns: Returns True if valid, else false.
+    func passwordIsValid() -> Bool {
+        if password == "" { return false }
+        return true
+    }
+
     // MARK:- Local helper functions
     
     fileprivate func validateForm() -> Bool {
-        if userName == "" {
+        if !usernameIsValid() {
             alertItem = AlertContext.userNameRequired
             return false
         }
-        if password == "" {
+        if !passwordIsValid() {
             alertItem = AlertContext.passwordRequired
             return false
         }
