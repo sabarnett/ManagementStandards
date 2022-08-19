@@ -6,9 +6,14 @@
 import Foundation
 
 struct QuestionnaireData: Codable {
+    
+    // MARK:- Persistable data
+    
     var introduction: Introduction
     var questions: [Question]
     var units: [Unit]
+    
+    // MARK:- Computed properties
     
     func question(withId: Int) -> Question {
         guard let question = questions.first(where: { $0.id == withId } ) else {

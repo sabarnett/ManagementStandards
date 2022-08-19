@@ -1,11 +1,12 @@
-// Project: Parse Questionnaire
+// Helper methods for loading the questionnaire data from disc.
 //
-//  
+// The questionnaire is part of the app bundle in a file called "ManagementQuestionnaire"
 //
 
 import Foundation
 
 class QuestionnaireLoader {
+    
     public static func load(forName: String) -> QuestionnaireData? {
         // Locate and load the data file
         if let jsonData = readLocalFile(forName: "ManagementQuestionnaire") {
@@ -21,7 +22,7 @@ class QuestionnaireLoader {
         return nil
     }
 
-    private static func readLocalFile(forName name: String) -> Data? {
+    fileprivate static func readLocalFile(forName name: String) -> Data? {
         do {
             if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"),
                 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {

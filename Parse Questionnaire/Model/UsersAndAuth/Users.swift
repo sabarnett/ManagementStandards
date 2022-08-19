@@ -87,6 +87,14 @@ class Users {
         }        
     }
     
+    /// Updates the logged in user to change the first name, last name and email address. After the changes have been
+    /// made, they will be persisted to disk.
+    ///
+    /// - Parameters:
+    ///   - firstname: The users first name
+    ///   - lastname: The users last name
+    ///   - email: The users email address.
+    ///
     func updateLoggedInUser(firstname: String, lastname: String, email: String) {
         guard let user = currentUser else { return }
 
@@ -98,6 +106,11 @@ class Users {
         signin(userName: user.name)
     }
     
+    /// Updates the current userrs password. It is assumed that the password has been validated before we update it, so
+    /// no additional validation is done here.
+    ///
+    /// - Parameter newPassword: The new, encrypted, password for the user.
+    ///
     func updateLoggedInPassword(newPassword: String) {
         guard let user = currentUser else { return }
 
@@ -107,16 +120,9 @@ class Users {
         signin(userName: user.name)
     }
     
-    func deleteLoggedInUser() {
-        // delete reviews for this user
-        
-        // delete this user
-        
-        
-    }
-    
     // Mark:- Load/save user list
-    private func loadUserList() {
+
+    fileprivate func loadUserList() {
         // Find and load the user list. If it doesn't exist, create it
         let fileURL = usersFileName()
         
@@ -132,7 +138,7 @@ class Users {
         }
     }
     
-    private func saveUserList() {
+    fileprivate func saveUserList() {
         let fileURL = usersFileName()
         
         do {
@@ -143,7 +149,7 @@ class Users {
         }
     }
     
-    private func usersFileName() -> URL {
+    fileprivate func usersFileName() -> URL {
         let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         return URL(fileURLWithPath: "UserList", relativeTo: directoryURL)
             .appendingPathExtension("json")

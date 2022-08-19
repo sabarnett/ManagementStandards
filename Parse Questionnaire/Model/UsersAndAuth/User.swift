@@ -58,13 +58,6 @@ class User: Codable, Identifiable {
     )
 }
 
-extension User {
-    static func dummy() -> User {
-        User(name: "Dummy",
-             email: "dummy@dummy.com",
-             password: Auth.encrypt("dummy"))
-    }
-}
 
 struct UserPreferences: Codable {
     var qaCardFilter: qaCardFilterResults

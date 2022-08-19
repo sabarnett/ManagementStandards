@@ -14,8 +14,4 @@ struct Question: Identifiable, Codable {
     var unitsIfYes: String
     var unitsIfNo: String
     var unitsIfUnsure: String
-    
-    static var empty: Question {
-        Question(id: -1, question: "", targetIfYes: -1, targetIfNo: -1, targetIfUnsure: -1, unitsIfYes: "", unitsIfNo: "", unitsIfUnsure: "")
-    }
 }
