@@ -44,26 +44,16 @@ struct Review: Codable, Identifiable {
 
 extension Review {
 
-    // MARK:- Share icon handler
+    // MARK:- Share icon data. We return an array of data to be passed to the share handler
 
-    func shareReview() {
+    func reportShareItems() -> [Any] {
         let reportData = try! Document(markdown: self.report).renderHTML()
         let htmlData = "<h1>\(self.title)</h1><p>\(self.description)</p>\(reportData)"
         
         let attributedString = try? NSAttributedString(htmlString: htmlData)
         let pdfData = HTMLtoPDF.toPDF(htmlData)
         
-        let av = UIActivityViewController(activityItems: [attributedString!, pdfData],
-                                          applicationActivities: nil)
-        
-        let scenes = UIApplication.shared.connectedScenes
-        guard
-            let windowScenes = scenes.first as? UIWindowScene,
-            let window = windowScenes.windows.first,
-            let rootView = window.rootViewController
-        else { return }
-        
-        rootView.present(av, animated: true, completion: nil)
+        return [attributedString!.string, attributedString!, pdfData]
     }
 }
 

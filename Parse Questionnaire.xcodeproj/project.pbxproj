@@ -46,6 +46,8 @@
 		E8BF428F287481A400C53975 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF428E287481A400C53975 /* Auth.swift */; };
 		E8C09CA0287ABDE20052EF8B /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C09C9F287ABDE20052EF8B /* HomeTabView.swift */; };
 		E8C09CA2287ABE670052EF8B /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C09CA1287ABE670052EF8B /* AppData.swift */; };
+		E8C1DBD428B121C000B21A48 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1DBD328B121C000B21A48 /* ActivityView.swift */; };
+		E8C1DBD628B121E800B21A48 /* ActivityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1DBD528B121E800B21A48 /* ActivityItem.swift */; };
 		E8C1F6BC288AC4EC003841DE /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1F6BB288AC4EC003841DE /* PageTitleView.swift */; };
 		E8C2183C2848E570003E2915 /* QuestionnaireTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */; };
 		E8C268EF288976F200400EAC /* ResultsQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C268EE288976F200400EAC /* ResultsQA.swift */; };
@@ -102,6 +104,8 @@
 		E8BF428E287481A400C53975 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		E8C09C9F287ABDE20052EF8B /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		E8C09CA1287ABE670052EF8B /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		E8C1DBD328B121C000B21A48 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		E8C1DBD528B121E800B21A48 /* ActivityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItem.swift; sourceTree = "<group>"; };
 		E8C1F6BB288AC4EC003841DE /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireTitleView.swift; sourceTree = "<group>"; };
 		E8C268EE288976F200400EAC /* ResultsQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsQA.swift; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 				E8D1B6252878700F0029C173 /* Alerts */,
 				E8B854F7284CF14D0060EF13 /* Styles */,
 				E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */,
+				E8C1DBD328B121C000B21A48 /* ActivityView.swift */,
+				E8C1DBD528B121E800B21A48 /* ActivityItem.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -508,11 +514,13 @@
 				E816A3FD28840AE900653A06 /* ResultUnitsCell.swift in Sources */,
 				E8C867C92889827500FD0ADD /* ResultsQACard.swift in Sources */,
 				E80A25DC28917DCC0090D426 /* QuestionPrompts.swift in Sources */,
+				E8C1DBD428B121C000B21A48 /* ActivityView.swift in Sources */,
 				E84AE3212881F5370028011A /* Reviews.swift in Sources */,
 				E8FE37E128854862004B02A3 /* UnitView.swift in Sources */,
 				E8BB36BC28A2D97D00AAE549 /* AccountViewModel.swift in Sources */,
 				E8BB35152885860F00369316 /* XDismissButton.swift in Sources */,
 				E8C268EF288976F200400EAC /* ResultsQA.swift in Sources */,
+				E8C1DBD628B121E800B21A48 /* ActivityItem.swift in Sources */,
 				E82DA6C9287AC21D00C19C73 /* ReviewView.swift in Sources */,
 				E8B77CFA28AFD30900C76AB1 /* QandA.swift in Sources */,
 				E8947BCD284377E800D47C7A /* QuestionnaireLoader.swift in Sources */,

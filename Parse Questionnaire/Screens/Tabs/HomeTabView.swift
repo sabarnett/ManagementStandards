@@ -10,6 +10,7 @@ struct HomeTabView: View {
     @EnvironmentObject var viewModel : AppData
     @State var showQuestionnaire: Bool = false
     @State var showInfoView: Bool = false
+    @State private var reportItems: ActivityItem?
     @Binding var loggedIn: Bool
     
     var body: some View {
@@ -121,12 +122,16 @@ struct HomeTabView: View {
     private func reviewTrailingBarItems() -> some View {
         HStack(spacing: 10) {
             Button {
-                viewModel.selectedReview?.shareReview()
+                if let reportData = viewModel.selectedReview?.reportShareItems() {
+                    reportItems = ActivityItem (itemsArray: reportData)
+                }
             } label: {
                 Image(systemName: "square.and.arrow.up")
                     .resizable()
                     .scaleEffect(0.9)
             }
+            .activitySheet($reportItems)
+            
             Button {
                 showInfoView = true
             } label: {

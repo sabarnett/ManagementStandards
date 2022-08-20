@@ -51,7 +51,7 @@ struct SignIn: View {
             Button {
                 if !viewModel.usernameIsValid() {
                     focusField = .userName
-                } else if viewModel.passwordIsValid() {
+                } else if !viewModel.passwordIsValid() {
                     focusField = .password
                 } else {
                     performSignin()
