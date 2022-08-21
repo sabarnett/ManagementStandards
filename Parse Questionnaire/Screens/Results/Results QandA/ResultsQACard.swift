@@ -17,6 +17,7 @@ struct ResultsQACard: View {
                     .font(.body)
                     .padding(10)
                     .foregroundColor(.secondary)
+                    .frame(minHeight: 110)
                 
                 VStack(alignment: .center) {
                     Text("Your answer: \(qa.answer)")

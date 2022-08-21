@@ -14,9 +14,8 @@ struct ResultsQA: View {
 
     var body: some View {
         VStack {
-            PageTitleView(title: "Q and A")
-            
             HStack {
+                PageTitleView(title: "Q and A")
                 Spacer()
                 Menu() {
                     Text("Filter results to show")
@@ -55,15 +54,17 @@ struct ResultsQA: View {
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {
             // Set the filter state bssed on the user preferences
-            filterQAResults = Users.shared.loggedInUser!.preferences.qaCardFilter
+            filterQAResults = Users.shared.loggedInUser?.preferences.qaCardFilter ?? .allResults
             withAnimation(.easeIn(duration: 0.4)) {
                 appearAnimationActive = true
             }
         }
         .onDisappear {
             // Update the user preferences with the filter state
-            Users.shared.loggedInUser!.preferences.qaCardFilter = filterQAResults
-            Users.shared.save(Users.shared.loggedInUser!)
+            if Users.shared.loggedInUser != nil {
+                Users.shared.loggedInUser!.preferences.qaCardFilter = filterQAResults
+                Users.shared.save(Users.shared.loggedInUser!)
+            }
             appearAnimationActive = false
         }
     }
