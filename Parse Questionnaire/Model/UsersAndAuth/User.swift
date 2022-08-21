@@ -42,7 +42,7 @@ class User: Codable, Identifiable {
     
     // User definition
     var name: String
-    var email: String
+    var email: String?
     var password: String
     var firstname: String?
     var lastname: String?

@@ -21,6 +21,8 @@ struct Review: Codable, Identifiable {
     var description: String
     var QA: [QandA]
     var units: [Unit]
+    var reportIntro: String?
+    var qaIntro: String?
 
     // MARK:- Review Computed properties
     
@@ -36,8 +38,8 @@ struct Review: Codable, Identifiable {
 
     var report: String {
         get {
-            let unitText = self.units.map({ $0.analysisText })
-            return unitText.joined(separator: "\n\n")
+            let reportData = ReviewReportBuilder().buildReport(for: self)
+            return reportData
         }
     }
 }
@@ -47,13 +49,21 @@ extension Review {
     // MARK:- Share icon data. We return an array of data to be passed to the share handler
 
     func reportShareItems() -> [Any] {
-        let reportData = try! Document(markdown: self.report).renderHTML()
-        let htmlData = "<h1>\(self.title)</h1><p>\(self.description)</p>\(reportData)"
+        let markdown = self.report
+        let markdownDocument = try! Document(markdown: markdown)
         
+        let reportData = markdownDocument.renderCommonMark()
+        let htmlData = markdownDocument.renderHTML()
+
         let attributedString = try? NSAttributedString(htmlString: htmlData)
         let pdfData = HTMLtoPDF.toPDF(htmlData)
         
-        return [attributedString!.string, attributedString!, pdfData]
+        // Formats supported:
+        // 1. Plain Text
+        // 2. Attributed String
+        // 3. PDF
+        // 4. CommonMark markdown
+        return [attributedString!.string, attributedString!, pdfData, reportData]
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8061AC128B24CE700ABE06E /* ReviewReportBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8061AC028B24CE700ABE06E /* ReviewReportBuilder.swift */; };
 		E80A25DA28917DAC0090D426 /* QuestionnaireTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25D928917DAC0090D426 /* QuestionnaireTitles.swift */; };
 		E80A25DC28917DCC0090D426 /* QuestionPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25DB28917DCC0090D426 /* QuestionPrompts.swift */; };
 		E80A25DE28917DD80090D426 /* QuestionnaireFinished.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A25DD28917DD80090D426 /* QuestionnaireFinished.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8061AC028B24CE700ABE06E /* ReviewReportBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReportBuilder.swift; sourceTree = "<group>"; };
 		E80A25D928917DAC0090D426 /* QuestionnaireTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireTitles.swift; sourceTree = "<group>"; };
 		E80A25DB28917DCC0090D426 /* QuestionPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPrompts.swift; sourceTree = "<group>"; };
 		E80A25DD28917DD80090D426 /* QuestionnaireFinished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireFinished.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				E84AE31C2881ECD80028011A /* Review.swift */,
 				E84AE3202881F5370028011A /* Reviews.swift */,
 				E8B77CF928AFD30900C76AB1 /* QandA.swift */,
+				E8061AC028B24CE700ABE06E /* ReviewReportBuilder.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				E8BB36BC28A2D97D00AAE549 /* AccountViewModel.swift in Sources */,
 				E8BB35152885860F00369316 /* XDismissButton.swift in Sources */,
 				E8C268EF288976F200400EAC /* ResultsQA.swift in Sources */,
+				E8061AC128B24CE700ABE06E /* ReviewReportBuilder.swift in Sources */,
 				E8C1DBD628B121E800B21A48 /* ActivityItem.swift in Sources */,
 				E82DA6C9287AC21D00C19C73 /* ReviewView.swift in Sources */,
 				E8B77CFA28AFD30900C76AB1 /* QandA.swift in Sources */,

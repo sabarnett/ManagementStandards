@@ -57,6 +57,10 @@ class Questionnaire: ObservableObject {
     }
     
     func saveReview(to viewModel: AppData) {
+        // Add intro text to the review so we have it for reporting
+        review.reportIntro = questionnaireData?.introduction.report
+        review.qaIntro = questionnaireData?.introduction.questions
+        
         // Resolve the unit list
         var unitList: Set<String> = Set<String>()
         for qa in review.QA {
