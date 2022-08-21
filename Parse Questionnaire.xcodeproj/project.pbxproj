@@ -136,6 +136,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8061AC228B25C4000ABE06E /* Reporting */ = {
+			isa = PBXGroup;
+			children = (
+				E8C1DBD328B121C000B21A48 /* ActivityView.swift */,
+				E8C1DBD528B121E800B21A48 /* ActivityItem.swift */,
+				E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */,
+				E8061AC028B24CE700ABE06E /* ReviewReportBuilder.swift */,
+			);
+			path = Reporting;
+			sourceTree = "<group>";
+		};
 		E80A25D828917D8C0090D426 /* QuestionnairePhases */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +277,6 @@
 				E84AE31C2881ECD80028011A /* Review.swift */,
 				E84AE3202881F5370028011A /* Reviews.swift */,
 				E8B77CF928AFD30900C76AB1 /* QandA.swift */,
-				E8061AC028B24CE700ABE06E /* ReviewReportBuilder.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -311,12 +321,10 @@
 		E8947BCB284377AE00D47C7A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E8061AC228B25C4000ABE06E /* Reporting */,
 				E8947BCE28437EBD00D47C7A /* Extensions */,
 				E8D1B6252878700F0029C173 /* Alerts */,
 				E8B854F7284CF14D0060EF13 /* Styles */,
-				E8DB057928ABDBAA00449F1D /* HTMLtoPDF.swift */,
-				E8C1DBD328B121C000B21A48 /* ActivityView.swift */,
-				E8C1DBD528B121E800B21A48 /* ActivityItem.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
