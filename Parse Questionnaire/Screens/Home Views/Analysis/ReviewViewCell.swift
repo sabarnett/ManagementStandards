@@ -27,10 +27,10 @@ struct ReviewViewCell: View {
                     .font(.footnote)
             }
            
-           Spacer()
-           Button(action: {}) {
-               Image(systemName: "chevron.right")
-           }
+//           Spacer()
+//           Button(action: {}) {
+//               Image(systemName: "chevron.right")
+//           }
         }.padding(6)
     }
 }

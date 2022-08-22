@@ -14,6 +14,8 @@ struct AccountView: View {
     @State var appearAnimationActive:Bool = false
     @State var showDeleteAccountVerification: Bool = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             PageTitleView(title: "Your Details",
@@ -72,6 +74,11 @@ struct AccountView: View {
                     }
                 }
             }
+        }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: { XDismissButton() }
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
         .onAppear {

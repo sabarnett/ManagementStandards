@@ -22,7 +22,6 @@ struct QuestionnaireView: View {
     
     @State private var phase: QuestionnairePhase = .titles
     
-    
     var body: some View {
         ZStack {
             PopupBackgroundView()
@@ -93,7 +92,7 @@ struct QuestionnaireView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionnaireView(showQuestionnaire: .constant(true))
-            .environmentObject(AppData())
+        QuestionnaireView(showQuestionnaire: .constant(true)) 
+        .environmentObject(AppData())
     }
 }

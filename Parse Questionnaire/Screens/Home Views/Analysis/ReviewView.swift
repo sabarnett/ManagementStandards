@@ -36,11 +36,15 @@ struct ReviewView: View {
                     }
                     List {
                         ForEach(viewModel.reviews) { review in
-                            ReviewViewCell(review: review)
-                                .onTapGesture {
-                                    viewModel.selectedReview = review
-                                    viewModel.showReview = true
-                                }
+                            NavigationLink(destination: {
+                                ReviewTabView(selectedReview: review)
+                            }, label: {
+                                ReviewViewCell(review: review)
+//                                    .onTapGesture {
+//                                        viewModel.selectedReview = review
+//                                        viewModel.showReview = true
+//                                    }
+                            })
                         }
                         .onDelete(perform: deleteReview)
                     }.listStyle(.plain)

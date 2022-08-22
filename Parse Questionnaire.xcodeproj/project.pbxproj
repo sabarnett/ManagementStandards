@@ -62,6 +62,7 @@
 		E8E8C9AD28804DC1002CF367 /* APPButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E8C9AC28804DC1002CF367 /* APPButtonText.swift */; };
 		E8EBC0AE28A5344800EC1CBB /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBC0AD28A5344800EC1CBB /* NSAttributedStringExtensions.swift */; };
 		E8EF6F792884562F00F05709 /* ResultUnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF6F782884562F00F05709 /* ResultUnitsView.swift */; };
+		E8FB641728B3A2CD00034906 /* ReviewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB641628B3A2CD00034906 /* ReviewTabView.swift */; };
 		E8FE37E128854862004B02A3 /* UnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE37E028854862004B02A3 /* UnitView.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		E8E8C9AC28804DC1002CF367 /* APPButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPButtonText.swift; sourceTree = "<group>"; };
 		E8EBC0AD28A5344800EC1CBB /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		E8EF6F782884562F00F05709 /* ResultUnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUnitsView.swift; sourceTree = "<group>"; };
+		E8FB641628B3A2CD00034906 /* ReviewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTabView.swift; sourceTree = "<group>"; };
 		E8FE37E028854862004B02A3 /* UnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				E8C09C9F287ABDE20052EF8B /* HomeTabView.swift */,
+				E8FB641628B3A2CD00034906 /* ReviewTabView.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				E8947BD22843803900D47C7A /* QuestionPromptView.swift in Sources */,
 				E8261FFE28411748005F84A3 /* Unit.swift in Sources */,
 				E8C09CA2287ABE670052EF8B /* AppData.swift in Sources */,
+				E8FB641728B3A2CD00034906 /* ReviewTabView.swift in Sources */,
 				E80A25DE28917DD80090D426 /* QuestionnaireFinished.swift in Sources */,
 				E8C268F12889770200400EAC /* ResultsReport.swift in Sources */,
 				E8261FF8284116F6005F84A3 /* QuestionnaireData.swift in Sources */,
