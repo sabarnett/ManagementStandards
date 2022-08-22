@@ -7,6 +7,7 @@ import SwiftUI
 
 struct ReviewTabView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var viewModel : AppData
     @State var selectedReview: Review
     @State var showInfoView: Bool = false
@@ -25,8 +26,9 @@ struct ReviewTabView: View {
         }
         .navigationBarTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(/* leading: reviewLeadingBarItems(), */
+        .navigationBarItems(leading: reviewLeadingBarItems(),
             trailing: reviewTrailingBarItems(selectedReview: selectedReview))
+        .navigationBarBackButtonHidden(true)
         .padding(.horizontal, 20)
         .padding(.top, 15)
 
@@ -42,15 +44,19 @@ struct ReviewTabView: View {
     
     // MARK:- Review details page
 
-//    private func reviewLeadingBarItems() -> some View {
-//        Button { viewModel.showReview = false  }
-//        label: {
-//            HStack {
-//                Image(systemName: "chevron.left")
-//                Text("Reviews")
-//            }
-//        }
-//    }
+    private func reviewLeadingBarItems() -> some View {
+        Button { presentationMode.wrappedValue.dismiss()  }
+        label: {
+            HStack {
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    EmptyView()
+                } else {
+                    Image(systemName: "chevron.left").padding(.trailing, 0)
+                    Text("Reviews")
+                }
+            }
+        }
+    }
     
     private func reviewTrailingBarItems(selectedReview: Review) -> some View {
         HStack(spacing: 10) {

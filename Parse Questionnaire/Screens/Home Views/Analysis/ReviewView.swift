@@ -10,10 +10,12 @@ struct ReviewView: View {
     @EnvironmentObject var viewModel: AppData
     @State var appearAnimationActive: Bool = false
     @State var showDeletePrompt: Bool = false
+    @State var selectedReviewId: UUID? = nil
     
     var body: some View {
         VStack {
             PageTitleView(title: "Reviews")
+                .padding(.top, 15)
             
             if viewModel.reviewCount == 0 {
                 Spacer()
@@ -34,20 +36,20 @@ struct ReviewView: View {
                     if viewModel.loadingReviews {
                         BusyView(caption: "retrieving reviews")
                     }
-                    List {
+                    List(selection: $selectedReviewId) {
                         ForEach(viewModel.reviews) { review in
                             NavigationLink(destination: {
                                 ReviewTabView(selectedReview: review)
                             }, label: {
                                 ReviewViewCell(review: review)
-//                                    .onTapGesture {
-//                                        viewModel.selectedReview = review
-//                                        viewModel.showReview = true
-//                                    }
                             })
                         }
                         .onDelete(perform: deleteReview)
                     }.listStyle(.plain)
+                    .onAppear(perform: {
+                        guard let selectedReview = viewModel.selectedReview else { return }
+                        selectedReviewId = selectedReview.id
+                    })
                 }
             }
         }

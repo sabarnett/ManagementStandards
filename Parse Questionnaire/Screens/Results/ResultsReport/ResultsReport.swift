@@ -13,10 +13,10 @@ struct ResultsReport: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text(review.title)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundColor(.titleColor)
+            HStack {
+                PageTitleView(title: review.title)
+                Spacer()
+            }.padding(.top, 0)
             
             Text(review.description)
                 .font(.body)

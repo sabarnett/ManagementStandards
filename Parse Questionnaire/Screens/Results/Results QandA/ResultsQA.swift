@@ -41,7 +41,8 @@ struct ResultsQA: View {
                     Image(systemName: filterQAResults == .allResults ? "menucard" : "menucard.fill")
                         .scaleEffect(1.6)
                 }
-            }.padding(.horizontal)
+            }.padding(.top, 0)
+            .padding(.horizontal)
             
             TabView(selection: $selection) {
                 ForEach(filteredQA()) {

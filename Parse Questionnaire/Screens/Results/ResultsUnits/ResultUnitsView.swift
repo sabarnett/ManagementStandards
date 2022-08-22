@@ -13,19 +13,10 @@ struct ResultUnitsView: View {
     var body: some View {
         VStack {
             HStack {
-                VStack(alignment: .leading) {
-                    Text(review.title)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
-                    Text(review.createdDateFormatted)
-                        .font(.caption)
-                }
-                .foregroundColor(Color.titleColor)
-                .padding(.horizontal, 15)
+                PageTitleView(title: review.title, subtitle: review.createdDateFormatted)
                 Spacer()
-            }
-            
+            }.padding(.top, 0)
+
             if review.unitCount == 0 {
                 Spacer()
                 

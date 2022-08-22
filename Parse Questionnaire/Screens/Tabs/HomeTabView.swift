@@ -17,21 +17,10 @@ struct HomeTabView: View {
     var body: some View {
         NavigationView {
             ReviewView()
-//            TabView {
-//                ReviewView()
-//                    .tabItem {
-//                        Label("Analyses", systemImage: "newspaper.fill")
-//                    }
-//
-//                AccountView(loggedIn: $loggedIn)
-//                    .tabItem {
-//                        Label("Account", systemImage: "person.fill")
-//                    }
-//            }
-            .navigationBarTitle("")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: homeLeadingBarItems(),
-                                trailing: homeTrailingBarItems())
+                .navigationBarTitle("")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(leading: homeLeadingBarItems(),
+                                    trailing: homeTrailingBarItems())
         }
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()
