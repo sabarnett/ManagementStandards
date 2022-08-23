@@ -49,6 +49,7 @@ struct ResultsQA: View {
                     q in
                     ResultsQACard(qa: q, units: review.units)
                         .tag(q.id)
+                        .frame(maxWidth: 500)
                 }
             }.tabViewStyle(.page)
         }
