@@ -59,11 +59,10 @@ extension Review {
         let pdfData = HTMLtoPDF.toPDF(htmlData)
         
         // Formats supported:
-        // 1. Plain Text
-        // 2. Attributed String
-        // 3. PDF
-        // 4. CommonMark markdown
-        return [attributedString!.string, attributedString!, pdfData, reportData]
+        // 1. Attributed String
+        // 2. PDF
+        // 3. CommonMark markdown
+        return [attributedString!, pdfData, reportData]
     }
 }
 
