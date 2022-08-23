@@ -17,7 +17,7 @@ struct InfoView: View {
                 Form {
                     Section(header: Text("About the App").bold()) {
                         AboutLineView(name: "Name", value: "Parse Questionnaire")
-                        AboutLineView(name: "Version", value: "0.1.0")
+                        AboutLineView(name: "Version", value: "2.0.0")
                         AboutLineView(name: "Author", value: "Steven Barnett")
                     }
                     Section(header: Text("Support").bold()) {
@@ -25,15 +25,20 @@ struct InfoView: View {
                         AboutLineView(name: "Email", value: "mac@sabarnett.co.uk")
                     }
                     
-                    VStack {
-                        Image("YesNoMaybe")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .opacity(0.6)
-                        Text("Copyright (c) 2022 Steven Barnett")
+                    HStack {
                         Spacer()
-                    }.padding(20)
+                        VStack {
+                            Image("YesNoMaybe")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .opacity(0.6)
+                            Text("Copyright (c) 2022 Steven Barnett")
+                                .font(.callout)
+                        }
+                        Spacer()
+                    }
+                    Spacer()
                 }
             }
         }
