@@ -10,7 +10,7 @@ struct HomeTabView: View {
     @EnvironmentObject var viewModel : AppData
     @State var showQuestionnaire: Bool = false
     @State var showInfoView: Bool = false
-    @State var showSettingsView: Bool = false
+    @State var showAccountView: Bool = false
     @State private var reportItems: ActivityItem?
     @Binding var loggedIn: Bool
     
@@ -33,7 +33,7 @@ struct HomeTabView: View {
         .sheet(isPresented: $showInfoView) {
             InfoView(showInfoView: $showInfoView)
         }
-        .sheet(isPresented: $showSettingsView) {
+        .sheet(isPresented: $showAccountView) {
             AccountView(loggedIn: $loggedIn)
         }
     }
@@ -52,17 +52,17 @@ struct HomeTabView: View {
     private func homeTrailingBarItems() -> some View {
         HStack(spacing: 10) {
             Button {
-                showQuestionnaire = true
+                showQuestionnaire.toggle()
             } label: {
                 Image(systemName: "plus")
             }
             Button {
-                showSettingsView.toggle()
+                showAccountView.toggle()
             } label: {
-                Image(systemName: "gearshape")
+                Image(systemName: "person")
             }
             Button {
-                showInfoView = true
+                showInfoView.toggle()
             } label: {
                 Image(systemName: "info.circle")
             }
@@ -74,5 +74,6 @@ struct HomeNavView_Previews: PreviewProvider {
     static var previews: some View {
         HomeTabView(loggedIn: .constant(true))
             .environmentObject(AppData())
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
