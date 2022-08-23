@@ -66,7 +66,6 @@ class Questionnaire: ObservableObject {
         for qa in review.QA {
             if !qa.units.isEmpty {
                 // Split the unit list, returning the trimmed unit number
-                //let unitIds = qa.units.split(separator: "&")
                 let unitIds = qa.units.components(separatedBy: CharacterSet(charactersIn: "&,"))
 
                 let trimmedUnitIds = unitIds.map() { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
@@ -82,7 +81,7 @@ class Questionnaire: ObservableObject {
         }
 
         // Add the units to the review
-        review.units = unsortedUnits.sorted(by: {a, b in a.id < b.id})
+        review.units = unsortedUnits.sorted(by: {a, b in a.sortKey < b.sortKey })
         
         // Add the review which will also cause the list to save
         viewModel.addReview(review)
@@ -116,5 +115,3 @@ class Questionnaire: ObservableObject {
 
     
 }
-
-
