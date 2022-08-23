@@ -39,17 +39,14 @@ struct ReviewView: View {
                     List(selection: $selectedReviewId) {
                         ForEach(viewModel.reviews) { review in
                             NavigationLink(destination: {
-                                ReviewTabView(selectedReview: review)
+                                ReviewTabView(selectedReview: review, selectedReviewId: $selectedReviewId)
                             }, label: {
                                 ReviewViewCell(review: review)
                             })
                         }
                         .onDelete(perform: deleteReview)
-                    }.listStyle(.plain)
-                    .onAppear(perform: {
-                        guard let selectedReview = viewModel.selectedReview else { return }
-                        selectedReviewId = selectedReview.id
-                    })
+                    }
+                    .listStyle(.plain)
                 }
             }
         }

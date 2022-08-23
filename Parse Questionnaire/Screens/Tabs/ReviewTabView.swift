@@ -10,6 +10,7 @@ struct ReviewTabView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var viewModel : AppData
     @State var selectedReview: Review
+    @Binding var selectedReviewId: UUID?
     @State var showInfoView: Bool = false
     @State private var reportItems: ActivityItem?
     
@@ -36,6 +37,8 @@ struct ReviewTabView: View {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            
+            selectedReviewId = selectedReview.id
         }
         .sheet(isPresented: $showInfoView) {
             InfoView(showInfoView: $showInfoView)
@@ -82,6 +85,7 @@ struct ReviewTabView: View {
 
 struct ReviewTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewTabView(selectedReview: Review.dummyData)
+        ReviewTabView(selectedReview: Review.dummyData,
+                      selectedReviewId: .constant(UUID()))
     }
 }
