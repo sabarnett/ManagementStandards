@@ -44,8 +44,7 @@ struct QuestionnaireView: View {
         }
         .overlay(alignment: .topTrailing) {
             Button {
-                questions.alertItem = nil
-                questions.showAlert = true
+                showWarning = true
             } label: { XDismissButton() }
         }
         .onChange(of: phase) {
@@ -54,24 +53,10 @@ struct QuestionnaireView: View {
                 showQuestionnaire = false
             }
         }
-        .alert(isPresented: $questions.showAlert) {
-            if let alertItem = questions.alertItem {
-                return ErrorPrompt(alertItem: alertItem)
-            } else {
-                return AreYouSurePrompt()
-            }
+        .messageBox(message: $questions.messageItem)
+        .alert(isPresented: $showWarning) {
+            AreYouSurePrompt()
         }
-    }
-    
-    fileprivate func ErrorPrompt(alertItem: AlertItem) -> Alert {
-        return Alert(title: alertItem.title,
-                     message: alertItem.message,
-                     dismissButton: .default(alertItem.dismissButton,
-                                             action: {
-                questions.showAlert = false
-                questions.alertItem = nil
-            })
-        )
     }
     
     fileprivate func AreYouSurePrompt() -> Alert {
@@ -80,11 +65,11 @@ struct QuestionnaireView: View {
             message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
             primaryButton: .destructive(Text("Cancel")) {
                 print("Questionnaire cancelled...")
-                questions.showAlert = false
+                showWarning = false
                 showQuestionnaire = false
             },
             secondaryButton: .default(Text("Resume")) {
-                questions.showAlert = false
+                showWarning = false
             }
         )
     }

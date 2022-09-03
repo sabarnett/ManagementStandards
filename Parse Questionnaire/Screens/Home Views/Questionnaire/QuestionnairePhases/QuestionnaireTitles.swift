@@ -60,13 +60,13 @@ struct QuestionnaireTitles: View {
     
     func validateAndSetTitles() -> Bool {
         questions.reviewTitle = reviewTitle
-        if questions.alertItem != nil {
+        if questions.messageItem != nil {
             focusField = .title
             return false
         }
         
         questions.reviewDescription = reviewDescription
-        if questions.alertItem != nil {
+        if questions.messageItem != nil {
             focusField = .description
             return false
         }

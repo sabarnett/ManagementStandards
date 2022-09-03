@@ -89,13 +89,7 @@ struct AccountView: View {
         .onDisappear {
             appearAnimationActive = false
         }
-        .alert(item: $accViewModel.alertItem) {
-            alertItem in
-            
-            Alert(title: alertItem.title,
-                  message: alertItem.message,
-                  dismissButton: .default(alertItem.dismissButton))
-        }
+        .messageBox(message: $accViewModel.messageItem)
     }
 }
 

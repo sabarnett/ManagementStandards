@@ -9,8 +9,7 @@ class Questionnaire: ObservableObject {
     
     @Published var questionnaireData: QuestionnaireData? = QuestionnaireLoader.load(forName: "ManagementStandards")
     @Published var isComplete: Bool = false
-    @Published var alertItem: AlertItem?
-    @Published var showAlert: Bool = false 
+    @Published var messageItem: MessageItem?
     
     private var currentQuestionId = 1
     private var review: Review = Review(created: Date.now,
@@ -93,8 +92,7 @@ class Questionnaire: ObservableObject {
         get { review.title }
         set {
             if newValue.isEmpty {
-                alertItem = AlertContext.reviewTitleRequired
-                showAlert = true
+                messageItem = MessageContext.reviewTitleRequired
                 return
             }
             review.title = newValue
@@ -105,13 +103,10 @@ class Questionnaire: ObservableObject {
         get { review.title }
         set {
             if newValue.isEmpty {
-                alertItem = AlertContext.reviewDescriptionRequired
-                showAlert = true
+                messageItem = MessageContext.reviewDescriptionRequired
                 return
             }
             review.description = newValue
         }
     }
-
-    
 }

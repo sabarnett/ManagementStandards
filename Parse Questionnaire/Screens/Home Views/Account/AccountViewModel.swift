@@ -17,7 +17,7 @@ class AccountViewModel: ObservableObject {
     @Published var newPassword: String = ""
     @Published var verifyPassword: String = ""
     
-    @Published var alertItem: AlertItem?
+    @Published var messageItem: MessageItem?
 
     init() {
         let user = Users.shared.loggedInUser
@@ -31,15 +31,15 @@ class AccountViewModel: ObservableObject {
     func updateUser() {
         // Verify data
         if firstname.isEmpty {
-            alertItem = AlertContext.firstnameRequired
+            messageItem = MessageContext.firstnameRequired
             return
         }
         if lastname.isEmpty {
-            alertItem = AlertContext.lastnameRequired
+            messageItem = MessageContext.lastnameRequired
             return
         }
         if email.isEmpty {
-            alertItem = AlertContext.emailRequired
+            messageItem = MessageContext.emailRequired
             return
         }
 
@@ -49,30 +49,30 @@ class AccountViewModel: ObservableObject {
                                         email: email)
         
         // inform the user
-        alertItem = AlertContext.userUpdated
+        messageItem = MessageContext.userUpdated
     }
     
     func updatePassword() {
         // Verify data
         if oldPassword.isEmpty {
-            alertItem = AlertContext.oldPasswordRequired
+            messageItem = MessageContext.oldPasswordRequired
             return
         }
         if newPassword.isEmpty {
-            alertItem = AlertContext.newPasswordRequired
+            messageItem = MessageContext.newPasswordRequired
             return
         }
         if verifyPassword.isEmpty {
-            alertItem = AlertContext.verifyPasswordRequired
+            messageItem = MessageContext.verifyPasswordRequired
             return
         }
         if newPassword != verifyPassword {
-            alertItem = AlertContext.newPasswordsDoNotMatch
+            messageItem = MessageContext.newPasswordsDoNotMatch
             return
         }
 
         if !Auth.validatePassword(oldPassword, forUser: Users.shared.loggedInUser!) {
-            alertItem = AlertContext.oldPasswordIncorrect
+            messageItem = MessageContext.oldPasswordIncorrect
             return
         }
         
@@ -85,6 +85,6 @@ class AccountViewModel: ObservableObject {
         verifyPassword = ""
         
         // Save user
-        alertItem = AlertContext.passwordUpdated
+        messageItem = MessageContext.passwordUpdated
     }
 }
