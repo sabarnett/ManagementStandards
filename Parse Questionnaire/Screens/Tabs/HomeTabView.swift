@@ -21,7 +21,23 @@ struct HomeTabView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(leading: homeLeadingBarItems(),
                                     trailing: homeTrailingBarItems())
+                .toolbar {
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Spacer()
+                        Button {
+                            showAccountView.toggle()
+                        } label: {
+                            Image(systemName: "person")
+                        }
+                        Button {
+                            showInfoView.toggle()
+                        } label: {
+                            Image(systemName: "info.circle")
+                        }
+                    }
+                }
         }
+        
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()
@@ -55,16 +71,6 @@ struct HomeTabView: View {
                 showQuestionnaire.toggle()
             } label: {
                 Image(systemName: "plus")
-            }
-            Button {
-                showAccountView.toggle()
-            } label: {
-                Image(systemName: "person")
-            }
-            Button {
-                showInfoView.toggle()
-            } label: {
-                Image(systemName: "info.circle")
             }
         }
     }
