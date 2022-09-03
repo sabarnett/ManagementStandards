@@ -14,7 +14,7 @@ class SigninViewModel: ObservableObject {
     
     @Published var userName: String = ""
     @Published var password: String = ""
-    @Published var alertItem: AlertItem?
+    @Published var messageItem: MessageItem?
     
     /// Attempt to signin. The form will be validated first and them we will login the user
     /// if no issues are found
@@ -30,12 +30,12 @@ class SigninViewModel: ObservableObject {
 
         // Signin - validate the user and the password
         guard let user = Users.shared.loggedInUser else {
-            alertItem = AlertContext.invalidCredentials
+            messageItem = MessageContext.invalidCredentials
             return false
         }
         
         if !Auth.validatePassword(password, forUser: user) {
-            alertItem = AlertContext.invalidCredentials
+            messageItem = MessageContext.invalidCredentials
             return false
         }
         
@@ -51,7 +51,7 @@ class SigninViewModel: ObservableObject {
         if !validateForm() { return false }
 
         if Users.shared.get(userName: userName) != nil {
-            alertItem = AlertContext.userAlreadyExists
+            messageItem = MessageContext.userAlreadyExists
             return false
         }
         
@@ -82,11 +82,11 @@ class SigninViewModel: ObservableObject {
     
     fileprivate func validateForm() -> Bool {
         if !usernameIsValid() {
-            alertItem = AlertContext.userNameRequired
+            messageItem = MessageContext.userNameRequired
             return false
         }
         if !passwordIsValid() {
-            alertItem = AlertContext.passwordRequired
+            messageItem = MessageContext.passwordRequired
             return false
         }
 

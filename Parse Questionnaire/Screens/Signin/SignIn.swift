@@ -68,13 +68,7 @@ struct SignIn: View {
             }
         }
         .padding(20)
-        .alert(item: $viewModel.alertItem) {
-            alertItem in
-            
-            Alert(title: alertItem.title,
-                  message: alertItem.message,
-                  dismissButton: .default(alertItem.dismissButton))
-        }
+        .messageBox(message: $viewModel.messageItem)
     }
     
     func performSignin() {
