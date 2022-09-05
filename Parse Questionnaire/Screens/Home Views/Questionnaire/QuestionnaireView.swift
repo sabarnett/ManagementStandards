@@ -18,7 +18,7 @@ struct QuestionnaireView: View {
     @Binding var showQuestionnaire: Bool
     
     @StateObject var questions = Questionnaire()
-    @State private var showWarning: Bool = false
+    @State private var showWarning: MessageItem?
     
     @State private var phase: QuestionnairePhase = .titles
     
@@ -44,7 +44,7 @@ struct QuestionnaireView: View {
         }
         .overlay(alignment: .topTrailing) {
             Button {
-                showWarning = true
+                showWarning = MessageContext.confirmQuit
             } label: { XDismissButton() }
         }
         .onChange(of: phase) {
@@ -54,25 +54,31 @@ struct QuestionnaireView: View {
             }
         }
         .messageBox(message: $questions.messageItem)
-        .alert(isPresented: $showWarning) {
-            AreYouSurePrompt()
+        .messageBox(message: $showWarning) {
+            response in
+            
+            showQuestionnaire = (response != .Primary)
+            showWarning = nil
         }
+//        .alert(isPresented: $showWarning) {
+//            AreYouSurePrompt()
+//        }
     }
     
-    fileprivate func AreYouSurePrompt() -> Alert {
-        return Alert(
-            title: Text("Are you sure you want to cancel?"),
-            message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
-            primaryButton: .destructive(Text("Cancel")) {
-                print("Questionnaire cancelled...")
-                showWarning = false
-                showQuestionnaire = false
-            },
-            secondaryButton: .default(Text("Resume")) {
-                showWarning = false
-            }
-        )
-    }
+//    fileprivate func AreYouSurePrompt() -> Alert {
+//        return Alert(
+//            title: Text("Are you sure you want to cancel?"),
+//            message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
+//            primaryButton: .destructive(Text("Cancel")) {
+//                print("Questionnaire cancelled...")
+//                showWarning = false
+//                showQuestionnaire = false
+//            },
+//            secondaryButton: .default(Text("Resume")) {
+//                showWarning = false
+//            }
+//        )
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
