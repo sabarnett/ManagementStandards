@@ -15,7 +15,7 @@ struct APPButtonText: View {
     
     var body: some View {
         Text(caption)
-            .font(.title3)
+            .font(.headline)
             .fontWeight(.semibold)
             .padding()
             .frame(width: buttonWidth, height: buttonHeight)
