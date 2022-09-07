@@ -72,12 +72,6 @@ struct ReviewTabView: View {
                     .scaleEffect(0.9)
             }
             .activitySheet($reportItems)
-            
-            Button {
-                showInfoView = true
-            } label: {
-                Image(systemName: "info.circle")
-            }
         }
     }
 
