@@ -28,7 +28,7 @@ struct MessageBoxViewModifier: ViewModifier {
                     if let buttonPressed = buttonPressed {
                         buttonPressed(response)
                     }
-                }
+                }.padding(.horizontal, 10)
             }
         }
     }

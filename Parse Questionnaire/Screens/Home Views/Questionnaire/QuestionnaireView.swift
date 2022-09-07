@@ -37,7 +37,8 @@ struct QuestionnaireView: View {
                     // Display the questionnaire and gather results
                     QuestionPrompts(questions: questions, phase: $phase)
                 } else if phase == .save {
-                    // Finished - display the confirmation text and the begin analysis button
+                    // Finished - display the confirmation text and
+                    // the begin analysis button
                     QuestionnaireFinished(questions: questions, phase: $phase)
                 }
             }
@@ -60,25 +61,7 @@ struct QuestionnaireView: View {
             showQuestionnaire = (response != .Primary)
             showWarning = nil
         }
-//        .alert(isPresented: $showWarning) {
-//            AreYouSurePrompt()
-//        }
     }
-    
-//    fileprivate func AreYouSurePrompt() -> Alert {
-//        return Alert(
-//            title: Text("Are you sure you want to cancel?"),
-//            message: Text("If you close the questionnaire now, your answers will be discarded and the analysis will not be created."),
-//            primaryButton: .destructive(Text("Cancel")) {
-//                print("Questionnaire cancelled...")
-//                showWarning = false
-//                showQuestionnaire = false
-//            },
-//            secondaryButton: .default(Text("Resume")) {
-//                showWarning = false
-//            }
-//        )
-//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
