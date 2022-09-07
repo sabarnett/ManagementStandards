@@ -66,7 +66,8 @@ struct MessageBoxView: View {
     }
     
     fileprivate func doubleButton() -> some View {
-        return HStack(alignment: .center, spacing: 20) {
+        return HStack(alignment: .center) {
+            Spacer()
             Button(action: {
                 onButtonPress(.Primary)
             }, label: {
@@ -76,6 +77,9 @@ struct MessageBoxView: View {
                               backgroundColor: message.primaryButton.color,
                               foregroundColor: .primary)
             })
+            Spacer()
+            Divider()
+            Spacer()
             Button(action: {
                 onButtonPress(.Secondary)
             }, label: {
@@ -85,7 +89,8 @@ struct MessageBoxView: View {
                               backgroundColor: message.secondaryButton.color,
                               foregroundColor: .primary)
             })
-        }
+            Spacer()
+        }.frame(maxHeight: 50)
     }
     
     fileprivate func singleButton() -> some View {
