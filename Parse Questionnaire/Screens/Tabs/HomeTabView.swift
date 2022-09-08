@@ -21,6 +21,7 @@ struct HomeTabView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(leading: homeLeadingBarItems(),
                                     trailing: homeTrailingBarItems())
+
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Spacer()
@@ -36,8 +37,23 @@ struct HomeTabView: View {
                         }
                     }
                 }
+            
+            VStack {
+                Spacer()
+                
+                Image("StarPages")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 400, height: 280, alignment: .center)
+                Text("Please expand the sidebar and select a review from the reviews list, or press the + icon to create a new one.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40)
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: 400)
+                Spacer()
+            }
         }
-        
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()

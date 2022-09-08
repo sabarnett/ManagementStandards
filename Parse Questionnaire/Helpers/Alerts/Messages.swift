@@ -38,8 +38,8 @@ struct MessageItem: Identifiable {
     }
     
     let id = UUID()
-    let title: String
-    let message: String
+    var title: String
+    var message: String
     var dismissButton: MessageButton = MessageButton(type: .Dismiss, caption: "", color: .buttonBackground)
     var primaryButton: MessageButton = MessageButton(type: .Primary, caption: "", color: Color(UIColor.systemRed))
     var secondaryButton: MessageButton = MessageButton(type: .Secondary, caption: "", color: Color(UIColor.systemBlue))
@@ -121,4 +121,11 @@ struct MessageContext {
     static let passwordUpdated = MessageItem(title: "Updated",
                                              message: "Your password has been updated.",
                                              dismissButton: "OK")
+    
+    // MARK: - Review list actions
+    static let deleteReviewPrompt = MessageItem(title: "Delete Review?",
+                                                message: "Are you sure you want to delete review ??. This acrion cannot be undone!",
+                                                primaryButton: "Delete",
+                                                secondaryButton: "Keep"
+    )
 }

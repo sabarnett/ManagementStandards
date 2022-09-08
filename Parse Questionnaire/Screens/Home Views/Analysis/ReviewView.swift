@@ -9,7 +9,7 @@ struct ReviewView: View {
     
     @EnvironmentObject var viewModel: AppData
     @State var appearAnimationActive: Bool = false
-    @State var showDeletePrompt: Bool = false
+    @State var showDeletePrompt: MessageItem? = nil
     @State var selectedReviewId: UUID? = nil
     
     var body: some View {
@@ -43,8 +43,14 @@ struct ReviewView: View {
                             }, label: {
                                 ReviewViewCell(review: review)
                             })
+                            .tag(review.id)
                         }
                         .onDelete(perform: deleteReview)
+                        .onAppear {
+                            if selectedReviewId == nil && viewModel.reviewCount > 0 {
+                                selectedReviewId = viewModel.reviews.first!.id
+                            }
+                        }
                     }
                     .listStyle(.plain)
                 }
@@ -58,28 +64,24 @@ struct ReviewView: View {
             viewModel.loadReviews()
         }
         .onDisappear { appearAnimationActive = false }
-        .alert(isPresented: $showDeletePrompt) { deleteReviewPrompt() }
+        .messageBox(message: $showDeletePrompt) {
+            response in
+            
+            if response == .Primary {
+                if let selectedReview = viewModel.selectedReview {
+                    viewModel.deleteReview(selectedReview)
+                }
+            }
+        }
     }
     
     fileprivate func deleteReview(at offsets: IndexSet) {
         viewModel.selectedReview = viewModel.reviews[offsets.first!]
-        showDeletePrompt = true
-    }
-    
-    fileprivate func deleteReviewPrompt() -> Alert {
-        return Alert(
-            title: Text("Are you sure?"),
-            message: Text("Do you want to delete review:  '\(viewModel.selectedReview!.title)'? This action cannot be undone!"),
-            primaryButton: .destructive(Text("Delete")) {
-                    if let selectedReview = viewModel.selectedReview {
-                        viewModel.deleteReview(selectedReview)
-                    }
-                    showDeletePrompt = false
-                },
-            secondaryButton: .cancel(Text("Keep")) {
-                    showDeletePrompt = false
-                }
-        )
+        
+        var deleteMessage = MessageContext.deleteReviewPrompt
+        deleteMessage.message = deleteMessage.message.replacingOccurrences(of: "$1", with: viewModel.selectedReview?.title ?? "")
+        
+        showDeletePrompt = deleteMessage
     }
 }
 

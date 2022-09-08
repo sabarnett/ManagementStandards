@@ -18,20 +18,40 @@ struct MessageBoxViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack {
             content
-                .blur(radius: message != nil ? 15 : 0)
-            
-            if let messageItem = message {
-                MessageBoxView(message: messageItem) {
-                    response in
+                .fullScreenCover(item: $message) {
+                    messageItem in
                     
-                    message = nil
-                    if let buttonPressed = buttonPressed {
-                        buttonPressed(response)
-                    }
-                }.padding(.horizontal, 10)
-            }
+                    ZStack {
+                        MessageBoxView(message: messageItem) {
+                            response in
+                            
+                            message = nil
+                            if let buttonPressed = buttonPressed {
+                                buttonPressed(response)
+                            }
+                        }.padding(.horizontal, 10)
+                    }.background(FullScreenCoverBackgroundRemovalView())
+                }
         }
     }
+}
+
+private struct FullScreenCoverBackgroundRemovalView: UIViewRepresentable {
+    
+    private class BackgroundRemovalView: UIView {
+        override func didMoveToWindow() {
+            super.didMoveToWindow()
+            
+            superview?.superview?.backgroundColor = .clear
+        }
+    }
+    
+    func makeUIView(context: Context) -> UIView {
+        return BackgroundRemovalView()
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {}
+    
 }
 
 extension View {
