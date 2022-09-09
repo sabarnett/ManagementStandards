@@ -46,14 +46,9 @@ struct ReviewView: View {
                             .tag(review.id)
                         }
                         .onDelete(perform: deleteReview)
-                        .onAppear {
-                            if selectedReviewId == nil && viewModel.reviewCount > 0 {
-                                selectedReviewId = viewModel.reviews.first!.id
-                            }
                         }
                     }
                     .listStyle(.plain)
-                }
             }
         }
         .opacity(appearAnimationActive ? 1 : 0.1)

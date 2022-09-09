@@ -38,7 +38,7 @@ struct ReviewTabView: View {
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
             
-//            selectedReviewId = selectedReview.id
+            selectedReviewId = selectedReview.id
         }
         .sheet(isPresented: $showInfoView) {
             InfoView(showInfoView: $showInfoView)
