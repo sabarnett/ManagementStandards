@@ -24,10 +24,6 @@ struct HomeTabView: View {
                 .navigationBarItems(leading: homeLeadingBarItems(),
                                     trailing: homeTrailingBarItems())
 
-                .toolbar {
-                    toolbarItems()
-                }
-            
             // This will appear as the detail page on the iPad. It gives us the
             // chance to give the users some instruction when the app first
             // opens and nothing has been selected from the review list.
@@ -61,6 +57,7 @@ struct HomeTabView: View {
         .sheet(isPresented: $showAccountView) {
             AccountView(loggedIn: $loggedIn)
         }
+
     }
     
     // MARK: - Top of page tools
@@ -80,6 +77,16 @@ struct HomeTabView: View {
                 showQuestionnaire.toggle()
             } label: {
                 Image(systemName: "plus")
+            }
+            Button {
+                showAccountView.toggle()
+            } label: {
+                Image(systemName: "person")
+            }
+            Button {
+                showInfoView.toggle()
+            } label: {
+                Image(systemName: "info.circle")
             }
         }
     }
