@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays an individual cell in the review list.
 //
 
 import SwiftUI
@@ -26,11 +26,6 @@ struct ReviewViewCell: View {
                 Text(review.createdDateFormatted)
                     .font(.footnote)
             }
-           
-//           Spacer()
-//           Button(action: {}) {
-//               Image(systemName: "chevron.right")
-//           }
         }.padding(6)
     }
 }

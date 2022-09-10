@@ -63,8 +63,8 @@ struct ReviewReportBuilder {
         var analysis = ""
         
         for qa in review.QA {
-            analysis = analysis + "\n\n**\(qa.id). \(qa.question)**\n\n"
-            analysis = analysis + "Answer **\(qa.answer)**\n\n"
+            analysis = analysis + "\n\n**\(qa.id). \(qa.question)**  "
+            analysis = analysis + "Your answer **\(qa.answer)**\n\n"
             analysis = analysis + "Units added: \(qa.units.count > 0 ? qa.units : "None added.")"
         }
 

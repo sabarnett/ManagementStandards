@@ -28,6 +28,8 @@ struct AccountView: View {
                     TextInput(field: "Last Name", text: $accViewModel.lastname)
                     TextInput(field: "Email Address", text: $accViewModel.email)
                         .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     
                     HStack {
                         Spacer()

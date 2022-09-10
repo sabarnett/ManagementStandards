@@ -175,16 +175,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		E816A3FB28840AC400653A06 /* Results */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF6F77288454D300F05709 /* ResultsUnits */,
-				E8C268F22889771100400EAC /* Results QandA */,
-				E8C268F32889772300400EAC /* ResultsReport */,
-			);
-			path = Results;
-			sourceTree = "<group>";
-		};
 		E8261FD928411669005F84A3 = {
 			isa = PBXGroup;
 			children = (
@@ -291,19 +281,12 @@
 			isa = PBXGroup;
 			children = (
 				E8C09C9F287ABDE20052EF8B /* HomeTabView.swift */,
+				E82DA6C8287AC21D00C19C73 /* ReviewView.swift */,
+				E84AE3222881F6560028011A /* ReviewViewCell.swift */,
 				E8548D6B2882FF6200D53638 /* Account */,
 				E8C6F61F28CC935B00B0AD19 /* Information View */,
 			);
 			path = "Master View";
-			sourceTree = "<group>";
-		};
-		E8548D6A2882FF5700D53638 /* Analysis */ = {
-			isa = PBXGroup;
-			children = (
-				E82DA6C8287AC21D00C19C73 /* ReviewView.swift */,
-				E84AE3222881F6560028011A /* ReviewViewCell.swift */,
-			);
-			path = Analysis;
 			sourceTree = "<group>";
 		};
 		E8548D6B2882FF6200D53638 /* Account */ = {
@@ -356,7 +339,7 @@
 				E8D1B62228786E680029C173 /* Signin */,
 				E8548D692882FF4600D53638 /* Master View */,
 				E8C09C9E287ABDC70052EF8B /* Detail View */,
-				E816A3FB28840AC400653A06 /* Results */,
+				E88F6B21287DF0D100C279D0 /* Questionnaire */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -383,8 +366,9 @@
 			isa = PBXGroup;
 			children = (
 				E8FB641628B3A2CD00034906 /* ReviewTabView.swift */,
-				E8548D6A2882FF5700D53638 /* Analysis */,
-				E88F6B21287DF0D100C279D0 /* Questionnaire */,
+				E8EF6F77288454D300F05709 /* ResultsUnits */,
+				E8C268F22889771100400EAC /* Results QandA */,
+				E8C268F32889772300400EAC /* ResultsReport */,
 			);
 			path = "Detail View";
 			sourceTree = "<group>";

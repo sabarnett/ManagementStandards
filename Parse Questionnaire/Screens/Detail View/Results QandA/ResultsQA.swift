@@ -1,6 +1,9 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Lets the user review the questions that were asked and the answers
+//  they gave. Where that question generated one or more units, the
+//  list of units will be presented to the user (they can tap a unit
+//  to get more detail).
 //
 
 import SwiftUI
@@ -45,8 +48,7 @@ struct ResultsQA: View {
             .padding(.horizontal)
             
             TabView(selection: $selection) {
-                ForEach(filteredQA()) {
-                    q in
+                ForEach(filteredQA()) { q in
                     ResultsQACard(qa: q, units: review.units)
                         .tag(q.id)
                         .frame(maxWidth: 500)
@@ -72,8 +74,7 @@ struct ResultsQA: View {
     }
     
     func filteredQA() -> [QandA] {
-        let values = review.QA.filter {
-            q in
+        let values = review.QA.filter { q in
             
             if filterQAResults == .allResults { return true }
             return !q.units.isEmpty

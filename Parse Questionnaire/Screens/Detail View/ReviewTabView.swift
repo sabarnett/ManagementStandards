@@ -1,6 +1,7 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays the review detail view. From here, we get to the list of units,
+//  the question/answer analysis and the full report.
 //
 
 import SwiftUI
@@ -45,8 +46,11 @@ struct ReviewTabView: View {
         }
     }
     
-    // MARK:- Review details page
+    // MARK: - Back button.
 
+    // The back button is only appropriate for the iPhone style device. If this is
+    // and iPad, then we don't need it as we will have master/detail views shown
+    // at the same time.
     private func reviewLeadingBarItems() -> some View {
         Button { presentationMode.wrappedValue.dismiss()  }
         label: {
@@ -61,6 +65,8 @@ struct ReviewTabView: View {
         }
     }
     
+    // MARK: - Share button
+
     private func reviewTrailingBarItems(selectedReview: Review) -> some View {
         HStack(spacing: 10) {
             Button {
@@ -74,7 +80,6 @@ struct ReviewTabView: View {
             .activitySheet($reportItems)
         }
     }
-
 }
 
 struct ReviewTabView_Previews: PreviewProvider {

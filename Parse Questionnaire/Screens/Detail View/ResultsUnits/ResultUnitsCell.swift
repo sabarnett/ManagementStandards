@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays the unit cell consisting of the unit number and the title.
 //
 
 import SwiftUI
@@ -20,8 +20,8 @@ struct ResultUnitsCell: View {
                 .foregroundColor(Color.buttonForeground)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
 
-            Text(unit.title)
-                .font(.body)
+                Text(unit.title)
+                    .font(.body)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
             

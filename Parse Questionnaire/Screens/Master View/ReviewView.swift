@@ -1,6 +1,8 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays the list of reviews that the user has previously created (or a
+//  place holder if there are none). Tapping a review in the list displays the
+//  detail view with the review contents.
 //
 
 import SwiftUI
@@ -18,19 +20,7 @@ struct ReviewView: View {
                 .padding(.top, 15)
             
             if viewModel.reviewCount == 0 {
-                Spacer()
-                
-                Image("StarPages")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 400, height: 280, alignment: .center)
-                Text("You have not created any reviews. Please tap the + button to create your first one.")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
-                    .font(.body)
-                    .foregroundColor(.secondary)
-                
-                Spacer()
+                noReviewsView()
             } else {
                 ZStack {
                     if viewModel.loadingReviews {
@@ -46,9 +36,9 @@ struct ReviewView: View {
                             .tag(review.id)
                         }
                         .onDelete(perform: deleteReview)
-                        }
                     }
-                    .listStyle(.plain)
+                }
+                .listStyle(.plain)
             }
         }
         .opacity(appearAnimationActive ? 1 : 0.1)
@@ -77,6 +67,24 @@ struct ReviewView: View {
         deleteMessage.message = deleteMessage.message.replacingOccurrences(of: "$1", with: viewModel.selectedReview?.title ?? "")
         
         showDeletePrompt = deleteMessage
+    }
+    
+    fileprivate func noReviewsView() -> some View {
+        VStack {
+            Spacer()
+            
+            Image("StarPages")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 400, height: 280, alignment: .center)
+            Text("You have not created any reviews. Please tap the + button to create your first one.")
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 40)
+                .font(.body)
+                .foregroundColor(.secondary)
+            
+            Spacer()
+        }
     }
 }
 
