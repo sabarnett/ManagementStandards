@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays information about the app.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ struct InfoView: View {
                 Form {
                     Section(header: Text("About the App").bold()) {
                         AboutLineView(name: "Name", value: "Parse Questionnaire")
-                        AboutLineView(name: "Version", value: "2.0.0")
+                        AboutLineView(name: "Version", value: Bundle.main.releaseAndBuildVersionNumberPretty)
                         AboutLineView(name: "Author", value: "Steven Barnett")
                     }
                     Section(header: Text("Support").bold()) {
@@ -43,9 +43,8 @@ struct InfoView: View {
             }
         }
         .overlay(alignment: .topTrailing) {
-            Button {
-                showInfoView = false
-            } label: { XDismissButton() }
+            Button { showInfoView = false }
+                label: { XDismissButton() }
         }
     }
 }
@@ -72,3 +71,4 @@ struct AboutLineView: View {
         }
     }
 }
+

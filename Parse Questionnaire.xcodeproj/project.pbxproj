@@ -55,6 +55,7 @@
 		E8C2183C2848E570003E2915 /* QuestionnaireTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */; };
 		E8C268EF288976F200400EAC /* ResultsQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C268EE288976F200400EAC /* ResultsQA.swift */; };
 		E8C268F12889770200400EAC /* ResultsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C268F02889770200400EAC /* ResultsReport.swift */; };
+		E8C6F62128CC9A5F00B0AD19 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F62028CC9A5F00B0AD19 /* BundleExtensions.swift */; };
 		E8C867C92889827500FD0ADD /* ResultsQACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C867C82889827500FD0ADD /* ResultsQACard.swift */; };
 		E8D1B621287869BB0029C173 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1B620287869BB0029C173 /* SignIn.swift */; };
 		E8D1B62428786E7E0029C173 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1B62328786E7E0029C173 /* SigninViewModel.swift */; };
@@ -117,6 +118,7 @@
 		E8C2183B2848E570003E2915 /* QuestionnaireTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireTitleView.swift; sourceTree = "<group>"; };
 		E8C268EE288976F200400EAC /* ResultsQA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsQA.swift; sourceTree = "<group>"; };
 		E8C268F02889770200400EAC /* ResultsReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsReport.swift; sourceTree = "<group>"; };
+		E8C6F62028CC9A5F00B0AD19 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		E8C867C82889827500FD0ADD /* ResultsQACard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsQACard.swift; sourceTree = "<group>"; };
 		E8D1B620287869BB0029C173 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E8D1B62328786E7E0029C173 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
@@ -205,7 +207,6 @@
 				E8B854F4284CF02B0060EF13 /* Screens */,
 				E8947BCB284377AE00D47C7A /* Helpers */,
 				E82620002841190E005F84A3 /* View */,
-				E8261FFF28411906005F84A3 /* App */,
 				E8261FF6284116B8005F84A3 /* Data */,
 				E8261FF5284116AD005F84A3 /* Model */,
 				E8261FE92841166D005F84A3 /* Assets.xcassets */,
@@ -259,7 +260,6 @@
 				E8BB35142885860F00369316 /* XDismissButton.swift */,
 				E8C1F6BB288AC4EC003841DE /* PageTitleView.swift */,
 				E8BC752E288D52B000B1D8E7 /* MarkdownView.swift */,
-				E8347FDA289BEBEE0046F9CB /* InfoView.swift */,
 				E8E02E3728A3ADF300AA5DAB /* DeleteAccountModalView.swift */,
 			);
 			path = View;
@@ -287,13 +287,14 @@
 			path = Reviews;
 			sourceTree = "<group>";
 		};
-		E8548D692882FF4600D53638 /* Tabs */ = {
+		E8548D692882FF4600D53638 /* Master View */ = {
 			isa = PBXGroup;
 			children = (
 				E8C09C9F287ABDE20052EF8B /* HomeTabView.swift */,
-				E8FB641628B3A2CD00034906 /* ReviewTabView.swift */,
+				E8548D6B2882FF6200D53638 /* Account */,
+				E8C6F61F28CC935B00B0AD19 /* Information View */,
 			);
-			path = Tabs;
+			path = "Master View";
 			sourceTree = "<group>";
 		};
 		E8548D6A2882FF5700D53638 /* Analysis */ = {
@@ -342,6 +343,7 @@
 				E8947BCF28437ED300D47C7A /* ColorExtensions.swift */,
 				E8EBC0AD28A5344800EC1CBB /* NSAttributedStringExtensions.swift */,
 				E836355128AD5C56000C67C4 /* ViewExtensions.swift */,
+				E8C6F62028CC9A5F00B0AD19 /* BundleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,11 +351,12 @@
 		E8B854F4284CF02B0060EF13 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E8D1B62228786E680029C173 /* Signin */,
-				E8548D692882FF4600D53638 /* Tabs */,
-				E8C09C9E287ABDC70052EF8B /* Home Views */,
-				E816A3FB28840AC400653A06 /* Results */,
 				E81FDAD0285B7BE900150580 /* Launch Screen.storyboard */,
+				E8261FFF28411906005F84A3 /* App */,
+				E8D1B62228786E680029C173 /* Signin */,
+				E8548D692882FF4600D53638 /* Master View */,
+				E8C09C9E287ABDC70052EF8B /* Detail View */,
+				E816A3FB28840AC400653A06 /* Results */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -376,14 +379,14 @@
 			path = UsersAndAuth;
 			sourceTree = "<group>";
 		};
-		E8C09C9E287ABDC70052EF8B /* Home Views */ = {
+		E8C09C9E287ABDC70052EF8B /* Detail View */ = {
 			isa = PBXGroup;
 			children = (
+				E8FB641628B3A2CD00034906 /* ReviewTabView.swift */,
 				E8548D6A2882FF5700D53638 /* Analysis */,
 				E88F6B21287DF0D100C279D0 /* Questionnaire */,
-				E8548D6B2882FF6200D53638 /* Account */,
 			);
-			path = "Home Views";
+			path = "Detail View";
 			sourceTree = "<group>";
 		};
 		E8C268F22889771100400EAC /* Results QandA */ = {
@@ -401,6 +404,14 @@
 				E8C268F02889770200400EAC /* ResultsReport.swift */,
 			);
 			path = ResultsReport;
+			sourceTree = "<group>";
+		};
+		E8C6F61F28CC935B00B0AD19 /* Information View */ = {
+			isa = PBXGroup;
+			children = (
+				E8347FDA289BEBEE0046F9CB /* InfoView.swift */,
+			);
+			path = "Information View";
 			sourceTree = "<group>";
 		};
 		E8D1B62228786E680029C173 /* Signin */ = {
@@ -523,6 +534,7 @@
 				E8261FFC28411727005F84A3 /* Question.swift in Sources */,
 				E8DB057A28ABDBAA00449F1D /* HTMLtoPDF.swift in Sources */,
 				E8B77CFC28AFD37F00C76AB1 /* MockData.swift in Sources */,
+				E8C6F62128CC9A5F00B0AD19 /* BundleExtensions.swift in Sources */,
 				E8C09CA0287ABDE20052EF8B /* HomeTabView.swift in Sources */,
 				E8D1B621287869BB0029C173 /* SignIn.swift in Sources */,
 				E84AE3232881F6560028011A /* ReviewViewCell.swift in Sources */,
@@ -689,7 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Parse Questionnaire/Preview Content\"";
 				DEVELOPMENT_TEAM = MH62Y8D74P;
 				ENABLE_PREVIEWS = YES;
@@ -705,7 +717,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.sabarnett.Parse-Questionnaire";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -720,7 +732,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Parse Questionnaire/Preview Content\"";
 				DEVELOPMENT_TEAM = MH62Y8D74P;
 				ENABLE_PREVIEWS = YES;
@@ -736,7 +748,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.sabarnett.Parse-Questionnaire";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

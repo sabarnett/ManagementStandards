@@ -1,7 +1,4 @@
 // Project: Parse Questionnaire
-//
-//  
-//
 
 import Foundation
 
@@ -30,15 +27,15 @@ class AccountViewModel: ObservableObject {
     
     func updateUser() {
         // Verify data
-        if firstname.isEmpty {
+        if firstname.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.firstnameRequired
             return
         }
-        if lastname.isEmpty {
+        if lastname.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.lastnameRequired
             return
         }
-        if email.isEmpty {
+        if email.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.emailRequired
             return
         }
@@ -54,15 +51,15 @@ class AccountViewModel: ObservableObject {
     
     func updatePassword() {
         // Verify data
-        if oldPassword.isEmpty {
+        if oldPassword.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.oldPasswordRequired
             return
         }
-        if newPassword.isEmpty {
+        if newPassword.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.newPasswordRequired
             return
         }
-        if verifyPassword.isEmpty {
+        if verifyPassword.trimmingCharacters(in: .whitespaces).isEmpty {
             messageItem = MessageContext.verifyPasswordRequired
             return
         }

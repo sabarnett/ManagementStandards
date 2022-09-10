@@ -1,6 +1,7 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Form to collect the users detailed information, to allow them to
+//  change their password or to delete their account.
 //
 
 import SwiftUI

@@ -1,6 +1,8 @@
 // Project: Parse Questionnaire
 //
-//  
+//  The master view (on the iPad) that displays the tool bar for additional
+//  functions and the navigation bar icons. The content of the view is
+//  provided by the ReviewView view.
 //
 
 import SwiftUI
@@ -23,21 +25,12 @@ struct HomeTabView: View {
                                     trailing: homeTrailingBarItems())
 
                 .toolbar {
-                    ToolbarItemGroup(placement: .bottomBar) {
-                        Spacer()
-                        Button {
-                            showAccountView.toggle()
-                        } label: {
-                            Image(systemName: "person")
-                        }
-                        Button {
-                            showInfoView.toggle()
-                        } label: {
-                            Image(systemName: "info.circle")
-                        }
-                    }
+                    toolbarItems()
                 }
             
+            // This will appear as the detail page on the iPad. It gives us the
+            // chance to give the users some instruction when the app first
+            // opens and nothing has been selected from the review list.
             VStack {
                 Spacer()
                 
@@ -70,7 +63,7 @@ struct HomeTabView: View {
         }
     }
     
-    // MARK:- Home page
+    // MARK: - Top of page tools
     
     private func homeLeadingBarItems() -> some View {
         Button {
@@ -87,6 +80,24 @@ struct HomeTabView: View {
                 showQuestionnaire.toggle()
             } label: {
                 Image(systemName: "plus")
+            }
+        }
+    }
+    
+    // MARK: - Bottom of page tools
+    
+    private func toolbarItems() -> some ToolbarContent {
+        ToolbarItemGroup(placement: .bottomBar) {
+            Spacer()
+            Button {
+                showAccountView.toggle()
+            } label: {
+                Image(systemName: "person")
+            }
+            Button {
+                showInfoView.toggle()
+            } label: {
+                Image(systemName: "info.circle")
             }
         }
     }

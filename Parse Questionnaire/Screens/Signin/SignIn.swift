@@ -1,6 +1,10 @@
 // Project: Parse Questionnaire
 //
-//  
+//  All users are required to sign in to the system to view previous
+//  reviews. If the user has not used the system before, they can tap
+//  the register button to create a new user. When you register, the minimum
+//  data is collected (username/password) and the user is automatically
+//  logged in.
 //
 
 import SwiftUI
@@ -49,11 +53,7 @@ struct SignIn: View {
                 }
 
             Button {
-                if !viewModel.usernameIsValid() {
-                    focusField = .userName
-                } else if !viewModel.passwordIsValid() {
-                    focusField = .password
-                } else {
+                if formIsValid() {
                     performSignin()
                 }
             } label: {
@@ -69,6 +69,17 @@ struct SignIn: View {
         }
         .padding(20)
         .messageBox(message: $viewModel.messageItem)
+    }
+    
+    func formIsValid() -> Bool {
+        if !viewModel.usernameIsValid() {
+            focusField = .userName
+        } else if !viewModel.passwordIsValid() {
+            focusField = .password
+        } else {
+            return true
+        }
+        return false
     }
     
     func performSignin() {
