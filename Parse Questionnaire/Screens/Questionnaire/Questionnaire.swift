@@ -12,17 +12,19 @@ class Questionnaire: ObservableObject {
     @Published var messageItem: MessageItem?
     
     private var currentQuestionId = 1
-    private var review: Review = Review(created: Date.now,
-                                        title: "Sample Review",
-                                        description: "This is a sample review",
-                                        QA: [],
-                                        units: [])
+    private var review: Review = Reviews.shared.newReview()
     
     var currentQuestion: Question {
         guard let data = questionnaireData else { return Question.empty }
         return data.question(withId: currentQuestionId)
     }
     
+    /// Saves the answer that was gien in response to the current question. Depending on the answer given, we may add
+    /// to the list of units that we are keeping track of. Each answer option may have zero, one or more units associated
+    /// with it.
+    ///
+    /// - Parameter buttonPress: The button that was pressed when the question was presented. There are three
+    ///         options available; Yes, No or Maybe.
     func addAnswer(buttonPress: ButtonPress) {
         
         let question = currentQuestion
@@ -55,28 +57,36 @@ class Questionnaire: ObservableObject {
         objectWillChange.send()
     }
     
+    /// Save the review to the database.
+    ///
+    /// At the point this is called, we have a list of the questions asked, the answers given and the units that were
+    /// generated as a consequence. This method fills out the questionnaire instance by working out a unique list
+    /// of units and storing the unit data in the review file. This ensures that, should the review file be changed, we
+    /// have stored the state of the review at the point it was generated.
+    ///
+    /// - Parameter viewModel: The global view model - this is used as  the vehicle for saving the review.
+    ///
     func saveReview(to viewModel: AppData) {
-        // Add intro text to the review so we have it for reporting
-        review.reportIntro = questionnaireData?.introduction.report
-        review.qaIntro = questionnaireData?.introduction.questions
+        guard let qData = questionnaireData else { fatalError("Attempt to save a review that was not created.") }
         
-        // Resolve the unit list
+        // Add intro text to the review so we have it for reporting
+        review.reportIntro = qData.reportIntroduction
+        review.qaIntro = qData.questionsIntroduction
+        
+        // Resolve the unit list into a set containing unique units numbers trimmed of all whitespace
         var unitList: Set<String> = Set<String>()
         for qa in review.QA {
             if !qa.units.isEmpty {
-                // Split the unit list, returning the trimmed unit number
                 let unitIds = qa.units.components(separatedBy: CharacterSet(charactersIn: "&,"))
 
                 let trimmedUnitIds = unitIds.map() { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 unitList.formUnion(trimmedUnitIds)
             }
         }
-        // We now have a set with unique unit ids.
-        var unsortedUnits: [Unit] = []
-        for unitId in unitList {
-            if let unit = questionnaireData?.units.first(where: { $0.id == unitId}) {
-                unsortedUnits.append(unit)
-            }
+        
+        // We now have a set with unique unit ids. Translate this into a list of full units.
+        let unsortedUnits: [Unit] = unitList.map() { unitId in
+            qData.units.first(where: { $0.id == unitId})!
         }
 
         // Add the units to the review

@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Presents the title qure aof the questionnaire form. Simple image and text.
 //
 
 import SwiftUI

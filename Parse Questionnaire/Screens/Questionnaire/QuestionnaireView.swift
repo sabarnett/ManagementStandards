@@ -48,15 +48,13 @@ struct QuestionnaireView: View {
                 showWarning = MessageContext.confirmQuit
             } label: { XDismissButton() }
         }
-        .onChange(of: phase) {
-            newValue in
+        .onChange(of: phase) { newValue in
             if newValue == .finished {
                 showQuestionnaire = false
             }
         }
         .messageBox(message: $questions.messageItem)
-        .messageBox(message: $showWarning) {
-            response in
+        .messageBox(message: $showWarning) { response in
             
             showQuestionnaire = (response != .Primary)
             showWarning = nil

@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Presents the three answer buttons to the user and accespts a response.
 //
 
 import SwiftUI
@@ -17,40 +17,28 @@ struct AnswerButtonsView: View {
     
     var body: some View {
         HStack(spacing: 20) {
-            Button(action: {
-                action(.yes)
-            }, label: {
-                APPButtonText(caption: "Yes")
-            })
+            Button(action: { action(.yes) },
+                   label: { APPButtonText(caption: "Yes") })
                 
-            Button(action: {
-                action(.no)
-            }, label: {
-                APPButtonText(caption: "No")
-            })
+            Button(action: { action(.no) },
+                   label: { APPButtonText(caption: "No") })
 
-            Button(action: {
-                action(.unsure)
-            }, label: {
-                APPButtonText(caption: "Unsure")
-            })
+            Button(action: { action(.unsure) },
+                   label: { APPButtonText(caption: "Unsure") })
         }
         .padding()
     }
 }
 
-
-
 struct AnswerButtonsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AnswerButtonsView(action: {
-                button in
+            AnswerButtonsView(action: { button in
                 print("\(button) pressed")
             })
             .previewLayout(.sizeThatFits)
-            AnswerButtonsView(action: {
-                button in
+            
+            AnswerButtonsView(action: { button in
                 print("\(button) pressed")
             })
             .previewLayout(.sizeThatFits)

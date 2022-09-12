@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Presents the question to the user. 
 //
 
 import SwiftUI

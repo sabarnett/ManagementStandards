@@ -7,13 +7,29 @@ import Foundation
 
 struct QuestionnaireData: Codable {
     
-    // MARK:- Persistable data
+    // MARK: - Persistable data
     
     var introduction: Introduction
     var questions: [Question]
     var units: [Unit]
+}
+
+extension QuestionnaireData {
+
+    // MARK: - Computed Properties
     
-    // MARK:- Computed properties
+    var reportIntroduction: String {
+        self.introduction.report
+    }
+    
+    var questionsIntroduction: String {
+        self.introduction.questions
+    }
+}
+
+extension QuestionnaireData {
+    
+    // MARK: - Computed accessors
     
     func question(withId: Int) -> Question {
         guard let question = questions.first(where: { $0.id == withId } ) else {

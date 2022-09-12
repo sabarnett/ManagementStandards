@@ -1,13 +1,12 @@
 // Project: Parse Questionnaire
 //
-//  
+// Questionnaire part 1: Collect the title and short description of the review.
 //
 
 import SwiftUI
 
 struct QuestionnaireTitles: View {
     
-    @EnvironmentObject var viewModel: AppData
     @StateObject var questions: Questionnaire
     @Binding var phase: QuestionnairePhase
     
@@ -21,7 +20,6 @@ struct QuestionnaireTitles: View {
     
     @FocusState private var focusField: Field?
 
-    
     var body: some View {
         VStack(alignment: .center, spacing: 25) {
             Form {
@@ -45,7 +43,6 @@ struct QuestionnaireTitles: View {
                     Spacer()
                     Button {
                         if !validateAndSetTitles() { return }
-
                         phase = .questionnaire
                     } label: {
                         APPButtonText(caption: "Begin Questionnaire")
@@ -75,8 +72,11 @@ struct QuestionnaireTitles: View {
     }
 }
 
-//struct QuestionnaireTitles_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuestionnaireTitles()
-//    }
-//}
+struct QuestionnaireTitles_Previews: PreviewProvider {
+    @StateObject static var questions = Questionnaire()
+    
+    static var previews: some View {
+        QuestionnaireTitles(questions: questions,
+                            phase: .constant(.titles))
+    }
+}

@@ -13,7 +13,7 @@ struct ReviewList: Codable {
 
 struct Review: Codable, Identifiable {
     
-    // MARK:- Review Persistable properties.
+    // MARK: - Review Persistable properties.
     
     var id: UUID = UUID()
     var created: Date
@@ -23,8 +23,11 @@ struct Review: Codable, Identifiable {
     var units: [Unit]
     var reportIntro: String?
     var qaIntro: String?
+}
 
-    // MARK:- Review Computed properties
+extension Review {
+    
+    // MARK: - Review Computed properties
     
     var unitCount: Int { units.count }
     
@@ -46,7 +49,7 @@ struct Review: Codable, Identifiable {
 
 extension Review {
 
-    // MARK:- Share icon data. We return an array of data to be passed to the share handler
+    // MARK: - Share icon data. We return an array of data to be passed to the share handler
 
     func reportShareItems() -> [Any] {
         let markdown = self.report

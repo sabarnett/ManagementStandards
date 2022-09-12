@@ -1,6 +1,8 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Questionnaire has finished, present the user with instructions on what
+//  happens now and give them a button to press to generate the final
+//  report. This is their last opportunity to cancel out.
 //
 
 import SwiftUI

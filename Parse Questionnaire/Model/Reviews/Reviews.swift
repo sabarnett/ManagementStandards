@@ -48,8 +48,15 @@ class Reviews {
         }
     }
 
+    func newReview() -> Review {
+        Review(created: Date.now,
+                title: "",
+                description: "",
+                QA: [],
+                units: [])
+    }
     
-    // Mark:- Load/save review list
+    // Mark: - Load/save review list
     
     private func loadReviewList(forUser: String) {
         // Find and load the user list. If it doesn't exist, create it
