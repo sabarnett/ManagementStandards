@@ -95,7 +95,7 @@ class Questionnaire: ObservableObject {
         // Add the review which will also cause the list to save
         viewModel.addReview(review)
         viewModel.selectedReview = review
-        viewModel.showReview = true
+        viewModel.selectedReviewId = review.id
     }
     
     var reviewTitle: String {

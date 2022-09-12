@@ -12,7 +12,6 @@ struct ReviewView: View {
     @EnvironmentObject var viewModel: AppData
     @State var appearAnimationActive: Bool = false
     @State var showDeletePrompt: MessageItem? = nil
-    @State var selectedReviewId: UUID? = nil
     
     var body: some View {
         VStack {
@@ -26,14 +25,16 @@ struct ReviewView: View {
                     if viewModel.loadingReviews {
                         BusyView(caption: "retrieving reviews")
                     }
-                    List(selection: $selectedReviewId) {
+                    List(selection: $viewModel.selectedReviewId) {
                         ForEach(viewModel.reviews) { review in
-                            NavigationLink(destination: {
-                                ReviewTabView(selectedReview: review, selectedReviewId: $selectedReviewId)
-                            }, label: {
-                                ReviewViewCell(review: review)
-                            })
-                            .tag(review.id)
+                            
+                            NavigationLink(
+                                destination: ReviewTabView(selectedReview: review, selectedReviewId: $viewModel.selectedReviewId),
+                                tag: review.id,
+                                selection: $viewModel.selectedReviewId)
+                                {
+                                    ReviewViewCell(review: review)
+                                }
                         }
                         .onDelete(perform: deleteReview)
                     }

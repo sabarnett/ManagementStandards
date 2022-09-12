@@ -11,7 +11,7 @@ class AppData: ObservableObject {
     
     @Published var reviews: [Review]!
     @Published var loadingReviews: Bool = true
-    @Published var showReview: Bool = false
+    @Published var selectedReviewId: UUID? = nil
     var selectedReview: Review?
     
     /// Returns the number of reviews that the current user has associated with them.

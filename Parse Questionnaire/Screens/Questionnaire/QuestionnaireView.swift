@@ -44,9 +44,8 @@ struct QuestionnaireView: View {
             }
         }
         .overlay(alignment: .topTrailing) {
-            Button {
-                showWarning = MessageContext.confirmQuit
-            } label: { XDismissButton() }
+            Button { showWarning = MessageContext.confirmQuit }
+                     label: { XDismissButton() }
         }
         .onChange(of: phase) { newValue in
             if newValue == .finished {
