@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Sets the colour of the background on popup windows.
 //
 
 import SwiftUI

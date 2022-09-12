@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Extension to make it easier to extract the version number of the app.
 //
 
 import Foundation

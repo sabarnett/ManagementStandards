@@ -1,10 +1,12 @@
-// Report builder. Rakes a review and builds the complete report in Markdown format.
+//
+// Report builder. Takes a review and builds the complete report in Markdown format.
+//
 
 import Foundation
 
 struct ReviewReportBuilder {
     
-    // MARK:- Public interface
+    // MARK: - Public interface
     
     /// Builds a report for a review instance. This will be a complete review in Markdown format.
     ///
@@ -23,7 +25,7 @@ struct ReviewReportBuilder {
         return "\(reportHeader)\n\n\(unitText)\n\n\(qaHeader)\n\n\(qaAnalysis)"
     }
     
-    // MARK:- Helper functions - build each section
+    // MARK: - Helper functions - build each section
     
     fileprivate func buildReportHeader(_ review: Review) -> String {
         

@@ -314,7 +314,7 @@
 			children = (
 				E8061AC228B25C4000ABE06E /* Reporting */,
 				E8947BCE28437EBD00D47C7A /* Extensions */,
-				E8D1B6252878700F0029C173 /* Alerts */,
+				E8D1B6252878700F0029C173 /* MessageBox */,
 				E8B854F7284CF14D0060EF13 /* Styles */,
 			);
 			path = Helpers;
@@ -407,14 +407,14 @@
 			path = Signin;
 			sourceTree = "<group>";
 		};
-		E8D1B6252878700F0029C173 /* Alerts */ = {
+		E8D1B6252878700F0029C173 /* MessageBox */ = {
 			isa = PBXGroup;
 			children = (
 				E8D1B626287874500029C173 /* Messages.swift */,
 				E872992028C358D600846FE3 /* MessageBoxViewModifier.swift */,
 				E8BB5C7028C7942D001277FB /* MessageBoxView.swift */,
 			);
-			path = Alerts;
+			path = MessageBox;
 			sourceTree = "<group>";
 		};
 		E8EF6F77288454D300F05709 /* ResultsUnits */ = {

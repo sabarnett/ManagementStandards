@@ -1,6 +1,7 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Provides a title at the top of the page and optionally provides a
+//  sub-title below it in a considerably smaller font size.
 //
 
 import SwiftUI

@@ -1,6 +1,7 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Big and scary view that the user sees when they try to delete their account. It is
+//  intended to make them think again before they do the delete.
 //
 
 import SwiftUI
@@ -29,11 +30,9 @@ struct DeleteAccountModalView: View {
 
                 Spacer()
                 
-                Button(action: {
-                    showWarning = false
-                }, label: {
-                    APPButtonText(caption: "Keep Account!",
-                        buttonWidth: 220)
+                Button(action: { showWarning = false },
+                       label: { APPButtonText(caption: "Keep Account!",
+                                              buttonWidth: 220)
                 }).padding(.bottom, 20)
                 
                 Button(action: {

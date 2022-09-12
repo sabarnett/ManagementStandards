@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Initialise an NSAttributedString with an HTML string.
 //
 
 import Foundation

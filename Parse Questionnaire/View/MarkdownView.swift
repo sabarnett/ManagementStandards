@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Helper component for displaying MarkDown text.
 //
 
 import SwiftUI

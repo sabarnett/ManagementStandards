@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Displays a progress bar while the review list loads.
 //
 
 import SwiftUI
@@ -14,14 +14,10 @@ struct BusyView: View {
             Color(.systemBackground)
                 .opacity(0.9)
             VStack(spacing: 20) {
-                ProgressView()
-                    .tint(.gray)
-                    .scaleEffect(2)
+                ProgressView().tint(.gray).scaleEffect(2)
                 
                 if let caption = caption {
-                    Text(caption)
-                        .font(.title2)
-                        .foregroundColor(.gray)
+                    Text(caption).font(.title2).foregroundColor(.gray)
                 }
             }
         }

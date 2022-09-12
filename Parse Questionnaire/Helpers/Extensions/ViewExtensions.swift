@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Extension to make it easier to hide the keyboard.
 //
 
 import SwiftUI

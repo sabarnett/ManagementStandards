@@ -1,6 +1,10 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Popup display of a unit. Shows the unit title and content, which is
+//  in MarkDown format.
+//
+//  The display can be dismissed by dragging down to the bottom of the screen
+//  or by tapping the close button we provide.
 //
 
 import SwiftUI
@@ -27,11 +31,8 @@ struct UnitView: View {
             }.padding()
         }
         .overlay(alignment: .topTrailing) {
-            Button {
-                sheetShown = false
-            } label: {
-                XDismissButton()
-            }
+            Button { sheetShown = false }
+                     label: { XDismissButton() }
         }
     }
 }

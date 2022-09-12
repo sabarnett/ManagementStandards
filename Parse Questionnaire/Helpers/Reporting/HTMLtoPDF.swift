@@ -38,11 +38,5 @@ struct HTMLtoPDF {
         
         // 5. Return PDF file
         return pdfData
-        
-//        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("output").appendingPathExtension("pdf")
-//            else { fatalError("Destination URL not created") }
-//
-//        pdfData.write(to: outputURL, atomically: true)
-//        print("open \(outputURL.path)") // command to open the generated file
     }
 }
