@@ -7,14 +7,17 @@ import Foundation
 
 struct QandA: Codable, Identifiable {
     
-    // MARK:- Q and A Persistable properties.
+    // MARK: - Q and A Persistable properties.
     
     var id: Int                 // Question Number
     var question: String
     var answer: String
     var units: String
+}
+
+extension QandA {
     
-    // MARK:- Q and A Persistable properties.
+    // MARK: - Q and A Persistable properties.
     
     func unitText(unitText: [Unit]) -> [Unit] {
         guard !units.isEmpty else { return [] }

@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Singleton to handle all things "Review" related.
 //
 
 import SwiftUI
@@ -9,6 +9,8 @@ class Reviews {
     public static let shared = Reviews()
     
     private init() { }
+    
+    // MARK: - Pubic interface
     
     private var reviewList: ReviewList!
     
@@ -56,7 +58,7 @@ class Reviews {
                 units: [])
     }
     
-    // Mark: - Load/save review list
+    // MARK: - Load/save review list
     
     private func loadReviewList(forUser: String) {
         // Find and load the user list. If it doesn't exist, create it
@@ -85,6 +87,7 @@ class Reviews {
         }
     }
 
+    // MARK: - File neme generation
     
     /// Generate the file name from which we will load or to which we will save the reviews for the user
     ///

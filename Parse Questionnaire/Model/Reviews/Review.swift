@@ -1,6 +1,7 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Defines the content and functionality of a review.This data is loaded from the
+//  user specific review data file.
 //
 
 import Foundation

@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Contains the data for a questionnaire. 
 //
 
 import Foundation

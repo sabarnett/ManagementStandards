@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Defines the properties of a question.
 //
 
 import Foundation

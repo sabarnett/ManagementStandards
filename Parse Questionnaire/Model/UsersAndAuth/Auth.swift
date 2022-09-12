@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Handles encrypting passwords and checking that a password is valid.
 //
 
 import Foundation

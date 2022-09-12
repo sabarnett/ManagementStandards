@@ -1,6 +1,6 @@
 // Project: Parse Questionnaire
 //
-//  
+//  Singleton class used to handle all things "User" related
 //
 
 import Foundation
@@ -15,6 +15,8 @@ class Users {
     private init() {
         loadUserList()
     }
+    
+    // MARK: - Pubic interface
     
     /// Returns the currently logged in user details
     ///
@@ -120,7 +122,7 @@ class Users {
         signin(userName: user.name)
     }
     
-    // Mark:- Load/save user list
+    // MARK: - Load/save user list
 
     fileprivate func loadUserList() {
         // Find and load the user list. If it doesn't exist, create it
@@ -149,6 +151,8 @@ class Users {
         }
     }
     
+    // MARK: - File name generation
+
     fileprivate func usersFileName() -> URL {
         let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         return URL(fileURLWithPath: "UserList", relativeTo: directoryURL)

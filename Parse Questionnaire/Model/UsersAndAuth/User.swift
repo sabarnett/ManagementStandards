@@ -58,7 +58,6 @@ class User: Codable, Identifiable {
     )
 }
 
-
 struct UserPreferences: Codable {
     var qaCardFilter: qaCardFilterResults
 }
