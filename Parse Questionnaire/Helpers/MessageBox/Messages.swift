@@ -17,7 +17,11 @@ struct MessageButton {
     var color: Color = Color.buttonBackground
 }
 
-struct MessageItem: Identifiable {
+struct MessageItem: Identifiable, Equatable {
+    
+    static func == (lhs: MessageItem, rhs: MessageItem) -> Bool {
+        lhs.id == rhs.id
+    }
     
     init(title: String, message: String, dismissButton: String, dismissButtonColor: Color = .buttonBackground) {
         self.title = title

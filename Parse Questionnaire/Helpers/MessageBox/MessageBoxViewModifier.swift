@@ -18,6 +18,13 @@ struct MessageBoxViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack {
             content
+                .onChange(of: message, perform: { msg in
+                    if msg != nil {
+                        // We have been passed a message to display. Disable animations while the
+                        // message is displayed so the fullScreenCover is not animated.
+                        UIView.setAnimationsEnabled(false)
+                    }
+                })
                 .fullScreenCover(item: $message) {
                     messageItem in
                     
@@ -30,7 +37,12 @@ struct MessageBoxViewModifier: ViewModifier {
                                 buttonPressed(response)
                             }
                         }.padding(.horizontal, 10)
-                    }.background(FullScreenCoverBackgroundRemovalView())
+                    }
+                    .background(FullScreenCoverBackgroundRemovalView())
+                    .onDisappear {
+                        // The message has been dismissed, so we re-enable animations.
+                        UIView.setAnimationsEnabled(true)
+                    }
                 }
         }
     }
