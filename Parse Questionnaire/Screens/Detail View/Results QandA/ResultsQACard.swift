@@ -21,7 +21,7 @@ struct ResultsQACard: View {
                     .padding(10)
                     .foregroundColor(.secondary)
                     .frame(minHeight: 110)
-                
+                    
                 VStack(alignment: .center) {
                     Text("Your answer: \(qa.answer)")
                         .padding(.vertical, 5)
@@ -32,7 +32,8 @@ struct ResultsQACard: View {
                         
                 }
                 .foregroundColor(Color.titleColor)
-            }.background(Color.secondary.opacity(0.3))
+                
+            }.background(Color.clear)
             
             if qa.units.count == 0 {
                 noUnitsGenerated()
@@ -45,7 +46,7 @@ struct ResultsQACard: View {
         .background(
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.secondary)
-                .opacity(0.3)
+                .opacity(0.5)
         )
         .padding(15)
     }
@@ -71,7 +72,7 @@ struct ResultsQACard: View {
         List(qa.unitText(unitText: units)) { datum in
             ResultUnitsCell(unit: datum)
         }.listStyle(.plain)
-            .padding(15)
+            
     }
 }
 
