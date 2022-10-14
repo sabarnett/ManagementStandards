@@ -180,6 +180,7 @@
 			children = (
 				E8261FE428411669005F84A3 /* Management Standards */,
 				E8261FE328411669005F84A3 /* Products */,
+				E872A20528F9E0C40059B313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +297,13 @@
 				E8BB36BB28A2D97D00AAE549 /* AccountViewModel.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		E872A20528F9E0C40059B313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E88F6B21287DF0D100C279D0 /* Questionnaire */ = {
