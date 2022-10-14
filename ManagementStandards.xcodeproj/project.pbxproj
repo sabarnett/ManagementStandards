@@ -14,7 +14,7 @@
 		E816A3FA2884026500653A06 /* BusyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816A3F92884026500653A06 /* BusyView.swift */; };
 		E816A3FD28840AE900653A06 /* ResultUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816A3FC28840AE900653A06 /* ResultUnitsCell.swift */; };
 		E81FDAD1285B7BE900150580 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81FDAD0285B7BE900150580 /* Launch Screen.storyboard */; };
-		E8261FE628411669005F84A3 /* Parse_QuestionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8261FE528411669005F84A3 /* Parse_QuestionnaireApp.swift */; };
+		E8261FE628411669005F84A3 /* ManagementStandardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8261FE528411669005F84A3 /* ManagementStandardsApp.swift */; };
 		E8261FE828411669005F84A3 /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8261FE728411669005F84A3 /* QuestionnaireView.swift */; };
 		E8261FEA2841166D005F84A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8261FE92841166D005F84A3 /* Assets.xcassets */; };
 		E8261FED2841166D005F84A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8261FEC2841166D005F84A3 /* Preview Assets.xcassets */; };
@@ -78,7 +78,7 @@
 		E816A3FC28840AE900653A06 /* ResultUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUnitsCell.swift; sourceTree = "<group>"; };
 		E81FDAD0285B7BE900150580 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E8261FE228411669005F84A3 /* Management Standards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Management Standards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8261FE528411669005F84A3 /* Parse_QuestionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse_QuestionnaireApp.swift; sourceTree = "<group>"; };
+		E8261FE528411669005F84A3 /* ManagementStandardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementStandardsApp.swift; sourceTree = "<group>"; };
 		E8261FE728411669005F84A3 /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
 		E8261FE92841166D005F84A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8261FEC2841166D005F84A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		E8261FFF28411906005F84A3 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E8261FE528411669005F84A3 /* Parse_QuestionnaireApp.swift */,
+				E8261FE528411669005F84A3 /* ManagementStandardsApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -561,7 +561,7 @@
 				E8C268F12889770200400EAC /* ResultsReport.swift in Sources */,
 				E8261FF8284116F6005F84A3 /* QuestionnaireData.swift in Sources */,
 				E84AE31D2881ECD80028011A /* Review.swift in Sources */,
-				E8261FE628411669005F84A3 /* Parse_QuestionnaireApp.swift in Sources */,
+				E8261FE628411669005F84A3 /* ManagementStandardsApp.swift in Sources */,
 				E872992128C358D600846FE3 /* MessageBoxViewModifier.swift in Sources */,
 				E8D1B627287874500029C173 /* Messages.swift in Sources */,
 				E8EF6F792884562F00F05709 /* ResultUnitsView.swift in Sources */,

@@ -11,7 +11,7 @@
 import SwiftUI
 
 @main
-struct Parse_QuestionnaireApp: App {
+struct ManagementStandardsApp: App {
     
     @State var loggedIn: Bool = false
     
