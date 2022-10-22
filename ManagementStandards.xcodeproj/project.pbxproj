@@ -33,6 +33,7 @@
 		E84AE3232881F6560028011A /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AE3222881F6560028011A /* ReviewViewCell.swift */; };
 		E872992128C358D600846FE3 /* MessageBoxViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872992028C358D600846FE3 /* MessageBoxViewModifier.swift */; };
 		E872A20428F9DD7C0059B313 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E872A20328F9DD7C0059B313 /* MarkdownUI */; };
+		E872FB6F2902C4BA0073BB81 /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872FB6E2902C4BA0073BB81 /* ShowTime.swift */; };
 		E88D391728423015009E90D9 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D391628423015009E90D9 /* Questionnaire.swift */; };
 		E88D391928423522009E90D9 /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D391828423522009E90D9 /* AnswerButtonView.swift */; };
 		E8947BCD284377E800D47C7A /* QuestionnaireLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8947BCC284377E800D47C7A /* QuestionnaireLoader.swift */; };
@@ -96,6 +97,7 @@
 		E84AE3202881F5370028011A /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		E84AE3222881F6560028011A /* ReviewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 		E872992028C358D600846FE3 /* MessageBoxViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoxViewModifier.swift; sourceTree = "<group>"; };
+		E872FB6E2902C4BA0073BB81 /* ShowTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		E88D391628423015009E90D9 /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 		E88D391828423522009E90D9 /* AnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
 		E8947BCC284377E800D47C7A /* QuestionnaireLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireLoader.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				E8261FEC2841166D005F84A3 /* Preview Assets.xcassets */,
+				E872FB6E2902C4BA0073BB81 /* ShowTime.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				E8261FFA28411716005F84A3 /* Introduction.swift in Sources */,
 				E8BF428D28747C6600C53975 /* Users.swift in Sources */,
 				E8C1F6BC288AC4EC003841DE /* PageTitleView.swift in Sources */,
+				E872FB6F2902C4BA0073BB81 /* ShowTime.swift in Sources */,
 				E8947BD22843803900D47C7A /* QuestionPromptView.swift in Sources */,
 				E8261FFE28411748005F84A3 /* Unit.swift in Sources */,
 				E8C09CA2287ABE670052EF8B /* AppData.swift in Sources */,

@@ -43,10 +43,13 @@ class Reviews {
     ///
     func remove(forUser userName: String) {
         let reviewsFileURL = reviewsFileName(userName: userName)
-        if FileManager.default.fileExists(atPath: reviewsFileURL.absoluteString) {
+
+        if FileManager.default.fileExists(atPath: reviewsFileURL.path) {
             do {
-                try FileManager.default.removeItem(atPath: reviewsFileURL.absoluteString)
-            } catch {}
+                try FileManager.default.removeItem(atPath: reviewsFileURL.path)
+            } catch {
+                print(error)
+            }
         }
     }
 
@@ -78,6 +81,7 @@ class Reviews {
 
     private func saveReviewsList(forUser: String) {
         let fileURL = reviewsFileName(userName: forUser)
+        print("Saving file to: \(fileURL.absoluteString)")
         
         do {
             let data = try JSONEncoder().encode(reviewList)
