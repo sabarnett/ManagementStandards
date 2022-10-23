@@ -10,6 +10,7 @@ import SwiftUI
 struct ReviewView: View {
     
     @EnvironmentObject var viewModel: AppData
+    
     @State var appearAnimationActive: Bool = false
     @State var showDeletePrompt: MessageItem? = nil
     
@@ -29,7 +30,9 @@ struct ReviewView: View {
                         ForEach(viewModel.reviews) { review in
                             
                             NavigationLink(
-                                destination: ReviewTabView(selectedReview: review, selectedReviewId: $viewModel.selectedReviewId),
+                                destination: ReviewTabView(
+                                    selectedReviewId: $viewModel.selectedReviewId,
+                                    selectedReview: review),
                                 tag: review.id,
                                 selection: $viewModel.selectedReviewId)
                                 {

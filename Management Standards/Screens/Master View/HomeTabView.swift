@@ -27,21 +27,8 @@ struct HomeTabView: View {
             // This will appear as the detail page on the iPad. It gives us the
             // chance to give the users some instruction when the app first
             // opens and nothing has been selected from the review list.
-            VStack {
-                Spacer()
-                
-                Image("StarPages")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 400, height: 280, alignment: .center)
-                Text("Please expand the sidebar and select a review from the reviews list, or press the + icon to create a new one.")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
-                    .font(.body)
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: 400)
-                Spacer()
-            }
+            ReviewTabView(selectedReviewId: .constant(nil),
+                    selectedReview: nil)
         }
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()
